@@ -1,10 +1,13 @@
 <div class="back">
     <div class="login">
-        <form [formGroup]="loginForm" class="login-block">
-            <img src="../../assets/logocutted.png" alt="logo" class="logo">
-            <input type="text" name="login" id="login" class="border-gradient border-gradient-purple" placeholder="LOGIN" formControlName="login">
-            <input type="password" name="senha" id="senha" class="border-gradient border-gradient-purple" placeholder="SENHA" formControlName="senha">
-            <input type="submit" [disabled]="!loginForm.valid" (click)="onSubmit()" class="submit" value="Entrar">
-        </form>
+        <div class="login-block outter">
+            <form [formGroup]="loginForm" class="login-block">
+                <img src="../../assets/favicon.ico" alt="logo" class="logo">
+                <input type="text" name="login" id="login" class="border-gradient border-gradient-purple" placeholder="LOGIN" formControlName="login">
+                <input type="password" name="senha" id="senha" class="border-gradient border-gradient-purple" placeholder="SENHA" formControlName="senha">
+                <input type="submit" [disabled]="!loginForm.valid" (click)="onSubmit()" class="btn-size submit" value="Entrar">
+            </form>
+            <button type="button" class="btn-size cadastrar">CADASTRAR</button>
+        </div>
     </div>
 </div>
