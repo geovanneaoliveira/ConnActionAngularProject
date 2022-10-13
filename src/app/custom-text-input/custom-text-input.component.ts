@@ -9,6 +9,8 @@ export class CustomTextInputComponent implements OnInit {
 
   constructor() { }
 
+  placeholder = 'placeholder';
+
   ngOnInit(): void {
   }
 

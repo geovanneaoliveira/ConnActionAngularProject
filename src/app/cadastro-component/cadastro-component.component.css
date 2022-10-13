@@ -1,0 +1,152 @@
+* {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* blocks */
+
+.rot{
+    background: rgba(255, 255, 255, 0.575);
+    display: flex;
+    border-radius: 15px;
+    transform: rotate(-2deg);
+}
+
+.outter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: white;
+    transform: rotate(2deg);
+    
+}
+
+.cadastro-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* inputs */
+
+input[type=text]{
+    padding: 10px;
+    outline: none;
+    caret-color: blue;
+    width: 140px;
+}
+
+.border-gradient {
+    border: 0;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(to right, blue, purple);
+}
+
+input::content{
+    background: -webkit-linear-gradient(45deg, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* FOTO */
+
+#mediaFile {
+    position: absolute;
+    top: -1000px;
+}
+
+#profile {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 5px 5px;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    background-image: url(../../assets/favicon2.ico);
+    display: table;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 8px rgba(black, 0.35);
+}
+
+.profile-outter {
+    border-radius: 100%;
+    position:relative;
+    cursor: pointer;
+    background: linear-gradient(to right, blue, purple);
+    display: table;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 8px rgba(black, 0.35);
+    margin-bottom: 12px;
+}
+
+.hasImage {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;   
+}
+
+.back {
+    background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(128,0,128,1) 80%);
+}
+
+/* BUTTONS */
+
+.btn-size{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button.voltar {
+    color: rgb(111, 0, 255);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, blue, purple);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    transition: 0.3s;
+}
+  
+button.voltar:hover {
+    box-shadow: none;
+    color: white;
+}
+
+button.submit {
+    padding: 13px;
+    margin: 10px 0;
+    width: 100%;
+    background-image: linear-gradient(to right,blue,purple,blue);
+    margin-top: 15px;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    transition: 0.5s;
+    color: white;            
+    border: 0;
+}
+
+button.submit:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

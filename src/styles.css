@@ -7,3 +7,10 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+.backfoto {
+    background-image: url(https://www.napratica.org.br/wp-content/uploads/2019/06/voluntariado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

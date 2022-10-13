@@ -116,10 +116,3 @@ input[type=text],input[type=password]::content{
     margin: 0;
     font-size: medium;
 }
-
-.back {
-    background-image: url(https://www.napratica.org.br/wp-content/uploads/2019/06/voluntariado.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
