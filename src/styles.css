@@ -1,16 +1,1 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
 /* You can add global styles to this file, and also import other style files */
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-.backfoto {
-    background-image: url(https://www.napratica.org.br/wp-content/uploads/2019/06/voluntariado.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
