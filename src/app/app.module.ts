@@ -9,6 +9,8 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { CustomTextInputComponent } from './custom-text-input/custom-text-input.
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
