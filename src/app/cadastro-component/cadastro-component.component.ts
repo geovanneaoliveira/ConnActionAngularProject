@@ -34,7 +34,7 @@ export class CadastroComponentComponent {
     (<HTMLInputElement>document.getElementById('mediaFile')).click();
     (<HTMLInputElement>document.getElementById('mediaFile')).onchange = () => {
       let caminho = (<HTMLInputElement>document.getElementById('mediaFile')).value;
-      (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url(../../assets/minhafoto.png)';
+      (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url(../../assets/pfpictures/deb.jpg)';
       console.log((<HTMLInputElement>document.getElementById('profile')).style.backgroundImage);
       console.log((<HTMLInputElement>document.getElementById('mediaFile')).value);
     };
