@@ -80,7 +80,7 @@ input::content{
     position: relative;
     cursor: pointer;
     background-color: white;
-    background-image: url(../../assets/favicon2.ico);
+    /* background-image: url(../../assets/favicon2.ico); */
     display: table;
     background-size: cover;
     background-position: center center;
