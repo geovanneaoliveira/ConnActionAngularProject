@@ -9,6 +9,7 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CustomTextInputComponent } from './custom-text-input/custom-text-input.
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    SerUmVoluntarioComponent,
   ],
   imports: [
     BrowserModule,
