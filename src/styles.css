@@ -5,3 +5,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+.back {
+    background: linear-gradient(to right, blue,purple);
+}
