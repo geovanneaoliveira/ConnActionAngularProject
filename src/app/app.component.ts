@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Route, Routes } from '@angular/router';
 
@@ -8,4 +9,7 @@ import { Route, Routes } from '@angular/router';
 })
 export class AppComponent {
   title = 'ConnActionAngularProject';
+
+  constructor(http: HttpClient){
+  }
 }
