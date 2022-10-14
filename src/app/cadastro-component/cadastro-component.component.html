@@ -1,4 +1,5 @@
 <div class="back">
+    <app-navbar></app-navbar>
     <div class="cadastro">
         <div class="rot">
             <div class="outter">
@@ -8,7 +9,7 @@
                     </div>        
                 </div>
                 <form [formGroup]="cadastroForm" class="cadastro-block">
-                    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg"/>
+                    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
                     <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
                     <input type="text" name="sobrenome" id="sobrenome" formControlName="sobrenome" [ngClass]="classesText" placeholder="SOBRENOME">
                     <input type="text" name="telefone" id="telefone" formControlName="telefone" [ngClass]="classesText" placeholder="TELEFONE">
@@ -16,7 +17,7 @@
                     <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText" placeholder="LOGIN">
                     <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText" placeholder="SENHA">
                     <button type="submit" (click)="onSubmit()" [innerText]="nome" [ngClass]="classesCadastro"></button>
-                    <button type="button" name="voltar" id="voltar" class="btn-size voltar">VOLTAR</button>
+                    <button type="button" name="voltar" id="voltar" class="btn-size voltar" routerLink="/">VOLTAR</button>
                 </form>
             </div>
         </div>

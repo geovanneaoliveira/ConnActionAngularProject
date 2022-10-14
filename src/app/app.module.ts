@@ -10,6 +10,9 @@ import { CustomPasswordInputComponent } from './custom-password-input/custom-pas
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.
     CustomSubmitComponent,
     CustomTextInputComponent,
     SerUmVoluntarioComponent,
+    LandingPageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
