@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 80px;
     border-radius: 15px;
     background-color: white;
     transform: rotate(2deg);
@@ -44,8 +44,8 @@
 input[type=text]{
     padding: 10px;
     outline: none;
-    caret-color: blue;
-    width: 140px;
+    caret-color: rgb(115, 62, 238);
+    width: 240px;
 }
 
 .border-gradient {
@@ -55,11 +55,11 @@ input[type=text]{
 }
 
 .border-gradient-purple {
-    border-image-source: linear-gradient(to right, blue, purple);
+    border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
 }
 
 input::content{
-    background: -webkit-linear-gradient(45deg, blue, purple);
+    background: -webkit-linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -76,6 +76,7 @@ input::content{
     width: 150px;
     height: 150px;
     margin: 5px 5px;
+    border-color: (337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     position: relative;
     cursor: pointer;
     background-color: white;
@@ -90,7 +91,7 @@ input::content{
     border-radius: 100%;
     position:relative;
     cursor: pointer;
-    background: linear-gradient(to right, blue, purple);
+    background: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     display: table;
     background-size: cover;
     background-position: center center;
@@ -105,7 +106,8 @@ input::content{
 }
 
 .back {
-    background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(128,0,128,1) 80%);
+    background: rgb(244,206,255);
+    background: linear-gradient(54deg, rgba(244,206,255,1) 31%, rgba(79,168,255,1) 100%);
 }
 
 /* BUTTONS */
@@ -117,9 +119,9 @@ input::content{
 }
 
 button.voltar {
-    color: rgb(111, 0, 255);
+    color: rgb(198, 158, 243);
     border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, blue, purple);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     box-shadow: 2px 1000px 1px #fff inset;
@@ -133,10 +135,10 @@ button.voltar:hover {
 
 button.submit {
     padding: 13px;
-    margin: 10px 0;
+    margin: 13px 0;
     width: 100%;
-    background-image: linear-gradient(to right,blue,purple,blue);
-    margin-top: 15px;
+    background-image: linear-gradient(337deg, rgba(217,88,255,1) 38%, rgba(0,126,250,1) 100%);
+    margin-top: 25px;
     text-transform: uppercase;
     background-size: 200% auto;
     transition: 0.5s;
