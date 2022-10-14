@@ -9,6 +9,7 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    SerUmVoluntarioComponent,
     LandingPageComponent,
     NavbarComponent,
   ],
