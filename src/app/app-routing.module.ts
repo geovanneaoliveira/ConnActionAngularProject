@@ -6,6 +6,8 @@ import { AuthGuard } from './helpers/auth.guard';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+
 
 const routes: Routes = [
   {
@@ -24,6 +26,10 @@ const routes: Routes = [
     path: 'oi',
     component: OiComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'voluntariado',
+    component: SerUmVoluntarioComponent
   },
   {
     path: '**',
