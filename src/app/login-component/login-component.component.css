@@ -108,15 +108,11 @@ input[type=text],input[type=password]::content{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 * {
     padding: 0;
     margin: 0;
     font-size: medium;
-}
-.back {
-    background: rgb(244,206,255);
-    background: linear-gradient(54deg, rgba(244,206,255,1) 31%, rgba(79,168,255,1) 100%);
 }
