@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Route, Routes } from '@angular/router';
+import { Route, Router, Routes } from '@angular/router';
+import { AuthenticationService } from './helpers/auth.service';
+import { User } from './types/types';
+
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,16 @@ import { Route, Routes } from '@angular/router';
 export class AppComponent {
   title = 'ConnActionAngularProject';
 
-  constructor(http: HttpClient){
-  }
+  user: User | null = null;
+
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService
+    ) {
+        this.authenticationService.user.subscribe(x => this.user = x);
+    }
+
+    logout() {
+        this.authenticationService.logout();
+    }
 }

@@ -10,8 +10,10 @@ import { CustomPasswordInputComponent } from './custom-password-input/custom-pas
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
+import { OiComponent } from './oi/oi.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     CustomTextInputComponent,
     LandingPageComponent,
     NavbarComponent,
+    OiComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
