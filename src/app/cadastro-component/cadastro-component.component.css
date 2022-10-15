@@ -30,7 +30,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
 }
 
 /* inputs */
@@ -96,10 +95,6 @@ input::content{
       opacity: 0.5;
       pointer-events: none;
       user-select: none;   
-}
-
-.back {
-    background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(128,0,128,1) 80%);
 }
 
 /* BUTTONS */

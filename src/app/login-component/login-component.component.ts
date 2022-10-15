@@ -28,7 +28,7 @@ export class LoginComponentComponent {
   ) { 
       // redirect to home if already logged in
       if (this.authenticationService.userValue) { 
-          this.router.navigate(['/cadastrar']);
+          this.router.navigate(['/oi']);
       }
   }
 
@@ -46,7 +46,7 @@ export class LoginComponentComponent {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate([this.returnUrl ?? '']);
+                  this.router.navigate([this.returnUrl ?? 'oi']);
               },
               error => {
                   this.error = error;

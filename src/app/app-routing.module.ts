@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { AuthGuard } from './helpers/auth.guard';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
@@ -21,7 +22,12 @@ const routes: Routes = [
   },
   {
     path: 'oi',
-    component: OiComponent
+    component: OiComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 

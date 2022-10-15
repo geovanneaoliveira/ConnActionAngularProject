@@ -8,6 +8,7 @@
 
 .back {
     background: linear-gradient(to right, blue,purple);
+    min-height: 100vmin;
 }
 
 /* scrollbar */
