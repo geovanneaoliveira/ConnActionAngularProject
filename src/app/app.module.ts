@@ -15,6 +15,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SerUmVoluntarioComponent,
     LandingPageComponent,
     OiComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

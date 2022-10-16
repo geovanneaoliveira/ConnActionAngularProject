@@ -1,1 +1,31 @@
-<p>oi works!</p>
+<h2>Tags</h2>
+<li *ngFor="let tag of tags">{{tag.nome}}</li>
+
+<h2>Eventos</h2>
+<div *ngFor="let evento of eventos">
+    Evento
+    <li>Nome:{{evento.nome}}</li>
+    <li>Data:{{evento.data}}</li>
+    <li>Organizacao:{{evento.nomeOrganizacao}}</li>
+    <li>Pessoas:{{evento.pessoasEvento}}</li>
+    <li>Tags:{{evento.tagsEvento}}</li>
+    <li>Patrocinadores:{{evento.patrocinadores}}</li>
+</div>
+
+<h2>Contribuicoes</h2>
+<div *ngFor="let contribuicao of contribuicoes">
+    Contribuicao
+    <li>{{contribuicao.nomeUsuario}} {{contribuicao.sobrenome}}</li>
+    <li>{{contribuicao.nomeOrg}}</li>
+    <li>{{contribuicao.data}}</li>
+    <li>{{contribuicao.valor}}</li>
+</div>
+
+<h2>Organizacoes</h2>
+<div *ngFor="let organizacao of organizacoes">
+    Organizacao
+    <li>{{organizacao.nomeSupervisor}} {{organizacao.sobrenomeSupervisor}}</li>
+    <li>{{organizacao.nomeOrg}}</li>
+    <li>{{organizacao.caminhoImagem}}</li>
+    <li>{{organizacao.descricao}}</li>
+</div>

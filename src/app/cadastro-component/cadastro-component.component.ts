@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
@@ -9,12 +10,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CadastroComponentComponent {
 
   cadastroForm;
+  submitted = false;
+  succes = false;
 
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
 
-  constructor(private formBuilder:FormBuilder){
+  constructor(private formBuilder:FormBuilder, private http: HttpClient){
     this.cadastroForm = this.formBuilder.group({
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
@@ -26,8 +29,22 @@ export class CadastroComponentComponent {
     });
   }
 
-  onSubmit() {
-    console.log(this.cadastroForm.value);
+  get f() {
+    return this.cadastroForm.controls;
+  } 
+
+  cadastrar() {
+    this.submitted = true;
+    if (this.cadastroForm.invalid) {
+        return;
+    }
+    this.http.post<any>('/pessoa/cadastro', this.cadastroForm.value)
+      .subscribe({
+        next: (response) => {
+          console.log(response);
+        },
+        error: (error) => console.log(error),
+      });
   }
 
   onClick = () => {
