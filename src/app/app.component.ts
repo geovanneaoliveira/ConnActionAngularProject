@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Route, Router, Routes } from '@angular/router';
 import { AuthenticationService } from './helpers/auth.service';
 import { User } from './types/types';
@@ -9,7 +9,7 @@ import { User } from './types/types';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'ConnActionAngularProject';
 
   user: User | null = null;
@@ -20,6 +20,9 @@ export class AppComponent {
     ) {
         this.authenticationService.user.subscribe(x => this.user = x);
     }
+  ngOnInit(): void {
+    console.log(this.user?.id);
+  }
 
     logout() {
         this.authenticationService.logout();

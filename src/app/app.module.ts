@@ -9,11 +9,14 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { OiComponent } from './oi/oi.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventodivComponent } from './eventodiv/eventodiv.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,11 @@ import { OiComponent } from './oi/oi.component';
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    SerUmVoluntarioComponent,
     LandingPageComponent,
-    NavbarComponent,
     OiComponent,
+    DashboardComponent,
+    EventodivComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { OiComponent } from './oi/oi.component';
     HttpClientModule,
   ],
   providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

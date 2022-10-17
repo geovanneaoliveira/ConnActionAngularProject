@@ -1,5 +1,3 @@
-<div class="back">
-    <app-navbar></app-navbar>
     <div class="cadastro">
         <div class="rot">
             <div class="outter">
@@ -8,18 +6,21 @@
                         <div id="profile"></div>
                     </div>        
                 </div>
-                <form [formGroup]="cadastroForm" class="cadastro-block">
+                <form [formGroup]="cadastroForm" class="cadastro-block" (ngSubmit)="cadastrar()">
                     <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
                     <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
+                    <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+                        <div *ngIf="f.nome.errors">Nome em branco!</div>
+                    </div>
                     <input type="text" name="sobrenome" id="sobrenome" formControlName="sobrenome" [ngClass]="classesText" placeholder="SOBRENOME">
                     <input type="text" name="telefone" id="telefone" formControlName="telefone" [ngClass]="classesText" placeholder="TELEFONE">
                     <input type="text" name="cpf" id="cpf" formControlName="cpf" [ngClass]="classesText" placeholder="CPF">
                     <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText" placeholder="LOGIN">
                     <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText" placeholder="SENHA">
-                    <button type="submit" (click)="onSubmit()" [innerText]="nome" [ngClass]="classesCadastro"></button>
-                    <button type="button" name="voltar" id="voltar" class="btn-size voltar" routerLink="/">VOLTAR</button>
+                    <button type="submit" [innerText]="nome" [ngClass]="classesCadastro" [disabled]="!cadastroForm.valid"></button>
+                    <div>Já possui uma conta?</div>
+                    <button type="button" name="voltar" id="voltar" class="btn-size voltar" routerLink="/login">Entrar</button>
                 </form>
             </div>
         </div>
     </div>
-</div>

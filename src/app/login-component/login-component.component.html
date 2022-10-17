@@ -1,5 +1,4 @@
-<div class="back">
-    <app-navbar></app-navbar>
+
     <div class="login">
         <div class="login-block outter">
             <form [formGroup]="loginForm" class="login-block" (ngSubmit)="onSubmit()">
@@ -8,7 +7,7 @@
                 <input type="password" name="senha" id="senha" class="border-gradient border-gradient-purple" placeholder="SENHA" formControlName="senha">
                 <input type="submit" [disabled]="!loginForm.valid" class="btn-size submit" value="Entrar">
             </form>
-            <button type="button" class="btn-size cadastrar">CADASTRAR</button>
+            <div>Não possui uma conta?</div>
+            <button type="button" class="btn-size cadastrar" routerLink="/cadastrar">CADASTRAR</button>
         </div>
     </div>
-</div>

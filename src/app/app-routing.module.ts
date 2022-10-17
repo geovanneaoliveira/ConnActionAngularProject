@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './helpers/auth.guard';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+
 
 const routes: Routes = [
   {
@@ -21,7 +25,19 @@ const routes: Routes = [
   },
   {
     path: 'oi',
-    component: OiComponent
+    component: OiComponent,
+  },
+  {
+    path: 'voluntariado',
+    component: SerUmVoluntarioComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 
