@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthenticationService } from '../helpers/auth.service';
 import { LoginComponentComponent } from '../login-component/login-component.component';
 
 @Component({
@@ -8,15 +9,13 @@ import { LoginComponentComponent } from '../login-component/login-component.comp
 })
 export class NavbarComponent implements OnInit {
 
-  @Output() logoutemitter: EventEmitter<any> = new EventEmitter();
-
-  constructor() { }
+  constructor(private auth:AuthenticationService) { }
 
   ngOnInit(): void {
   }
 
   logout = () => {
-    this.logoutemitter.emit(null);
+    this.auth.logout();
   }
 
 }
