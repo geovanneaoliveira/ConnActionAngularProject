@@ -16,6 +16,7 @@ import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventodivComponent } from './eventodiv/eventodiv.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LandingPageComponent,
     OiComponent,
     DashboardComponent,
+    EventodivComponent,
   ],
   imports: [
     BrowserModule,
