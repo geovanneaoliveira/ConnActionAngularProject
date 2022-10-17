@@ -9,12 +9,14 @@ import { Evento } from '../types/types';
 })
 export class EventodivComponent implements OnInit {
 
-  constructor(private eventoService:EventoService)  { }
-
   eventos: Evento[] = [];
 
-  ngOnInit(): void {
-  }
+  constructor(private eventoService:EventoService)  { }
 
+  ngOnInit(): void {
+    this.eventoService.getAll().subscribe(eventos => {
+      this.eventos = eventos;
+    });
+  }
 
 }

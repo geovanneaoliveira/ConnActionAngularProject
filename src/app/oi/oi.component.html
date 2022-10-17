@@ -2,15 +2,7 @@
 <li *ngFor="let tag of tags">{{tag.nome}}</li>
 
 <h2>Eventos</h2>
-<div *ngFor="let evento of eventos">
-    Evento
-    <li>Nome:{{evento.nome}}</li>
-    <li>Data:{{evento.data}}</li>
-    <li>Organizacao:{{evento.nomeOrganizacao}}</li>
-    <li>Pessoas:{{evento.pessoasEvento}}</li>
-    <li>Tags:{{evento.tagsEvento}}</li>
-    <li>Patrocinadores:{{evento.patrocinadores}}</li>
-</div>
+<app-eventodiv></app-eventodiv>
 
 <h2>Contribuicoes</h2>
 <div *ngFor="let contribuicao of contribuicoes">
