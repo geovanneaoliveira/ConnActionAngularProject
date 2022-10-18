@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
@@ -12,6 +11,8 @@ import { CustomTextInputComponent } from './custom-text-input/custom-text-input.
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     CustomTextInputComponent,
     LandingPageComponent,
     NavbarComponent,
+    QuemSomosComponent
   ],
   imports: [
     BrowserModule,

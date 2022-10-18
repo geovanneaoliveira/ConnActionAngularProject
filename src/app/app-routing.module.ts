@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'cadastrar',
     component: CadastroComponentComponent
+  },
+  {
+    path: 'quem-somos',
+    component:QuemSomosComponent
   }
 ];
 
