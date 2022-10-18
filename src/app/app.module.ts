@@ -16,6 +16,7 @@ import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
     LandingPageComponent,
     OiComponent,
     SouUmaOngComponent,
+    CadastroOngComponentComponent,
   ],
   imports: [
     BrowserModule,
