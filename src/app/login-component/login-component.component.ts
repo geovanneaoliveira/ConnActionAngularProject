@@ -28,7 +28,7 @@ export class LoginComponentComponent {
   ) { 
       // redirect to home if already logged in
       if (this.authenticationService.userValue) { 
-          this.router.navigate(['/oi']);
+          this.router.navigate(['/dashboard']);
       }
   }
 
@@ -38,7 +38,7 @@ export class LoginComponentComponent {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.loginForm!.invalid) {
+      if (this.loginForm.invalid) {
           return;
       }
       this.loading = true;
@@ -46,7 +46,7 @@ export class LoginComponentComponent {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate([this.returnUrl ?? 'oi']);
+                  this.router.navigate([this.returnUrl ?? 'dashboard']);
               },
               error => {
                   this.error = error;

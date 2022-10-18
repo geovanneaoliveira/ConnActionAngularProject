@@ -22,10 +22,16 @@
                   <a class="nav-link" aria-current="page" href="#">Empresas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" *ngIf="this.user == null" routerLink="/login">Entrar</a>
+                  <a class="nav-link" routerLink="/oi" aria-current="page">Oi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" *ngIf="this.user == null" routerLink="/cadastrar" >Cadastrar</a>
+                  <a class="nav-link" *ngIf="this.user != null"routerLink="dashboard" aria-current="page">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login" *ngIf="this.user == null">Entrar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/cadastrar" *ngIf="this.user == null">Cadastrar</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" *ngIf="this.user != null" (click)="logout()">Logout</a>

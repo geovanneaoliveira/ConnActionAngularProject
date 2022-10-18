@@ -1,4 +1,4 @@
 .landingfoto {
-    max-width: 100%;
+    width: 100vmax;
     max-height: auto;
 }
