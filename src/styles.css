@@ -7,8 +7,8 @@
 }
 
 .back {
-    background: rgb(244,206,255);
-    background: linear-gradient(54deg, rgba(244,206,255,1) 31%, rgba(79,168,255,1) 100%);
+    background: rgb(251, 236, 255);
+    background: linear-gradient(54deg, rgb(251, 236, 255) 31%, rgb(203, 227, 253) 100%);
     min-height: 100vmin;
 }
 

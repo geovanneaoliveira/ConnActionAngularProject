@@ -18,7 +18,7 @@
     justify-content:left;
     text-align : center;
     margin-left: 55px;
-    margin-top: 200px;
+    margin-top: 150px;
 
 }
 
@@ -74,7 +74,8 @@
     display: flex;
     flex-flow: row;
  text-align: center;
- margin-bottom: 40px;
+ margin-top: 40px;
+ margin-bottom: 0px;
  margin-right: 30px;
  margin-left: 0px;
 }
@@ -83,8 +84,7 @@
 #imagem{
     width: 500px;
     height: 560px;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 50px;
     display: inline;
 }
 
@@ -103,8 +103,8 @@
     border-radius: 15px;
     padding: 16px 30px;
     text-align: right;
-    margin-bottom: 20px;
-    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .para{
@@ -185,6 +185,7 @@
     flex-direction:row;
     font-family: 'Poppins';
     font-size: 18px;
+    margin-bottom: 40px;
 }
 
 #um{
@@ -193,4 +194,61 @@ font-family: 'Poppins';
     color: rgb(40, 5, 136);
     border-radius: 5px;
     padding: 12px 24px;
+}
+
+.background3{
+    background-color:rgb(222, 198, 253) ;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.texto{
+    display: block;
+}
+
+.dentro{
+    font-family: 'Poppins';
+    color: rgb(15, 23, 97);
+    font-size: 38px;
+    /* display: inline-block; */
+    text-align: left;
+    margin-left: 70px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.facil{
+    font-family: 'Poppins';
+    color: hsl(234, 73%, 22%);
+    font-size: 23px;
+    margin-left: 70px;
+    margin-right: 210px;
+    /* display: inline-block; */
+    text-align: left;
+ /* justify-items: left; */
+
+}
+
+#logo{
+    display: inline;
+    width: 250px;
+    height: 250px;
+    float: right;
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.sociais{
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+
+#soc{
+    height: 47px;
+    width: 47px;
+    margin: 5px;
 }

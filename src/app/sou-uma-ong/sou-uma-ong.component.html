@@ -1,14 +1,15 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<!-- <script type="text/javascript">
+    $('.nav a[href^="#"]').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+	$('html, body').animate({ 
+		scrollTop: targetOffset - 100
+	}, 500);
+});
+</script> -->
 
-<script>
-    var $doc = $('html, body');
-    $('.scrollSuave').click(function() {
-        $doc.animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-        return false;
-    });
-    </script>
 
 
 
@@ -22,7 +23,7 @@
     </div>
 </div>
 
-<div class="fundo2">
+<!-- <div class="fundo2">
     <div class="ong">
         <h1 >Como começar?</h1>
     </div>
@@ -36,7 +37,7 @@
         
             <a href="#pre" class="scrollSuave">Precisa de voluntários? Siga esse passo a passo!</a>
         </ul>
-    </div>
+    </div> -->
 
     <div id="mon" class="lado">
         <div >
@@ -84,4 +85,29 @@
                 </div>
 
     </div>
+    </div>
+
+    <div class="background3">
+        
+        <div class="texto">
+            <h1 class="dentro">Quer ficar por dentro de todas as novidades da ConnAction?</h1>
+    
+            <div class="redes">
+                <div> 
+                    <p class="facil">Tá fácil! Abaixo você encontra todas nossas redes sociais e grupos de whatsapp. Além disso, 
+                        com seu email cadastrado no site você já recebe notícias periodicamente!</p>
+                </div>
+    
+                <div class="sociais">
+                    <img id="soc" src="../../assets/fotos/facebook (1).png" alt="">
+                    <img id="soc" src="../../assets/fotos/instagram.png" alt="">
+                    <img id="soc" src="../../assets/fotos/whatsapp.png" alt="">
+                    <img id="soc" src="../../assets/fotos/twitter.png" alt="">
+                </div>
+    
+            </div>
+        </div>
+        
+    
+        <img id="logo" src="../../assets/fotos/lococolorida.png" >
     </div>
