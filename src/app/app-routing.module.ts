@@ -9,6 +9,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
     path: 'voluntariado',
     component: SerUmVoluntarioComponent
+  },
+  {
+
+    path: 'ong',
+    component: SouUmaOngComponent
   },
   {
     path: 'dashboard',

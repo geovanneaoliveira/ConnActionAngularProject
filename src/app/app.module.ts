@@ -15,8 +15,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +32,11 @@ import { EventodivComponent } from './eventodiv/eventodiv.component';
     SerUmVoluntarioComponent,
     LandingPageComponent,
     OiComponent,
+    SouUmaOngComponent,
+    CadastroOngComponentComponent,
     DashboardComponent,
     EventodivComponent,
+
   ],
   imports: [
     BrowserModule,
