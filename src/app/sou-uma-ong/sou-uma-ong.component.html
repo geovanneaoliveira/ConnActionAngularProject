@@ -1,0 +1,87 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script>
+    var $doc = $('html, body');
+    $('.scrollSuave').click(function() {
+        $doc.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    });
+    </script>
+
+
+
+<div class="fundo">
+    <div >
+        <h1 class="seja">Seja parte da rede ConnAction</h1>
+    </div>
+    <div >
+        <h1 class="subtitulo">Se a sua organização, coletivo ou movimento social está em busca 
+            de voluntários para colaborar com a sua causa, venha fazer parte da nossa rede!</h1>
+    </div>
+</div>
+
+<div class="fundo2">
+    <div class="ong">
+        <h1 >Como começar?</h1>
+    </div>
+
+    <div> 
+        <ul class="edit-index">
+
+            <a href="#mon" class="scrollSuave">Por que cadastrar minha ONG?</a>
+
+            <a href="#emp" class="scrollSuave">Voluntariado empresarial</a>
+        
+            <a href="#pre" class="scrollSuave">Precisa de voluntários? Siga esse passo a passo!</a>
+        </ul>
+    </div>
+
+    <div id="mon" class="lado">
+        <div >
+            <img id="imagem" src="https://atados.com.br/static/svg/04.svg">
+        </div>
+        <div class="voluntario">
+        <h1 class="porque">Por que cadastrar minha ONG?</h1>
+        <p class="para">
+            Na ConnAction sua ONG poderá encontrar pessoas engajados na sua causa através das
+            Tags de Interesse, que conecta ONG e voluntário em um match perfeito. Também torna possível
+            manter um controle sobre a quantidade de voluntários que marcaram presença, histórico de eventos,
+            contato com ex-participantes e muito mais!
+        </p>
+    </div>
+    </div>
+
+    <div id="emp" class="lado2">
+        <div class="voluntario">
+        <h1 class="porque">Voluntariado Empresarial</h1>
+        <p class="para2">
+            Para a empresa: Aumenta a satisfação e o engajamento dos seus colaboradores e os capacita através de um treinamento prático.
+            <br>
+            Para o colaborador: Contribui para a sociedade, aprende sobre responsabilidade social e desenvolve habilidades.
+            <br>
+            Para a ONG: Tem acesso a profissionais qualificados e fortalece sua gestão, aumentando assim o seu impacto social.
+        </p>
+    </div>
+    <div >
+        <img id="imagem2" src="https://atados.com.br/static/sou_uma_ong/imagem_2.png">
+    </div>
+    </div>
+
+     <div id="pre" class="ladotres">
+        <div class="meinscrevo">
+            <h1 class="precisa">Precisa de voluntários? Siga esse passo a passo!</h1>
+
+            <div class="passo">
+    
+                   <p id="um">Crie o seu perfil! Clique em "Sou uma ONG" e depois em "Cadastrar minha ONG"</p> 
+                   <p id="um">Crie vagas de voluntariado de acordo com as necessidades de sua organização usando as Tags de Interesse</p>
+                   <p id="um">Fique de olho no e-mail! Você receberá por lá todas as inscrições na vaga</p>
+                   <p id="um">Seja ágil! Selecione e comunique os voluntários que forem aptos à vaga (mesmo que a resposta seja negativa!)</p>
+                   <p id="um">Inicie o trabalho com os voluntários e faça o acompanhamento de perto para que ele se sinta acolhido e engajado.</p>
+
+                </div>
+
+    </div>
+    </div>
