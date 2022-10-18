@@ -1,18 +1,14 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(211, 233, 253);
-  }
 
-.background{
+
+.fundo{
     width: 100vw;
     height: 68vh;
-    background-image: url(../../assets/fotos/praia.png);
-    display: inline-block
+    background-image: url(../../assets/fotos/pessoasr.png);
+    display: inline-block;
     
 }
 
-.titulo{
+.seja{
     font-family: 'Poppins';
     font-size: 85px;
     color: white; 
@@ -29,7 +25,7 @@ body {
 
 .subtitulo{
     font-family: 'Poppins';
-    font-size: 35px;
+    font-size: 33px;
     color: white;
     display: block;
     text-align:left;
@@ -40,9 +36,9 @@ body {
  
 }
 
-.vaga{
+.ong{
     font-family: 'Poppins';
-    color: rgb(15, 23, 97);
+    color: rgb(101, 11, 104);
     font-size: 16px;
     display: block;
     text-align:left;
@@ -57,8 +53,8 @@ body {
     font-size: 20px;
     list-style-type: none;
     text-align: center;
-    padding: 10px;
-    margin-top: 35px;
+    padding: 15px;
+    margin-top: 30px;
     margin-bottom: 75px;
  }
     
@@ -66,10 +62,10 @@ body {
 .edit-index a{
     display: inline;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    padding: 6px 12px;
+    background-color: rgb(252, 238, 255);
+    padding: 8px 16px;
     margin: 4px 0;
-    color: rgb(15, 23, 97);
+    color: rgb(91, 18, 109);
     border-radius: 6px;
     margin-inline: 12px;
 }
@@ -78,14 +74,16 @@ body {
     display: flex;
     flex-flow: row;
  text-align: center;
- margin-bottom: 40px;
-
+ margin-top: 40px;
+ margin-bottom: 0px;
+ margin-right: 30px;
+ margin-left: 0px;
 }
 
+
 #imagem{
-    width: 400px;
-    height: 430px;
-    margin-top: 60px;
+    width: 500px;
+    height: 560px;
     margin-left: 50px;
     display: inline;
 }
@@ -96,53 +94,84 @@ body {
     align-items: flex-end;
 }
 
-.oque{
+.porque{
     display: inline-block;
     font-family: 'Poppins';
     font-size: 45px;
-    color: rgb(15, 23, 97);
-    /* background-color: rgb(205, 194, 255); */
+    /* background-color: rgb(254, 226, 255); */
+    color: rgb(91, 3, 99) ;
     border-radius: 15px;
     padding: 16px 30px;
     text-align: right;
-    margin-top: 60px;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .para{
     font-family: 'Poppins';
-    font-size: 20px;
-    color: rgb(0, 115, 216);
+    font-size: 21px;
+    color: rgb(40, 5, 136);
     margin: 60px;
+    margin-top: 60px;
 }
 
-
-.meinscrevo{
-    display: inline-block;
-    align-items: center;
-    margin-top: 40px;
-    text-align: center;
-
-}
-
-.onde{
-    display: inline;
-    font-family: 'Poppins';
-    font-size: 45px;
-    color: rgb(15, 23, 97);
-    /* background-color: rgb(205, 194, 255); */
-    border-radius: 15px;
-    padding: 16px 30px;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
+.lado2{
+    display: flex;
+    flex-flow: row;
+ text-align: center;
+ margin-bottom: 20px;
+ margin-right: 0px;
+ margin-left: 10px;
 }
 
 .para2{
     font-family: 'Poppins';
+    font-size: 21px;
+    color: rgb(40, 5, 136);
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+
+#imagem2{
+    width: 510px;
+    height: 430px;
+    margin-top: 10px;
+
+    display: inline;
+}
+
+.precisa{
+    display: inline;
+    font-family: 'Poppins';
+    font-size: 45px;
+    /* background-color: rgb(254, 226, 255); */
+    color: rgb(91, 3, 99);
+    border-radius: 15px;
+    padding: 16px 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 90px;
+    margin-top: 50px;
+}
+
+.ladotres{
+    display: flex;
+    flex-flow: row;
+ text-align: center;
+ margin-top: 150px;
+ margin-bottom: 0px;
+ margin-right: 0px;
+ margin-left: 10px;
+}
+
+.paratres{
+    font-family: 'Poppins';
     font-size: 22px;
-    color: rgb(0, 115, 216);
+    color:rgb(40, 5, 136);
     margin-top: 70px;
+    margin-bottom: 90px;
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -150,96 +179,26 @@ body {
     padding-right: 100px;
 }
 
-#button{
-    margin-top: 20px;
+.passo{
+    margin-top: 60px;
+    display: flex;
+    flex-direction:row;
     font-family: 'Poppins';
-    font-size: 20px;
-    background-color: rgb(242, 244, 250);
-    color: rgb(45, 82, 163);
-    padding: 7px 14px;
-    border-radius: 10px;
-    border: none;
-    margin-inline: 25px;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
-#button:hover{
-    background-color: rgb(168, 168, 255);
-}
-
-#imagemdois{
-    width: 500px;
-    height: 333px;
-    margin-top: 110px;
-    margin-left: 50px;
+#um{
+font-family: 'Poppins';
     display: inline;
-}
-
-.perfeita{
-    display: inline;
-    color: rgb(15, 23, 97);
-    margin-top: 80px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 40px;
-}
-
-.para3{
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: rgb(0, 115, 216);
-    margin: 30px;
-}
-
-.meinscrevi{
-    display: inline-block;
-    align-items: center;
-    margin-top: 70px;
-    text-align: center;
-    margin-bottom: 100px;
-}
-.agora{
-    color: rgb(15, 23, 97);
-    margin-top: 100px;
-    display: inline;
-    font-family: 'Poppins';
-    font-size: 45px;
-    /* background-color:rgb(205, 194, 255); */
-    border-radius: 15px;
-    padding: 16px 30px;
-    align-items: center;
-    text-align: center;
+    color: rgb(40, 5, 136);
+    border-radius: 5px;
+    padding: 12px 24px;
 }
 
 .background3{
-    background-color:rgb(125, 179, 230) ;
-    margin-bottom: 0px;
-}
-
-.dentro{
-    font-family: 'Poppins';
-    color: rgb(15, 23, 97);
-    font-size: 30px;
-    display: block;
-    text-align: left;
-    margin-left: 70px;
-    padding-top: 40px;
-}
-
-.facil{
-    font-family: 'Poppins';
-    color: rgb(15, 23, 97);
-    font-size: 20px;
-    display: block;
-    text-align: left;
-justify-items: left;
-margin-left: 70px;
-margin-right: 400px;
-margin-bottom: 0px;
-}
-
-.background3{
-    background-color:rgb(220, 221, 250) ;
+    background-color:rgb(222, 198, 253) ;
+    margin-top: 50px;
     margin-bottom: 0px;
     display: flex;
     flex-direction: row;

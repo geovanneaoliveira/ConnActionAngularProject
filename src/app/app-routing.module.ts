@@ -10,7 +10,7 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { OiComponent } from './oi/oi.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
-
+import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 
 const routes: Routes = [
   {
@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'voluntariado',
     component: SerUmVoluntarioComponent
+  },
+  {
+    path: 'ong',
+    component: SouUmaOngComponent
   },
   {
     path: 'dashboard',
