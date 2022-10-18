@@ -2,6 +2,7 @@ input[type=text], input[type=password]{
     padding: 10px;
     outline: none;
     caret-color: #1d57f8;
+    color: black;
 }
     
 .submit {
@@ -30,6 +31,7 @@ input[type=submit]:hover {
 }
 
 button.cadastrar {
+    margin-top: 10px;
     color: black;
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
@@ -79,12 +81,12 @@ input[type=password]:hover{
     width: 100%;
 }
 
-input[type=text],input[type=password]::content{
+/* input[type=text],input[type=password]::content{
     opacity: 1;
     background: -webkit-linear-gradient(45deg , blue, purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .login-block {
     display: flex;
@@ -114,5 +116,4 @@ input[type=text],input[type=password]::content{
 * {
     padding: 0;
     margin: 0;
-    font-size: medium;
 }

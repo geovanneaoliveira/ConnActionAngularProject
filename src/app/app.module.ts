@@ -17,6 +17,9 @@ import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventodivComponent } from './eventodiv/eventodiv.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro
     OiComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
+    DashboardComponent,
+    EventodivComponent,
+
   ],
   imports: [
     BrowserModule,

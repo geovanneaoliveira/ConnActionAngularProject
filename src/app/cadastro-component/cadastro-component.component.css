@@ -51,11 +51,11 @@ input[type=text]{
     border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
 }
 
-input::content{
+/*input::content{
     background: -webkit-linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+}*/
 
 /* FOTO */
 
@@ -112,6 +112,7 @@ input::content{
 }
 
 button.voltar {
+    margin-top: 10px;
     color: rgb(198, 158, 243);
     border: solid 3px transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
@@ -128,7 +129,7 @@ button.voltar:hover {
 
 button.submit {
     padding: 13px;
-    margin: 13px 0;
+    margin-bottom: 10px;
     width: 100%;
     background-image: linear-gradient(337deg, rgba(217,88,255,1) 38%, rgba(0,126,250,1) 100%);
     margin-top: 25px;
