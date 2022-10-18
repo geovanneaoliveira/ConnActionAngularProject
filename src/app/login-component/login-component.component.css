@@ -2,6 +2,7 @@ input[type=text], input[type=password]{
     padding: 10px;
     outline: none;
     caret-color: #1d57f8;
+    color: black;
 }
     
 .submit {
@@ -80,12 +81,12 @@ input[type=password]:hover{
     width: 100%;
 }
 
-input[type=text],input[type=password]::content{
+/* input[type=text],input[type=password]::content{
     opacity: 1;
     background: -webkit-linear-gradient(45deg , blue, purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .login-block {
     display: flex;
