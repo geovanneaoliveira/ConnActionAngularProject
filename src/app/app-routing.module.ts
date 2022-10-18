@@ -9,6 +9,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+import { SetTagsComponent } from './set-tags/set-tags.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'settags',
+    component: SetTagsComponent
   },
   {
     path: '**',

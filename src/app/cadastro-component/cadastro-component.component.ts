@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-component',
@@ -16,8 +17,9 @@ export class CadastroComponentComponent {
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
+  returnUrl: string = '/setTags';
 
-  constructor(private formBuilder:FormBuilder, private http: HttpClient){
+  constructor(private formBuilder:FormBuilder, private http: HttpClient, private router:Router){
     this.cadastroForm = this.formBuilder.group({
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
@@ -45,6 +47,7 @@ export class CadastroComponentComponent {
         },
         error: (error) => console.log(error),
       });
+      this.router.navigateByUrl('/login');
   }
 
   onClick = () => {

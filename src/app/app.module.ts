@@ -17,6 +17,7 @@ import { OiComponent } from './oi/oi.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
+import { SetTagsComponent } from './set-tags/set-tags.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EventodivComponent } from './eventodiv/eventodiv.component';
     OiComponent,
     DashboardComponent,
     EventodivComponent,
+    SetTagsComponent,
   ],
   imports: [
     BrowserModule,

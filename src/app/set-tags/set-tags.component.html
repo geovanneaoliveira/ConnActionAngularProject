@@ -1,0 +1,6 @@
+<div class="displayTags" *ngFor="let tag of tags">
+    <form [formGroup]="tagsForm" (ngSubmit)="setUserTags()">
+        <label for="tag">{{tag.nome}}</label>
+        <input type="checkbox" name="tag" id="tag" placeholder="tag">
+    </form>
+</div>
