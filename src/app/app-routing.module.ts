@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './helpers/auth.guard';
+import { AuthenticationService } from './helpers/auth.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { OiComponent } from './oi/oi.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {
     path: 'oi',
     component: OiComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path: 'voluntariado',
