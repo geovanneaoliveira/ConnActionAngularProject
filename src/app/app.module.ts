@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
     EventodivComponent,
     SetTagsComponent,
     CriarEventoComponent,
+    AtualizarCadastroComponent,
   ],
   imports: [
     BrowserModule,
