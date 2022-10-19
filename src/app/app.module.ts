@@ -20,6 +20,7 @@ import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { SetTagsComponent } from './set-tags/set-tags.component';
     DashboardComponent,
     EventodivComponent,
     SetTagsComponent,
+    CriarEventoComponent,
   ],
   imports: [
     BrowserModule,

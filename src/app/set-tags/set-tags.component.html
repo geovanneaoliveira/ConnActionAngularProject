@@ -1,6 +1,11 @@
-<div class="displayTags" *ngFor="let tag of tags">
-    <form [formGroup]="tagsForm" (ngSubmit)="setUserTags()">
-        <label for="tag">{{tag.nome}}</label>
-        <input type="checkbox" name="tag" id="tag" placeholder="tag">
-    </form>
+<div class="displayTags">
+    <form [formGroup]="tagsForm" (ngSubmit)="setUserTags()" novalidate>
+        <div *ngFor="let tag of tags; let i=index">
+          <label>
+            <input type="checkbox" [value]="tag.id" (change)="onCheckboxChange($event)" />
+            {{tag.nome}}
+          </label>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
 </div>
