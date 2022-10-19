@@ -24,6 +24,8 @@ import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.co
 import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { CriarOrgComponent } from './criar-org/criar-org.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 
 
 
@@ -45,7 +47,9 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
     AtualizarPerfilComponent,
     ContribuicaoComponent,
     SetTagsComponent,
-    CriarEventoComponent
+    CriarEventoComponent,
+    CriarOrgComponent,
+    CriarContribuicaoComponent,
   ],
   imports: [
     BrowserModule,

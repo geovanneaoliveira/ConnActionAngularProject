@@ -1,0 +1,10 @@
+<form [formGroup]="orgForm" (ngSubmit)="criarOrg()" style="display: flex; flex-direction:column; width:20%;">
+    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
+    <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
+    <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+        <div *ngIf="f.nome.errors">Nome em branco!</div>
+    </div>
+    <input type="text" name="descricao" id="descricao" formControlName="descricao" placeholder="DESCRIÇÃO">
+    <input type="text" name="CNPJ" id="CNPJ" formControlName="cnpj" placeholder="CNPJ">
+    <button type="submit" [disabled]="!orgForm.valid">Criar</button>
+</form>
