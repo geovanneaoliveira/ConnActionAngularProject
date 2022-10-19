@@ -9,8 +9,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
+import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
-
 
 const routes: Routes = [
   {
@@ -40,10 +40,14 @@ const routes: Routes = [
 
   {
     path: 'menu',
-    component: MenuComponentComponent
+    component: SetTagsComponent
   },
 
 
+  {
+    path: 'settags',
+    component: SetTagsComponent
+  },
   {
     path: '**',
     redirectTo: '/'

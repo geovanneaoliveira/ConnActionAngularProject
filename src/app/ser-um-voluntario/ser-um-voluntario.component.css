@@ -8,8 +8,8 @@ body {
     width: 100vw;
     height: 68vh;
     background-image: url(../../assets/fotos/praia.png);
-    display: inline-block
-    
+    display: inline-block;
+    background-repeat: no-repeat;
 }
 
 .titulo{
@@ -20,7 +20,6 @@ body {
     align-items: center;
     align-items: flex-end;
     justify-content:left;
-    text-align : center;
     margin-left: 55px;
     margin-top: 150px;
 

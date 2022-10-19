@@ -22,6 +22,8 @@ import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
 import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
+import { SetTagsComponent } from './set-tags/set-tags.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 
 
 
@@ -42,7 +44,8 @@ import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
     MenuComponentComponent,
     AtualizarPerfilComponent,
     ContribuicaoComponent,
-
+    SetTagsComponent,
+    CriarEventoComponent
   ],
   imports: [
     BrowserModule,

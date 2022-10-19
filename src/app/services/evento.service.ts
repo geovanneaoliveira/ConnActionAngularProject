@@ -12,5 +12,14 @@ export class EventoService {
   getAll = () => {
     return this.http.get<Evento[]>('/evento');
   }
+
+  criarEvento = () => {
+    this.http.post<any>('/evento/criar',{}).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (error) => console.log(error),
+    });;
+  }
 }
 

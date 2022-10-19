@@ -63,18 +63,15 @@ button.cadastrar:hover {
     transition: 0.5s;
 }
 
+.border-gradient-purple-inp {
+    border-image-source: linear-gradient(to right, rgba(217,88,255,1), rgba(0,126,250,1));
+    transition: 0.5s;
+}
+
 .border-gradient-purple:hover{
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-}
-
-input[type=text]:hover{
-    opacity: 1;
-}
-
-input[type=password]:hover{
-    opacity: 1;
 }
 
 .cadastrar {
