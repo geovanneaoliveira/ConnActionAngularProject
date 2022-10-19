@@ -21,6 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { CriarOrgComponent } from './criar-org/criar-org.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
     EventodivComponent,
     SetTagsComponent,
     CriarEventoComponent,
+    CriarOrgComponent,
+    CriarContribuicaoComponent,
   ],
   imports: [
     BrowserModule,
