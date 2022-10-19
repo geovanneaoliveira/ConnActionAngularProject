@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OiComponent } from './oi.component';
+import { ContribuicaoComponent } from './contribuicao.component';
 
-describe('OiComponent', () => {
-  let component: OiComponent;
-  let fixture: ComponentFixture<OiComponent>;
+describe('ContribuicaoComponent', () => {
+  let component: ContribuicaoComponent;
+  let fixture: ComponentFixture<ContribuicaoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OiComponent ]
+      declarations: [ ContribuicaoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OiComponent);
+    fixture = TestBed.createComponent(ContribuicaoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

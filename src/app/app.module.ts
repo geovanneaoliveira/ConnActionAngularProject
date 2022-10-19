@@ -13,14 +13,18 @@ import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
-import { OiComponent } from './oi/oi.component';
+
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
+import { MenuComponentComponent } from './menu-component/menu-component.component';
+import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
+import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+
 
 
 @NgModule({
@@ -33,13 +37,15 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
     CustomTextInputComponent,
     SerUmVoluntarioComponent,
     LandingPageComponent,
-    OiComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
     DashboardComponent,
     EventodivComponent,
+    MenuComponentComponent,
+    AtualizarPerfilComponent,
+    ContribuicaoComponent,
     SetTagsComponent,
-    CriarEventoComponent,
+    CriarEventoComponent
   ],
   imports: [
     BrowserModule,
