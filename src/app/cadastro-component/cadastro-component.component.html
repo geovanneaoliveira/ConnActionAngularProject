@@ -7,7 +7,7 @@
                     </div>        
                 </div>
                 <form [formGroup]="cadastroForm" class="cadastro-block" (ngSubmit)="cadastrar()">
-                    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
+                    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="fotoPerfil" (change)="fotoPerfil($event)"/>
                     <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
                     <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
                         <div *ngIf="f.nome.errors">Nome em branco!</div>

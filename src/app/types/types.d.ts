@@ -21,13 +21,12 @@ export type Evento = {
 }
 
 export type Cadastro = {
-    nome : string,
-    sobrenome : string,
-    telefone: string,
-    cpf : string,
-    login : string,
-    senha : string,
-    caminhoImagem : string, 
+    nome: string,
+    sobrenome : string | null | undefined,
+    telefone: string | null | undefined,
+    cpf : string | null | undefined,
+    login : string | null | undefined,
+    senha : string | null | undefined,
 }
 
 export type Contribuicao = {
