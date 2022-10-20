@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './helpers/auth.guard';
@@ -42,16 +43,18 @@ const routes: Routes = [
     path: 'menu',
     component: SetTagsComponent
   },
-
-
   {
     path: 'settags',
     component: SetTagsComponent
   },
   {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
+  },
+  {
     path: '**',
     redirectTo: '/'
-  }
+  },
 ];
 
 @NgModule({
