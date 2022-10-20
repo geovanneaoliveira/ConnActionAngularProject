@@ -13,10 +13,13 @@ import { Cadastro } from '../types/types';
 export class CadastroComponentComponent {
 
   cadastroForm;
+<<<<<<< HEAD
+=======
   submitted = false;
   succes = false;
   foto: any;
 
+>>>>>>> b543503784cb1d632f06904090d3add7f5bfb1e2
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
