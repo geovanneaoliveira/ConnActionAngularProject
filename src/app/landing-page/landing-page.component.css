@@ -1,4 +1,58 @@
-.landingfoto {
-    max-width: 100%;
-    max-height: auto;
+
+.page{
+    background-image: url(../../assets/fotos/maos.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bemvindo{
+    font-family: 'Poppins';
+    font-size: 90px;
+    color: white; 
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    justify-content:left;
+    text-align : left;
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.sub{
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: white;
+    display: block;
+    text-align:left;
+    justify-content: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+}
+
+#botao{
+    text-decoration: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 100px;
+    color: rgb(35, 7, 136);
+}
+
+.linha{
+    display: inline;
+}
+
+#img{
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    margin-top: 60px;
 }

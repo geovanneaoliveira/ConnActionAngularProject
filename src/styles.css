@@ -7,7 +7,9 @@
 }
 
 .back {
-    background: linear-gradient(to right, blue,purple);
+    background: rgb(251, 236, 255);
+    background: linear-gradient(54deg, rgb(251, 236, 255) 31%, rgb(203, 227, 253) 100%);
+    min-height: 100vmin;
 }
 
 /* scrollbar */

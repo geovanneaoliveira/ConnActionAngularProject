@@ -8,13 +8,33 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
 import { TesteComponent } from './teste/teste.component';
+=======
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventodivComponent } from './eventodiv/eventodiv.component';
+import { MenuComponentComponent } from './menu-component/menu-component.component';
+import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
+import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
+import { SetTagsComponent } from './set-tags/set-tags.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { CriarOrgComponent } from './criar-org/criar-org.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
+import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+
 
 
 
@@ -26,12 +46,28 @@ import { TesteComponent } from './teste/teste.component';
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    SerUmVoluntarioComponent,
     LandingPageComponent,
+
     NavbarComponent,
     QuemSomosComponent,
     FazerContribuicaoComponent,
     VagasOrganizacaoComponent,
     TesteComponent
+
+    SouUmaOngComponent,
+    CadastroOngComponentComponent,
+    DashboardComponent,
+    EventodivComponent,
+    MenuComponentComponent,
+    AtualizarPerfilComponent,
+    ContribuicaoComponent,
+    SetTagsComponent,
+    CriarEventoComponent,
+    CriarOrgComponent,
+    CriarContribuicaoComponent,
+    MinhasOrgsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +75,10 @@ import { TesteComponent } from './teste/teste.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
