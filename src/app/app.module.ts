@@ -26,6 +26,7 @@ import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
+import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 
 
 
@@ -50,6 +51,7 @@ import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribui
     CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
+    MinhasOrgsComponent,
   ],
   imports: [
     BrowserModule,

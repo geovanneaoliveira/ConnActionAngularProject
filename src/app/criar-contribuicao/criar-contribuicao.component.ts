@@ -30,7 +30,7 @@ export class CriarContribuicaoComponent implements OnInit {
   }
 
   criarContribuicao = () => {
-    
+
   }
 
 }
