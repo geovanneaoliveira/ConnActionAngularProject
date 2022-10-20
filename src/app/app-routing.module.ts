@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { TesteComponent } from './teste/teste.component';
+import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
 
 const routes: Routes = [
   {
@@ -21,8 +24,21 @@ const routes: Routes = [
   },
   {
     path: 'quem-somos',
-    component:QuemSomosComponent
+    component: QuemSomosComponent
+  },
+  {
+    path: 'contribuicoes',
+    component: FazerContribuicaoComponent
   }
+  ,
+  {
+  path:'vagas-organizacao',
+  component:VagasOrganizacaoComponent
+  },
+  {
+    path:'teste',
+    component:TesteComponent
+    }
 ];
 
 @NgModule({

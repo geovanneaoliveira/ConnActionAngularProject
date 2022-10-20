@@ -12,6 +12,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
+import { TesteComponent } from './teste/teste.component';
+
 
 
 @NgModule({
@@ -24,7 +28,10 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     CustomTextInputComponent,
     LandingPageComponent,
     NavbarComponent,
-    QuemSomosComponent
+    QuemSomosComponent,
+    FazerContribuicaoComponent,
+    VagasOrganizacaoComponent,
+    TesteComponent
   ],
   imports: [
     BrowserModule,

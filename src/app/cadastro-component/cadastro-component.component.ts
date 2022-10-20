@@ -9,7 +9,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CadastroComponentComponent {
 
   cadastroForm;
-
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
