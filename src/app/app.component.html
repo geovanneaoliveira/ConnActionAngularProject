@@ -22,7 +22,7 @@
                   <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/oi" aria-current="page" *ngIf="this.user != null">Oi</a>
+                  <a class="nav-link" *ngIf="this.user != null"  routerLink="/menu" aria-current="page">Menu</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" *ngIf="this.user != null"routerLink="dashboard" aria-current="page">Dashboard</a>
