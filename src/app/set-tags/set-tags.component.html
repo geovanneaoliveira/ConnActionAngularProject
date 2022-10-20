@@ -14,21 +14,17 @@
       <div class="tags"><ul class="list-group">
         <div class="displayTags">
           <form [formGroup]="tagsForm" (ngSubmit)="setUserTags()" novalidate>
-              <div *ngFor="let tag of tags; let i=index">
-                <label class="list-group-item">
-                  <input  type="checkbox" [value]="tag.id" (change)="onCheckboxChange($event)" />
-                  {{tag.nome}}
-                </label>
-              </div>
-              <input type="submit" value="Submit">
+            <div class="form-horizontal">
+              <div class="list-group-item" *ngFor="let tag of tags; let i=index">
+                  <label >
+                    <input  type="checkbox" [value]="tag.id" (change)="onCheckboxChange($event)" />
+                    {{tag.nome}}
+                  </label>
+                </div>
+              </div>  
+              <input id="salvar" type="submit" value="Salvar">
             </form>
       </div>
-          
-
-
-          
-
-
         </ul></div>
   </div>
 </div>
