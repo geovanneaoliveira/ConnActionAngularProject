@@ -15,7 +15,7 @@ export class MinhasOrgsComponent implements OnInit {
   constructor(private organizacaoService: OrganizacaoService) { }
 
   ngOnInit(): void {
-    this.organizacoes = this.organizacaoService.orgsPorSupervisor();
+    // this.organizacoes = this.organizacaoService.orgsPorSupervisor();
   }
 
 }
