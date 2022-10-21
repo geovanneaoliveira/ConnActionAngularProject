@@ -65,7 +65,7 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
     SetTagsEventoComponent,
     MeusEventosComponent,
     MinhasContribuicoesComponent,
-    HistoricoComponent
+    HistoricoComponent,
     SideMenuComponent,
     SupervisorComponent,
     OrgSupervisorComponent
