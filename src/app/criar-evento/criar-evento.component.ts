@@ -13,6 +13,10 @@ export class CriarEventoComponent implements OnInit {
   eventoForm;
   submitted = false;
 
+  nome="CriarEVENTO";
+  classesTextEvento='border-gradient border-gradient-purple';
+  
+
   constructor(private eventoService:EventoService, private formBuilder:FormBuilder, private http:HttpClient) { 
     this.eventoForm = this.formBuilder.group({
       nome:['', Validators.required],
@@ -34,5 +38,6 @@ export class CriarEventoComponent implements OnInit {
         error: (error) => console.log(error),
       });
   }
+  
 
 }

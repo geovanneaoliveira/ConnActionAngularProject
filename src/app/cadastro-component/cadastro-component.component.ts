@@ -16,7 +16,7 @@ export class CadastroComponentComponent {
 
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
-  classesCadastro='btn-size submit';
+  classesCadastro='btn-size button';
   returnUrl: string = '/setTags';
 
   constructor(private formBuilder:FormBuilder, private http: HttpClient, private router:Router){

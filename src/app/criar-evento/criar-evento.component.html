@@ -1,10 +1,28 @@
-<div>
-   <div>
+<div class="um">
     <div>
-        <div>
-            <form [formGroup]="eventoForm" class=""></form>
-            <input type="text">
+        <ul class="menu">
+            <a class="item" href="#">Atualizar meu perfil</a>
+        <a class="item active" href="#" aria-current="true">Meu Histórico</a>
+        <a class="item" href="#">Minhas Tags de Interesse</a>
+        <a class="item" href="#">Fazer uma Contribuição</a>
+        <a class="item" href="#">Vagas de voluntariado</a>
+
+        </ul>
+    </div>
+    <div>
+        <div class="card">
+            <h1 class="titulo">Criar Evento</h1>
+            <h2 class="subtitulo">Preencha as informações para criar um evento</h2>
+            <form  [formGroup]="eventoForm" class="form">
+            <input type="textEvento" name="NomeEvento" id="nomeEvento" formControlName="nome" [ngClass]="classesTextEvento"  placeholder="Nome Do Evento">
+            <input type="textEvento" name="datavento" id="dataEvento" formControlName="data" [ngClass]="classesTextEvento"  placeholder="Data Do Evento">
+            <button type="submit" class="button" >Criar Evento</button>
+        </form>
         </div>
     </div>
-   </div>
 </div>
+            
+            
+        
+ 
+  
