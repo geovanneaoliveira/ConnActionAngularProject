@@ -17,6 +17,9 @@ import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { HistoricoComponent } from './historico/historico.component';
+import { SupervisorComponent } from './supervisor/supervisor.component';
+import { AuthGuard } from './helpers/auth.guard';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 
 
 const routes: Routes = [
@@ -48,34 +51,45 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent
   },
-
   {
     path: 'menu',
-    component: MenuComponent
-  },
-  {
-    path: 'minhasorgs',
-    component: MinhasOrgsComponent
+    component: MenuComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'criarEvento',
-    component: CriarEventoComponent
+    component: CriarEventoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'tags',
-    component: SetTagsComponent
+    component: SetTagsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'vagas-organizacao',
-    component:VagasOrganizacaoComponent
+    component: VagasOrganizacaoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'teste',
-      component:TesteComponent
+    component: TesteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'atualizarCadastro',
-    component: AtualizarCadastroComponent
+    component: AtualizarCadastroComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'supervisor',
+    component: SupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orgsupervisor',
+    component: OrgSupervisorComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'historico',

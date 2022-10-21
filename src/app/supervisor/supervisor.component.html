@@ -1,0 +1,20 @@
+<div class="d-flex flex-column">
+<h3>Minhas Organizações</h3>
+<div class="d-flex flex-row flex-wrap">
+<div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
+    <div class="card shadow-sm org">
+        <img class="card-img-top imgFit" [src]="minhaOrg.orgFoto">
+        <div class="card-body">
+            <h2 class="txtover">{{minhaOrg.nomeOrg}}</h2>
+          <div class="d-flex">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gerenciarOrg(minhaOrg.nomeOrg)">Gerenciar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+<h3>Criar Organização</h3>
+<app-criar-org></app-criar-org>
+</div>

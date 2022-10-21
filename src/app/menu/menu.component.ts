@@ -1,6 +1,4 @@
-import {RouterModule, Routes} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 import { AuthenticationService } from '../helpers/auth.service';
 
@@ -11,15 +9,12 @@ import { AuthenticationService } from '../helpers/auth.service';
 })
 
 export class MenuComponent implements OnInit {
-
   name: String;
+  
   constructor(private auth:AuthenticationService) {
-  this.name = this.auth.userValue.nome
-}
+    this.name = this.auth.userValue.nome;
+  }
 
-
-ngOnInit(): void {
-
-}
+  ngOnInit(): void { }
 
 }
