@@ -20,7 +20,7 @@ export class CadastroComponentComponent {
 
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
-  classesCadastro='btn-size submit';
+  classesCadastro='btn-size button';
   returnUrl: string = '/setTags';
   base64:any;
 

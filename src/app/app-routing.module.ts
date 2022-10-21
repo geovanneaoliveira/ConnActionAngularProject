@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
-
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TesteComponent } from './teste/teste.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
@@ -55,6 +57,10 @@ const routes: Routes = [
     component: MinhasOrgsComponent
   },
   {
+    path: 'criarEvento',
+    component: CriarEventoComponent
+  },
+  {
     path: 'tags',
     component: SetTagsComponent
   },
@@ -64,12 +70,16 @@ const routes: Routes = [
   },
   {
     path:'teste',
-    component:TesteComponent
+      component:TesteComponent
+  },
+  {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
   },
   {
     path: '**',
     redirectTo: '/'
-  }
+  },
 ];
 
 @NgModule({
