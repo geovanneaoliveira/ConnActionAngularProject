@@ -10,17 +10,11 @@ import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-<<<<<<< HEAD
-import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-import { TesteComponent } from './teste/teste.component';
-=======
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
-
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
@@ -34,6 +28,7 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { TesteComponent } from './teste/teste.component';
 
 
 
@@ -48,13 +43,10 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
     CustomTextInputComponent,
     SerUmVoluntarioComponent,
     LandingPageComponent,
-
-    NavbarComponent,
     QuemSomosComponent,
     FazerContribuicaoComponent,
     VagasOrganizacaoComponent,
-    TesteComponent
-
+    TesteComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
     DashboardComponent,
