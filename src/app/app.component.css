@@ -2,8 +2,12 @@
     margin: 0;
 }
 
+
 .back-color {
     background-color: rgb(124, 124, 233);
 }
 
-
+.dashboardList {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,7 +1,9 @@
 export type User = {
     id: number;
+    nome: string;
     login: string;
     senha: string;
+    fotoPerfil: string;
     authdata?: string;
 }
 
@@ -21,13 +23,13 @@ export type Evento = {
 }
 
 export type Cadastro = {
-    nome : string,
+    nome: string,
     sobrenome : string,
-    telefone: string,
+    telefone: string
     cpf : string,
     login : string,
     senha : string,
-    caminhoImagem : string, 
+    fotoPerfil: string | ArrayBuffer | null
 }
 
 export type Contribuicao = {

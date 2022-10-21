@@ -36,10 +36,11 @@ margin-left: 16px;
     /* display: inline-flex; 
     flex-direction: row; */
     width: 800px;
-    height: 600px;
+    height: 550px;
     background-color: white;
     border-radius: 10px;
     margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
@@ -49,6 +50,7 @@ margin-left: 16px;
     margin-top: 40px;
     margin-left: 40px;
     margin-right: 50px;
+    color: rgb(124, 124, 233);
 
 }
 
@@ -61,33 +63,44 @@ margin-left: 16px;
 }
 
 
-
-.list-group{
-    border-radius: 22px;
-    display: flex;
-    flex-direction: row;    
-}
-
 .list-group-item{
+    color: black;
     border-radius: 22px;
     margin: 5px;
+    background-color: rgb(218, 206, 235);
     display: flex;
-
-    background-color: rgb(201, 185, 224);
-
-    
+    flex-wrap: wrap;
+    flex-direction: row;
 }
+
+.list-group {
+    list-style:none;
+    display: flex;
+}
+
+.form-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
 
 .tags{
-display: flex;
-
-margin-left: 30px;
-/* margin-right: 50px; */
-margin-top: 40px;
+    margin-top: 40px;
+    display: flex;
 
 
 }
 
-/* ul.list-group{
-    margin-right: 50px;
-} */
+#salvar{
+    margin-top: 25px;
+    margin-left: 50px;
+    background-color: rgb(124, 124, 233);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+
+}
+
+
