@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { OrganizacaoService } from '../services/organizacao.service';
+import { Organizacao } from '../types/types';
 
 @Component({
   selector: 'app-minhas-orgs',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinhasOrgsComponent implements OnInit {
 
-  constructor() { }
+  organizacoes: Organizacao[] = [];
+
+  constructor(private organizacaoService: OrganizacaoService) { }
 
   ngOnInit(): void {
+    this.organizacaoService.orgsPorSupervisor().subscribe(organizacoes => {
+      this.organizacoes = organizacoes;
+    });
   }
 
 }
