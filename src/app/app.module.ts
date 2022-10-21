@@ -16,16 +16,14 @@ import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao
 import { TesteComponent } from './teste/teste.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
-
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
-import { MenuComponentComponent } from './menu-component/menu-component.component';
-import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
@@ -33,7 +31,10 @@ import { SetTagsEventoComponent } from './set-tags-evento/set-tags-evento.compon
 import { MenuComponent } from './menu/menu.component';
 import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
-
+import { HistoricoComponent } from './historico/historico.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { SupervisorComponent } from './supervisor/supervisor.component';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 
 @NgModule({
   declarations: [
@@ -54,17 +55,23 @@ import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-cont
     DashboardComponent,
     EventodivComponent,
     MenuComponent,
-    AtualizarPerfilComponent,
     SetTagsComponent,
+    CriarEventoComponent,
+    AtualizarCadastroComponent,
     CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
     MinhasOrgsComponent,
-
     SetTagsEventoComponent,
-
     MeusEventosComponent,
-    MinhasContribuicoesComponent
+    MinhasContribuicoesComponent,
+    SetTagsEventoComponent,
+    MeusEventosComponent,
+    MinhasContribuicoesComponent,
+    HistoricoComponent,
+    SideMenuComponent,
+    SupervisorComponent,
+    OrgSupervisorComponent
   ],
   imports: [
     BrowserModule,

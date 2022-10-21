@@ -1,3 +1,8 @@
+.um{
+    display: flex;
+    flex-direction: row;
+}
+
 .menu{
 
     background-color: white;
@@ -12,11 +17,10 @@
 .item{
     font-size: 18px;
     padding-top: 10px;
-    padding-bottom: 10px;
+padding-bottom: 10px;
     text-decoration: none;
     color: black;
     display: block;
-    justify-items: center;
-    margin-left: 16px;
-
+justify-items: center;
+margin-left: 16px;
 }

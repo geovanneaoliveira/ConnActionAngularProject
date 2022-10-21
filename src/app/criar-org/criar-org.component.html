@@ -1,5 +1,5 @@
 <form [formGroup]="orgForm" (ngSubmit)="criarOrg()" style="display: flex; flex-direction:column; width:20%;">
-    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
+    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="orgFoto" (change)="fotoOrg($event)"/>
     <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
     <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
         <div *ngIf="f.nome.errors">Nome em branco!</div>
