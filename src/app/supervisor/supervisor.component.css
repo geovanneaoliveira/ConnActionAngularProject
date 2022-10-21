@@ -1,0 +1,7 @@
+.org {
+    max-width: 20vw;
+}
+
+.imgFit {
+    object-fit: cover;
+}

@@ -14,7 +14,8 @@ export class CriarOrgComponent implements OnInit {
 
   submitted=false;
   orgForm;
-  organizacao: any;
+  organizacao!: Organizacao;
+  base64:any;
 
   constructor(private formBuiler:FormBuilder, private organizacaoService:OrganizacaoService, private auth:AuthenticationService, private http:HttpClient) {
     this.orgForm = formBuiler.group({
@@ -34,15 +35,26 @@ export class CriarOrgComponent implements OnInit {
   }
 
   criarOrg = () => {
-    this.organizacao = this.orgForm.value;
     this.submitted = true;
-    this.http.post<any>('/org/criar', this.organizacao as Organizacao)
+    this.organizacao = this.orgForm.value as Organizacao;
+    this.organizacao.orgFoto = this.base64;
+    this.http.post<any>('/org/criar', this.organizacao)
       .subscribe({
         next: (response) => {
           console.log(response);
         },
         error: (error) => console.log(error),
       });
+  }
+
+  fotoOrg = (event:any) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.base64 = reader.result;
+      // (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url('+this.base64+')';
+    };
   }
 
 }
