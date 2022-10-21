@@ -16,6 +16,7 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { HistoricoComponent } from './historico/historico.component';
 
 
 const routes: Routes = [
@@ -75,6 +76,14 @@ const routes: Routes = [
   {
     path: 'atualizarCadastro',
     component: AtualizarCadastroComponent
+  },
+  {
+    path: 'historico',
+    component: HistoricoComponent
+  },
+  {
+    path: 'contribuicao',
+    component: FazerContribuicaoComponent
   },
   {
     path: '**',

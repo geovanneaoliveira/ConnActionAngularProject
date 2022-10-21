@@ -33,6 +33,7 @@ import { SetTagsEventoComponent } from './set-tags-evento/set-tags-evento.compon
 import { MenuComponent } from './menu/menu.component';
 import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
+import { HistoricoComponent } from './historico/historico.component';
 
 @NgModule({
   declarations: [
@@ -60,11 +61,11 @@ import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-cont
     CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
-    MinhasOrgsComponent
     MinhasOrgsComponent,
     SetTagsEventoComponent,
     MeusEventosComponent,
-    MinhasContribuicoesComponent
+    MinhasContribuicoesComponent,
+    HistoricoComponent
   ],
   imports: [
     BrowserModule,

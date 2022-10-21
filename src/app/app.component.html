@@ -10,9 +10,6 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" *ngIf="this.user != null"  routerLink="/atualizarCadastro">TesteLari</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" aria-current="page" *ngIf="this.user == null">Quem somos?</a>
                 </li>
                 <li class="nav-item">
@@ -41,15 +38,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" *ngIf="this.user != null" (click)="logout()">Logout</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/vagas-organizacao">teste vagas organização</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/teste">teste</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/criarEvento" *ngIf="this.user != null" >TesteAna</a>
                 </li>
               </ul>
             </div>
