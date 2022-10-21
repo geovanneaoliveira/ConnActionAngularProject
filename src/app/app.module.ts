@@ -21,12 +21,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
-import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
+import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
 
 
 
@@ -46,12 +47,13 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
     EventodivComponent,
     MenuComponentComponent,
     AtualizarPerfilComponent,
-    ContribuicaoComponent,
     SetTagsComponent,
     CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
     MinhasOrgsComponent,
+    MeusEventosComponent,
+    MinhasContribuicoesComponent,
   ],
   imports: [
     BrowserModule,

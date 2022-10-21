@@ -16,12 +16,13 @@ export class CadastroComponentComponent {
   submitted = false;
   succes = false;
   foto: any;
+  cadastro!: Cadastro;
 
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
   returnUrl: string = '/setTags';
-  caminho: any | null;
+  base64:any;
 
   constructor(private formBuilder:FormBuilder, private http: HttpClient, private router:Router){
     this.cadastroForm = this.formBuilder.group({
@@ -40,12 +41,13 @@ export class CadastroComponentComponent {
   } 
 
   cadastrar() {
-    const cadastro: Cadastro = this.cadastroForm.value as Cadastro;
+    this.cadastro = this.cadastroForm.value as Cadastro;
+    this.cadastro.fotoPerfil = this.base64;
     this.submitted = true;
     if (this.cadastroForm.invalid) {
         return;
     }
-    this.http.post<any>('/pessoa/cadastro', cadastro)
+    this.http.post<any>('/pessoa/cadastro', this.cadastro)
       .subscribe({
         next: (response) => {
           console.log(response);
@@ -65,11 +67,9 @@ export class CadastroComponentComponent {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url('+reader.result+')'
-      console.log(reader.result);
-      this.cadastroForm.value.fotoPerfil = reader.result as string; 
+      this.base64 = reader.result;
+      (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url('+this.base64+')';
     };
-    this.foto = file;
   }
 
 }

@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AuthenticationService } from '../helpers/auth.service';
 import { Evento } from '../types/types';
 
 @Injectable({
@@ -7,7 +8,9 @@ import { Evento } from '../types/types';
 })
 export class EventoService {
 
-  constructor(private http: HttpClient) { }
+  userId:any;
+
+  constructor(private http: HttpClient, private auth:AuthenticationService) { }
 
   getAll = () => {
     return this.http.get<Evento[]>('/evento');
@@ -19,7 +22,14 @@ export class EventoService {
         console.log(response);
       },
       error: (error) => console.log(error),
-    });;
+    });
+  }
+
+  eventosUsuarioPresente = () => {
+    this.userId = this.auth.userValue.id;
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("idUsuario", this.userId);
+    return this.http.get<Evento[]>('/evento/porusuario', {params:queryParams});
   }
 }
 
