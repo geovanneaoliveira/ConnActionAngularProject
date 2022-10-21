@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TesteComponent } from './teste/teste.component';
@@ -64,16 +65,16 @@ const routes: Routes = [
     component: SetTagsComponent
   },
   {
-    path: 'atualizarCadastro',
-    component: AtualizarCadastroComponent
-  },
-  {
     path:'vagas-organizacao',
     component:VagasOrganizacaoComponent
   },
   {
     path:'teste',
-    component:TesteComponent
+      component:TesteComponent
+  },
+  {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
   },
   {
     path: '**',

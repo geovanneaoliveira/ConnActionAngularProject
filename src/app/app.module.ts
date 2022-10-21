@@ -16,7 +16,6 @@ import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao
 import { TesteComponent } from './teste/teste.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
-
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
