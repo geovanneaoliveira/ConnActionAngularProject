@@ -29,6 +29,7 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { SetTagsEventoComponent } from './set-tags-evento/set-tags-evento.component';
 import { MenuComponent } from './menu/menu.component';
 import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
@@ -58,6 +59,7 @@ import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-cont
     CriarOrgComponent,
     CriarContribuicaoComponent,
     MinhasOrgsComponent,
+    SetTagsEventoComponent,
     MeusEventosComponent,
     MinhasContribuicoesComponent
   ],
