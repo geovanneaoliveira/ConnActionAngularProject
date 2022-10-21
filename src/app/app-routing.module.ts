@@ -16,6 +16,7 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { HistoricoComponent } from './historico/historico.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
@@ -89,6 +90,14 @@ const routes: Routes = [
     path: 'orgsupervisor',
     component: OrgSupervisorComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'historico',
+    component: HistoricoComponent
+  },
+  {
+    path: 'contribuicao',
+    component: FazerContribuicaoComponent
   },
   {
     path: '**',

@@ -31,6 +31,7 @@ import { SetTagsEventoComponent } from './set-tags-evento/set-tags-evento.compon
 import { MenuComponent } from './menu/menu.component';
 import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
+import { HistoricoComponent } from './historico/historico.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
@@ -64,6 +65,7 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
     SetTagsEventoComponent,
     MeusEventosComponent,
     MinhasContribuicoesComponent,
+    HistoricoComponent
     SideMenuComponent,
     SupervisorComponent,
     OrgSupervisorComponent
