@@ -27,6 +27,7 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -44,7 +45,7 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
     CadastroOngComponentComponent,
     DashboardComponent,
     EventodivComponent,
-    MenuComponentComponent,
+    MenuComponent,
     AtualizarPerfilComponent,
     ContribuicaoComponent,
     SetTagsComponent,
