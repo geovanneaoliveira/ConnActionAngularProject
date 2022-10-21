@@ -10,10 +10,11 @@ import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
+import { TesteComponent } from './teste/teste.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
@@ -22,16 +23,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
 import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
-import { ContribuicaoComponent } from './contribuicao/contribuicao.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
-import { TesteComponent } from './teste/teste.component';
-
-
-
+import { SetTagsEventoComponent } from './set-tags-evento/set-tags-evento.component';
+import { MenuComponent } from './menu/menu.component';
+import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
+import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
 
 @NgModule({
   declarations: [
@@ -51,15 +52,19 @@ import { TesteComponent } from './teste/teste.component';
     CadastroOngComponentComponent,
     DashboardComponent,
     EventodivComponent,
-    MenuComponentComponent,
+    MenuComponent,
     AtualizarPerfilComponent,
-    ContribuicaoComponent,
     SetTagsComponent,
+    CriarEventoComponent,
+    AtualizarCadastroComponent,
     CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
+    MinhasOrgsComponent
     MinhasOrgsComponent,
-
+    SetTagsEventoComponent,
+    MeusEventosComponent,
+    MinhasContribuicoesComponent
   ],
   imports: [
     BrowserModule,
