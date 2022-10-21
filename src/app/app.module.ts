@@ -33,6 +33,7 @@ import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { SupervisorComponent } from './supervisor/supervisor.component';
     MeusEventosComponent,
     MinhasContribuicoesComponent,
     SideMenuComponent,
-    SupervisorComponent
+    SupervisorComponent,
+    OrgSupervisorComponent
   ],
   imports: [
     BrowserModule,

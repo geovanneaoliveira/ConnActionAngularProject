@@ -1,7 +1,23 @@
 .org {
-    max-width: 20vw;
+    width: 22vw;
+}
+
+h2 {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.txtover {
+    text-overflow: ellipsis;
 }
 
 .imgFit {
     object-fit: cover;
+    width: 22vw;
+    height: 22vw;
+}
+
+.margemorg {
+    margin-left: 2.5vw;
+    margin-bottom: 2vw;
 }

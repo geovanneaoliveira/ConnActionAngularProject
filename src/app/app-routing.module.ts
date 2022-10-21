@@ -18,6 +18,7 @@ import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 
 
 const routes: Routes = [
@@ -82,6 +83,11 @@ const routes: Routes = [
   {
     path: 'supervisor',
     component: SupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orgsupervisor',
+    component: OrgSupervisorComponent,
     canActivate: [AuthGuard]
   },
   {
