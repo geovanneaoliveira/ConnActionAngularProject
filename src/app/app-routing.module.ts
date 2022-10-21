@@ -36,7 +36,7 @@ const routes: Routes = [
     component: CadastroComponentComponent
   },
   {
-    path: 'quem-somos',
+    path: 'quemsomos',
     component: QuemSomosComponent
   },
   {
@@ -87,7 +87,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'orgsupervisor',
+    path: 'orgsupervisor/:id',
     component: OrgSupervisorComponent,
     canActivate: [AuthGuard]
   },

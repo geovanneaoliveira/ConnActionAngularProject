@@ -15,7 +15,7 @@ export type Tag = {
 export type Evento = {
     id: number;
     nome: string;
-    data: string;
+    data: Date;
     nomeOrganizacao: string;
     pessoasEvento: string[];
     tagsEvento: string[];
@@ -48,4 +48,8 @@ export type Organizacao = {
     nomeSupervisor: string;
     sobrenomeSupervisor: string;
     orgFoto: string;
+    cnpj: string;
+    eventos: Evento[];
+    contribuicoes: number;
+    tags: string[];
 }
