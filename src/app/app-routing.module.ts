@@ -15,6 +15,7 @@ import { AuthenticationService } from './helpers/auth.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { MenuComponentComponent } from './menu-component/menu-component.component';
+import { MenuComponent } from './menu/menu.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
@@ -53,14 +54,14 @@ const routes: Routes = [
 
   {
     path: 'menu',
-    component: SetTagsComponent
+    component: MenuComponent
   },
   {
     path: 'minhasorgs',
     component: MinhasOrgsComponent
   },
   {
-    path: 'settags',
+    path: 'tags',
     component: SetTagsComponent
   },
   {

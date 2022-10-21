@@ -31,11 +31,9 @@ import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { MenuComponent } from './menu/menu.component';
 import { MeusEventosComponent } from './meus-eventos/meus-eventos.component';
 import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-contribuicoes.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -58,7 +56,7 @@ import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-cont
     CadastroOngComponentComponent,
     DashboardComponent,
     EventodivComponent,
-    MenuComponentComponent,
+    MenuComponent,
     AtualizarPerfilComponent,
     SetTagsComponent,
     CriarEventoComponent,
