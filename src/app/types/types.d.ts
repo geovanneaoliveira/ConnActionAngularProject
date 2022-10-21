@@ -47,5 +47,5 @@ export type Organizacao = {
     descricao: string;
     nomeSupervisor: string;
     sobrenomeSupervisor: string;
-    caminhoImagem: string;
+    orgFoto: string;
 }

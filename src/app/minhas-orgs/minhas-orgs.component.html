@@ -1,6 +1,5 @@
 <!-- <h2>Organizacoes</h2>
 <div class="um">
-
     <div><ul class="menu">
         <a class="item" href="#">Atualizar meu perfil</a>
         <a class="item active" href="#" aria-current="true">Meu Histórico</a>
@@ -16,7 +15,6 @@
     Organizacao
     <li>{{organizacao.nomeSupervisor}} {{organizacao.sobrenomeSupervisor}}</li>
     <li>{{organizacao.nomeOrg}}</li>
-    <li>{{organizacao.caminhoImagem}}</li>
     <li>{{organizacao.descricao}}</li>
-</div> 
+    <img [src]="organizacao.orgFoto" alt="fotoorg">
 </div>
