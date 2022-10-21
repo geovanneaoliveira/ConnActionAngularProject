@@ -26,6 +26,7 @@ import { MenuComponentComponent } from './menu-component/menu-component.componen
 import { AtualizarPerfilComponent } from './atualizar-perfil/atualizar-perfil.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CriarOrgComponent } from './criar-org/criar-org.component';
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
@@ -56,8 +57,11 @@ import { MinhasContribuicoesComponent } from './minhas-contribuicoes/minhas-cont
     AtualizarPerfilComponent,
     SetTagsComponent,
     CriarEventoComponent,
+    AtualizarCadastroComponent,
+    CriarEventoComponent,
     CriarOrgComponent,
     CriarContribuicaoComponent,
+    MinhasOrgsComponent
     MinhasOrgsComponent,
     SetTagsEventoComponent,
     MeusEventosComponent,
