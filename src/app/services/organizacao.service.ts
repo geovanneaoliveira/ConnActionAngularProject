@@ -10,6 +10,7 @@ import { Organizacao } from '../types/types';
 export class OrganizacaoService implements OnInit{
   
   userId:any;
+  nomeOrg: any;
 
   constructor(private http:HttpClient, private auth:AuthenticationService) {}
   

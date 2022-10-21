@@ -28,7 +28,7 @@ export class LoginComponentComponent {
   ) { 
       // redirect to home if already logged in
       if (this.authenticationService.userValue) { 
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/menu']);
       }
   }
 
@@ -46,7 +46,7 @@ export class LoginComponentComponent {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate([this.returnUrl ?? '/dashboard']);
+                  this.router.navigate([this.returnUrl ?? '/menu']);
               },
               error => {
                   this.error = error;
