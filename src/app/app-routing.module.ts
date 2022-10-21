@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { TesteComponent } from './teste/teste.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
@@ -14,6 +16,10 @@ import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { HistoricoComponent } from './historico/historico.component';
+import { SupervisorComponent } from './supervisor/supervisor.component';
+import { AuthGuard } from './helpers/auth.guard';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 
 
 const routes: Routes = [
@@ -45,18 +51,20 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent
   },
-
   {
     path: 'menu',
-    component: MenuComponent
+    component: MenuComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'minhasorgs',
-    component: MinhasOrgsComponent
+    path: 'criarEvento',
+    component: CriarEventoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'tags',
-    component: SetTagsComponent
+    component: SetTagsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'atualizarCadastro',
@@ -64,11 +72,39 @@ const routes: Routes = [
   },
   {
     path:'vagas-organizacao',
-    component:VagasOrganizacaoComponent
+    component: VagasOrganizacaoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'teste',
     component:TesteComponent
+  },
+  {
+    component: TesteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'supervisor',
+    component: SupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orgsupervisor',
+    component: OrgSupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'historico',
+    component: HistoricoComponent
+  },
+  {
+    path: 'contribuicao',
+    component: FazerContribuicaoComponent
   },
   {
     path: '**',

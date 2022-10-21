@@ -8,7 +8,9 @@ import { Contribuicao } from '../types/types';
 })
 export class ContribuicaoService {
 
-  constructor(private http: HttpClient, public auth:AuthenticationService) { }
+  constructor(private http: HttpClient, public auth:AuthenticationService) {
+  }
+
 
   userId:any;
 
