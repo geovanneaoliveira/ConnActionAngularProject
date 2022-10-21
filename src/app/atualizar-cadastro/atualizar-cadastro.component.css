@@ -32,7 +32,7 @@
     /* display: inline-flex; 
     flex-direction: row; */
     width: 800px;
-    height: 600px;
+    height: 800px;
     background-color: white;
     border-radius: 10px;
     margin-top: 50px;
@@ -56,31 +56,16 @@
     margin-right: 50px;
 }
 
-
-/* blocks */
-
-.rot{
-    background: rgba(255, 255, 255, 0.575);
-    display: flex;
-    border-radius: 15px;
-    transform: rotate(-2deg);
-}
-
-.outter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px 80px;
-    border-radius: 15px;
-    background-color: white;
-    transform: rotate(2deg);
+.text {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
 }
 
 .cadastro-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -97,7 +82,7 @@ input[type=text]{
     padding: 10px;
     outline: none;
     caret-color: rgb(115, 62, 238);
-    width: 240px;
+    width: 600px;
 }
 
 .border-gradient {
@@ -141,7 +126,7 @@ input[type=text]{
 
 .profile-outter {
     border-radius: 100%;
-    position:relative;
+    position: relative;
     cursor: pointer;
     background: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
     display: table;

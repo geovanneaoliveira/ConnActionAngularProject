@@ -9,17 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./atualizar-cadastro.component.css']
 })
 export class AtualizarCadastroComponent {
-  cadastroForm;
+  atualizarForm;
   submitted = false;
   succes = false;
 
-  nome='CADASTRAR';
+  nome='ATUALIZAR';
   classesText='border-gradient border-gradient-purple';
   classesCadastro='btn-size submit';
   returnUrl: string = '/setTags';
 
   constructor(private formBuilder:FormBuilder, private http: HttpClient, private router:Router){
-    this.cadastroForm = this.formBuilder.group({
+    this.atualizarForm = this.formBuilder.group({
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
       telefone: ['', Validators.required],
@@ -31,15 +31,15 @@ export class AtualizarCadastroComponent {
   }
 
   get f() {
-    return this.cadastroForm.controls;
+    return this.atualizarForm.controls;
   } 
 
   cadastrar() {
     this.submitted = true;
-    if (this.cadastroForm.invalid) {
+    if (this.atualizarForm.invalid) {
         return;
     }
-    this.http.post<any>('/pessoa/cadastro', this.cadastroForm.value)
+    this.http.put<any>('/pessoa/atualizar-cadastro', this.atualizarForm.value)
       .subscribe({
         next: (response) => {
           console.log(response);
