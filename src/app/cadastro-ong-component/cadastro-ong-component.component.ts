@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CadastroOngComponentComponent {
 
-  cadastroOngForm
+  cadastroOngForm;
 
   nome='CADASTRAR';
   classesText='border-gradient border-gradient-purple';
