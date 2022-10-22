@@ -33,6 +33,7 @@ import { HistoricoComponent } from './historico/historico.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
     HistoricoComponent,
     SideMenuComponent,
     SupervisorComponent,
-    OrgSupervisorComponent
+    OrgSupervisorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
