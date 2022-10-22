@@ -64,6 +64,15 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'criarEvento',
+    component: CriarEventoComponent
+  },
+  {
+    path:'vagas-organizacao',
+    component: VagasOrganizacaoComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'atualizarCadastro',
     component: AtualizarCadastroComponent
   },
