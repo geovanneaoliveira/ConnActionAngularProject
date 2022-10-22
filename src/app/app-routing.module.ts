@@ -6,7 +6,6 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { TesteComponent } from './teste/teste.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -69,11 +68,6 @@ const routes: Routes = [
   {
     path:'vagas-organizacao',
     component: VagasOrganizacaoComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path:'teste',
-    component: TesteComponent,
     canActivate: [AuthGuard]
   },
   {
