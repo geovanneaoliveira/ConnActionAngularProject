@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
-import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
@@ -66,6 +66,10 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
+  },
+  {
     path:'vagas-organizacao',
     component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
@@ -91,7 +95,7 @@ const routes: Routes = [
   },
   {
     path: 'contribuicao',
-    component: FazerContribuicaoComponent
+    component: CriarContribuicaoComponent
   },
   {
     path: '**',
