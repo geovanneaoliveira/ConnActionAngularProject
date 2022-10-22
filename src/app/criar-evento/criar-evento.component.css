@@ -65,6 +65,7 @@ button{
 .um{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 /* titulos */

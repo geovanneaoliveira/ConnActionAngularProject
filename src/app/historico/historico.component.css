@@ -1,26 +1,43 @@
 .um{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
-
-.menu{
-
-    background-color: white;
-    width: 300px;
+.card{
+    border: none;
+    display: flex;
+    /* display: inline-flex; 
+    flex-direction: row; */
+    width: 800px;
+    /* height: 800px; */
+    background-color:white;
     border-radius: 10px;
-    margin-left: 15px;
     margin-top: 50px;
-    display: block;
-    margin-right: 80px;
+    margin-bottom: 15px;
+
 }
 
-.item{
-    font-size: 18px;
-    padding-top: 10px;
-padding-bottom: 10px;
-    text-decoration: none;
-    color: black;
+.titulo{
     display: block;
-justify-items: center;
-margin-left: 16px;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 50px;
+
+}
+
+.subtitulo {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.text {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 50px;
 }

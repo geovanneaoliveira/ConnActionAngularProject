@@ -1,10 +1,15 @@
-<div>
-    <ul class="menu">
-        <a class="item" >Atualizar meu perfil</a>
-        <a class="item" >Meu Histórico</a>
-        <a class="item" routerLink="/tags">Minhas Tags de Interesse</a>
-        <a class="item" >Fazer uma Contribuição</a>
-        <a class="item" >Vagas de voluntariado</a>
-        <a class="item" routerLink="/supervisor">Menu de Supervisor</a>
-    </ul>
-</div>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <a class="dropdown-item" routerLink="/atualizarCadastro">Atualizar Cadastro</a> 
+        <a class="dropdown-item" routerLink="/historico">Meu Histórico</a>
+        <a class="dropdown-item" routerLink="/tags">Minhas Tags de Interesse</a>
+        <a class="dropdown-item"routerLink="/contribuicao">Fazer uma Contribuição</a>
+        <a class="dropdown-item" routerLink="/vagas-organizacao">Vagas de voluntariado</a>
+        <a class="dropdown-item"routerLink="/supervisor">Menu de Supervisor</a>
+      </div>
+    </div>
+  </div>

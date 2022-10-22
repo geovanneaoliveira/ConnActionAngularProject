@@ -18,18 +18,6 @@
     margin-top: 140px;
 }
 
-.menu{
-    background-color: white;
-    width: 450px;
-    height: 500px;
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-top: 70px;
-    display: block;
-    margin-right: 60px;
-
-}
-
 .linha{
     display: inline-flex;
     flex-direction: row;
@@ -45,4 +33,12 @@
     justify-items: center;
     margin-left: 25px;
 
+}
+
+
+#img{
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    margin-top: 60px;
 }
