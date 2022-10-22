@@ -1,8 +1,20 @@
 <h2>Organizacoes</h2>
+<div class="um">
+    <div><ul class="menu">
+        <a class="item" href="#">Atualizar meu perfil</a>
+        <a class="item active" href="#" aria-current="true">Meu Histórico</a>
+       <a class="item" routerLink="/tags">Minhas Tags de Interesse</a>
+       <a class="item" href="#">Fazer uma Contribuição</a>
+       <a class="item" href="#">Vagas de voluntariado</a>
+      </ul>
+    </div>
+</div>
+
+<h2>Organizacoes</h2>
 <div *ngFor="let organizacao of organizacoes">
     Organizacao
     <li>{{organizacao.nomeSupervisor}} {{organizacao.sobrenomeSupervisor}}</li>
     <li>{{organizacao.nomeOrg}}</li>
-    <li>{{organizacao.caminhoImagem}}</li>
     <li>{{organizacao.descricao}}</li>
+    <img [src]="organizacao.orgFoto" alt="fotoorg">
 </div>

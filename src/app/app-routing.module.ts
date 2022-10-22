@@ -1,18 +1,24 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
+import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarEventoComponent } from './criar-evento/criar-evento.component';
+import { TesteComponent } from './teste/teste.component';
+import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AuthGuard } from './helpers/auth.guard';
-import { AuthenticationService } from './helpers/auth.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { MenuComponentComponent } from './menu-component/menu-component.component';
-import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { MenuComponent } from './menu/menu.component';
+import { HistoricoComponent } from './historico/historico.component';
+import { SupervisorComponent } from './supervisor/supervisor.component';
+import { AuthGuard } from './helpers/auth.guard';
+import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
+
 
 const routes: Routes = [
   {
@@ -29,7 +35,7 @@ const routes: Routes = [
   },
   {
     path: 'quem-somos',
-    component:QuemSomosComponent
+    component: QuemSomosComponent
   },
   {
     path: 'voluntariado',
@@ -43,18 +49,53 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent
   },
-
   {
     path: 'menu',
-    component: SetTagsComponent
+    component: MenuComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'minhasorgs',
-    component: MinhasOrgsComponent
+    path: 'criarEvento',
+    component: CriarEventoComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'settags',
-    component: SetTagsComponent
+    path: 'tags',
+    component: SetTagsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'vagas-organizacao',
+    component: VagasOrganizacaoComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'teste',
+    component: TesteComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'supervisor',
+    component: SupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orgsupervisor',
+    component: OrgSupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'historico',
+    component: HistoricoComponent
+  },
+  {
+    path: 'contribuicao',
+    component: FazerContribuicaoComponent
   },
   {
     path: '**',

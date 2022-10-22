@@ -1,0 +1,33 @@
+<div class="um">
+    <app-side-menu></app-side-menu>
+    <form [formGroup]="atualizarForm" class="cadastro-block" (ngSubmit)="cadastrar()">
+        <div class="card">
+            <h1 class="titulo">Atualizar meu Perfil</h1>
+            <h2 class="subtitulo">Atualize seu perfil a hora que quiser!</h2>
+            <h2 class="text">Altere sua foto de perfil:</h2>
+            <div class="cadastro">
+                <div>
+                    <div (click)="onClick()">
+                        <div class="profile-outter">
+                            <div id="profile"></div>
+                            <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+            <h2 class="text">Altere seus dados pessoais:</h2>
+            <div class="cadastro">
+                    <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
+                    <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+                        <div *ngIf="f.nome.errors">Nome em branco!</div>
+                    </div>
+                    <input type="text" name="sobrenome" id="sobrenome" formControlName="sobrenome" [ngClass]="classesText" placeholder="SOBRENOME">
+                    <input type="text" name="telefone" id="telefone" formControlName="telefone" [ngClass]="classesText" placeholder="TELEFONE">
+                    <input type="text" name="cpf" id="cpf" formControlName="cpf" [ngClass]="classesText" placeholder="CPF">
+                    <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText" placeholder="LOGIN">
+                    <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText" placeholder="SENHA">
+                    <button type="submit" [innerText]="nome" [ngClass]="classesCadastro" [disabled]="!atualizarForm.valid"></button>    
+            </div>
+        </div>
+    </form>
+</div>

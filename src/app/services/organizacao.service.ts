@@ -9,11 +9,10 @@ import { Organizacao } from '../types/types';
 })
 export class OrganizacaoService implements OnInit{
   
-  userId;
+  userId:any;
+  nomeOrg: any;
 
-  constructor(private http:HttpClient, private auth:AuthenticationService) {
-    this.userId = this.auth.userValue.id;
-  }
+  constructor(private http:HttpClient, private auth:AuthenticationService) {}
   
   ngOnInit(): void {
     
@@ -28,6 +27,7 @@ export class OrganizacaoService implements OnInit{
   }
 
   orgsPorSupervisor = () => {
+    this.userId = this.auth.userValue.id;
     let queryParams = new HttpParams();
     queryParams = queryParams.append("idSupervisor", this.userId);
     return this.http.get<Organizacao[]>('/org/porSupervisor', {params:queryParams});

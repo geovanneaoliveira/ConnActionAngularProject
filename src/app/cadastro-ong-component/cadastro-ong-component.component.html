@@ -1,15 +1,10 @@
 <div class="cadastro">
     <div class="rot">
         <div class="outter">
-            <!-- <div (click)="onClick()">
-                <div class="profile-outter">
-                    <div id="profile"></div>
-                </div>        
-            </div> -->
             <form [formGroup]="cadastroOngForm" class="cadastro-ong-block">
                 <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
                 <input type="text" name="descricao" id="descricao" formControlName="descricao" [ngClass]="classesText" placeholder="DESCRIÇÃO">
-                <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="caminhoImagem"/>
+                <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="ongFoto"/>
                 <input type="text" name="supervisor" id="supervisor" formControlName="supervisor" [ngClass]="classesText" placeholder="SUPERVISOR">
                 <input type="text" name="cnpj" id="cnpj" formControlName="cnpj" [ngClass]="classesText" placeholder="CNPJ">
                 <button type="submit" (click)="onSubmit()" [innerText]="nome" [ngClass]="classesCadastro"></button>

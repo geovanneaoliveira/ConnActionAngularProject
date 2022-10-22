@@ -1,0 +1,23 @@
+.btn{
+border: 0;
+padding: 10px 8px;
+background-color: #f6f6f6;
+color: black;
+}
+
+ #teste1{
+    background-color: #f6f6f6;
+}
+/* header{
+background-image: url(https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg);
+height: 300px;
+background-repeat: no-repeat;
+} */
+.container{
+align-items: center;
+}
+
+.fs-4{
+    font-size: 2em;
+    color: #f6f6f6;
+}

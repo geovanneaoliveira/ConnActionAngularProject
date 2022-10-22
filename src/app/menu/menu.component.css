@@ -1,0 +1,48 @@
+.page{
+    background-image: url(../../assets/fotos/maos.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bemvindo{
+    font-family: 'Poppins';
+    font-size:75px;
+    color: white; 
+    display: inline;
+    align-items: left;
+    margin-left: 28px;
+    margin-top: 140px;
+}
+
+.menu{
+    background-color: white;
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 70px;
+    display: block;
+    margin-right: 60px;
+
+}
+
+.linha{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.item{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    justify-items: center;
+    margin-left: 25px;
+
+}

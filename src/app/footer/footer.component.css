@@ -1,0 +1,55 @@
+.background3{
+    background-color:rgb(220, 221, 250) ;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.texto{
+    display: block;
+}
+
+.dentro{
+    font-family: 'Poppins';
+    color: rgb(15, 23, 97);
+    font-size: 38px;
+    /* display: inline-block; */
+    text-align: left;
+    margin-left: 70px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.facil{
+    font-family: 'Poppins';
+    color: hsl(234, 73%, 22%);
+    font-size: 23px;
+    margin-left: 70px;
+    margin-right: 210px;
+    /* display: inline-block; */
+    text-align: left;
+ /* justify-items: left; */
+
+}
+
+#logo{
+    display: inline;
+    width: 250px;
+    height: 250px;
+    float: right;
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.sociais{
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+
+#soc{
+    height: 47px;
+    width: 47px;
+    margin: 5px;
+}

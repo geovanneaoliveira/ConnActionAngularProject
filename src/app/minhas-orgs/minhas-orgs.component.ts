@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { OrganizacaoService } from '../services/organizacao.service';
 import { Organizacao } from '../types/types';
 
@@ -15,7 +14,9 @@ export class MinhasOrgsComponent implements OnInit {
   constructor(private organizacaoService: OrganizacaoService) { }
 
   ngOnInit(): void {
-    // this.organizacoes = this.organizacaoService.orgsPorSupervisor();
+    this.organizacaoService.orgsPorSupervisor().subscribe(organizacoes => {
+      this.organizacoes = organizacoes;
+    });
   }
 
 }
