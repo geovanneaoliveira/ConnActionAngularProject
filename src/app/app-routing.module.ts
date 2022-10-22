@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
-import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
-import { TesteComponent } from './teste/teste.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -34,7 +33,7 @@ const routes: Routes = [
     component: CadastroComponentComponent
   },
   {
-    path: 'quem-somos',
+    path: 'quemsomos',
     component: QuemSomosComponent
   },
   {
@@ -65,13 +64,12 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path:'vagas-organizacao',
-    component: VagasOrganizacaoComponent,
-    canActivate: [AuthGuard]
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
   },
   {
-    path:'teste',
-    component: TesteComponent,
+    path:'vagas-organizacao',
+    component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -85,7 +83,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'orgsupervisor',
+    path: 'orgsupervisor/:id',
     component: OrgSupervisorComponent,
     canActivate: [AuthGuard]
   },
@@ -95,7 +93,7 @@ const routes: Routes = [
   },
   {
     path: 'contribuicao',
-    component: FazerContribuicaoComponent
+    component: CriarContribuicaoComponent
   },
   {
     path: '**',

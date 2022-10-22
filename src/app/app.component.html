@@ -10,13 +10,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" *ngIf="this.user == null">Quem somos?</a>
+                  <a class="nav-link" routerLink="/quemsomos" aria-current="page" *ngIf="this.user == null">Quem somos?</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/voluntariado" >Quero me voluntariar!</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page">Todas as ONGs</a>
+                  <a class="nav-link" routerLink="/ong" aria-current="page">ONG</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>

@@ -13,7 +13,7 @@ export class SupervisorComponent implements OnInit {
 
   minhasOrgs: Organizacao[] = [];
 
-  constructor(private organizacaoService:OrganizacaoService, private router:Router, private orgSup:OrgSupervisorComponent) { }
+  constructor(private organizacaoService:OrganizacaoService, private router:Router) { }
 
   ngOnInit(): void {
     this.organizacaoService.orgsPorSupervisor().subscribe(organizacoes => {
@@ -21,9 +21,8 @@ export class SupervisorComponent implements OnInit {
     });
   }
   
-  gerenciarOrg = (nomeOrg:string) => {
-    this.organizacaoService.nomeOrg = nomeOrg;
-    this.router.navigateByUrl('/orgsupervisor');
+  gerenciarOrg = (org:Organizacao) => {
+    this.router.navigate([`orgsupervisor/${org.id}`]);
   }
 
 }
