@@ -1,29 +1,60 @@
-<div class="container">  
-    <main class="container">
-        <div class="col-md-6 px-0">
-          <img [src]="org.orgFoto" alt="logo" width="50%" height="50%">
-      </div>
- 
-      <div class="row g-5">
-        <div class="col-md-8">
-          
-          <article class="blog-post">
-            <h2 class="blog-post-title mb-1">Descrição</h2>
-            <p>{{org.descricao}}</p>
-            <hr>
-            <h2>Eventos</h2>
-          </article>
-    <div class="row mb-2" *ngFor="let evento of org.eventos">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">{{evento.nome}}</h3>
-              <div class="mb-1 text-muted">{{evento.data}}</div>
-              <p *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Gerenciar</button>
+<div class="container">
+  <div class="p-4 p-md-5 mb-4 rounded imgBanner">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
+      <img [src]="org.orgFoto" alt="logo" width="50%" height="50%">
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="">
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1">Descrição</h2>
+        <p>{{org.descricao}}</p>
+      </article>
+      <hr>
+      <h2>Eventos</h2>
+      <div class="d-flex flex-row flex-wrap justify-content-between">
+        <div class="d-flex flex-row margemorg justify-content-between" *ngFor="let evento of org.eventos">
+          <div class="card shadow-sm org">
+            <div class="card-body">
+              <div class="header-evento">
+              <h5 class="card-title txtover">{{evento.nome}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
+            </div>
+              <!-- <div class="d-flex flex-row flex-wrap">
+                <div id="tag-desse-evento" class="mb-2 txtover" *ngFor="let tag of evento.tagsEvento">
+                  <p>{{tag}}</p>
+                </div>
+              </div> -->
+              <div class="d-flex">
+                <div class="btn-group">
+                  <button type="button" class="botaoBorderGradient btnsize">Gerenciar</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="d-flex flex-row margemorg">
+          <div class="card shadow-sm org backcolor">
+            <div class="moresize d-flex">
+              <img class="card-img-top more" src="../../assets/fotos/more.png">
+            </div>
+            <div class="card-body">
+              <h2 class="txtover">Adicionar evento</h2>
+              <div class="d-flex">
+                <div class="btn-group">
+                  <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Adicionar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-      
+<app-criar-evento></app-criar-evento>

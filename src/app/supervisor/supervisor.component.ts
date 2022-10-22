@@ -25,4 +25,8 @@ export class SupervisorComponent implements OnInit {
     this.router.navigate([`orgsupervisor/${org.id}`]);
   }
 
+  adicionarOrg = () => {
+
+  }
+
 }
