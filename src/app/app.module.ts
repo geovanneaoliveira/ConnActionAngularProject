@@ -8,10 +8,12 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CustomPasswordInputComponent } from './custom-password-input/custom-password-input.component';
 import { CustomSubmitComponent } from './custom-submit/custom-submit.component';
 import { CustomTextInputComponent } from './custom-text-input/custom-text-input.component';
+import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -22,9 +24,21 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     CustomPasswordInputComponent,
     CustomSubmitComponent,
     CustomTextInputComponent,
+    SerUmVoluntarioComponent,
     LandingPageComponent,
-    NavbarComponent,
-    QuemSomosComponent
+    QuemSomosComponent,
+    SouUmaOngComponent,
+    CadastroOngComponentComponent,
+    DashboardComponent,
+    EventodivComponent,
+    MenuComponentComponent,
+    AtualizarPerfilComponent,
+    ContribuicaoComponent,
+    SetTagsComponent,
+    CriarEventoComponent,
+    CriarOrgComponent,
+    CriarContribuicaoComponent,
+    MinhasOrgsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +46,10 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
