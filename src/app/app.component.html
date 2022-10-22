@@ -16,7 +16,7 @@
                   <a class="nav-link" routerLink="/voluntariado" >Quero me voluntariar!</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/ong" aria-current="page">ONG</a>
+                  <a class="nav-link" routerLink="/ong">ONG</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>
@@ -33,15 +33,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/cadastrar" *ngIf="this.user == null">Cadastrar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/vagas-organizacao" *ngIf="this.user != null">teste vagas organização</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/teste" *ngIf="this.user != null">teste</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/criarEvento" *ngIf="this.user != null" >TesteAna</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" *ngIf="this.user != null" (click)="logout()">Logout</a>
