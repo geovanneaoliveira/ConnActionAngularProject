@@ -31,5 +31,11 @@ export class EventoService {
     queryParams = queryParams.append("idUsuario", this.userId);
     return this.http.get<Evento[]>('/evento/porusuario', {params:queryParams});
   }
+
+  eventosIdOrg = (idOrg:number) => {
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("idOrg", idOrg);
+    return this.http.get<Evento[]>('/evento/poridorg', {params:queryParams});
+  }
 }
 
