@@ -1,7 +1,10 @@
-<form [formGroup]="contribuicaoForm" (ngSubmit)="criarContribuicao()" style="display: flex; flex-direction:column; width:20%;">
-    <input type="number" name="valor" id="valor" formControlName="valor" placeholder="VALOR">
-    <div *ngIf="submitted && f.valor.errors" class="invalid-feedback">
-        <div *ngIf="f.valor.errors">Valor em branco!</div>
-    </div>
-    <button type="submit" [disabled]="!contribuicaoForm.valid">Doar</button>
-</form>
+<div class="um">
+    <app-side-menu></app-side-menu>
+    <form [formGroup]="contribuicaoForm" (ngSubmit)="criarContribuicao()" style="display: flex; flex-direction:column; width:20%;">
+        <input type="number" name="valor" id="valor" formControlName="valor" placeholder="VALOR">
+        <div *ngIf="submitted && f.valor.errors" class="invalid-feedback">
+            <div *ngIf="f.valor.errors">Valor em branco!</div>
+        </div>
+        <button type="submit" [disabled]="!contribuicaoForm.valid">Doar</button>
+    </form>
+</div>
