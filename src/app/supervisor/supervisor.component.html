@@ -1,4 +1,3 @@
-<div class="d-flex flex-column">
 <h3>Minhas Organizações</h3>
 <div class="d-flex flex-row flex-wrap">
 <div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
@@ -14,7 +13,21 @@
         </div>
       </div>
 </div>
+<div class="d-flex flex-row margemorg">
+  <div class="card shadow-sm org backcolor">
+    <div class="moresize d-flex">
+      <img class="card-img-top more" src="../../assets/fotos/more.png">
+    </div>
+      <div class="card-body">
+          <h2 class="txtover">Adicionar Organização</h2>
+        <div class="d-flex">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
-<h3>Criar Organização</h3>
+</div>
 <app-criar-org></app-criar-org>
-</div>
+<!-- Modal -->

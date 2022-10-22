@@ -1,4 +1,3 @@
-import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EventoService } from '../services/evento.service';

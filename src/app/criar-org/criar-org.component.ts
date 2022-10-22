@@ -42,6 +42,7 @@ export class CriarOrgComponent implements OnInit {
       .subscribe({
         next: (response) => {
           console.log(response);
+          window.location.reload();
         },
         error: (error) => console.log(error),
       });
