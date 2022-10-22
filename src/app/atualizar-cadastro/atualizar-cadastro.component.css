@@ -33,10 +33,11 @@
     /* display: inline-flex; 
     flex-direction: row; */
     width: 800px;
-    height: 800px;
+    height: 950px;
     background-color: white;
     border-radius: 10px;
     margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
@@ -80,7 +81,7 @@
 /* inputs */
 
 input[type=text]{
-    padding: 10px;
+    padding: 20px;
     outline: none;
     width: 600px;
 }
@@ -174,7 +175,7 @@ button.voltar:hover {
 button.submit {
     padding: 13px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 25%;
     background-image: linear-gradient(337deg, rgba(217,88,255,1) 38%, rgba(0,126,250,1) 100%);
     margin-top: 25px;
     text-transform: uppercase;
@@ -182,6 +183,7 @@ button.submit {
     transition: 0.5s;
     color: white;            
     border: 0;
+    border-radius: 20px;
 }
 
 button.submit:hover {

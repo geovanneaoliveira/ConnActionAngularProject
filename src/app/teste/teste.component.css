@@ -1,8 +1,51 @@
-.g-5, .gx-5 {
+.p-4{
+    background-color: rgb(255, 255, 255);
+}
+ .imgBanner{
+   background-color:rgb(171, 171, 252); 
+} 
+
+#tag-desse-evento{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+#btn-tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+#btn-participar{
+    margin-bottom: 1em;
+    background-color:rgb(211, 211, 255); 
+    border-radius: 18px;
+    padding: 8px;
+    color: #000000;
 
 }
 
-.col-md-8 {
-    flex: 0 0 auto;
-    width: 66.66666667%;
-}   
+
+
+#btn-participar a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+#tag-desse-evento{
+    padding-left: 12px;
+    display: flex;
+    gap: 12px;
+}
+
+#tag-desse-evento p {
+    background-color: #e2e2e2;
+    border-radius: 24px;
+    padding: 12px;
+    font-size: 15px; 
+    color: rgb(0, 0, 0); 
+}

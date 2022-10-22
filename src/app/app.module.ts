@@ -11,9 +11,7 @@ import { CustomTextInputComponent } from './custom-text-input/custom-text-input.
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-import { TesteComponent } from './teste/teste.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -35,6 +33,7 @@ import { HistoricoComponent } from './historico/historico.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +46,7 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
     SerUmVoluntarioComponent,
     LandingPageComponent,
     QuemSomosComponent,
-    FazerContribuicaoComponent,
     VagasOrganizacaoComponent,
-    TesteComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
     DashboardComponent,
@@ -71,7 +68,8 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
     HistoricoComponent,
     SideMenuComponent,
     SupervisorComponent,
-    OrgSupervisorComponent
+    OrgSupervisorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
