@@ -42,7 +42,7 @@ input[type=textEvento]{
 
 /* button */
 
-button{
+.button{
     padding: 13px;
     margin-bottom: 10px;
     width: 25%;
@@ -55,8 +55,16 @@ button{
     border: 0;
     margin-left: 40px;
     padding: 10px;
-    
     border-radius: 20px;
+}
+
+.btn-size {
+    padding: 11px;
+}
+
+.btn-sizeG {
+    padding: 8px;
+    border-radius: 5px;
 }
 
 
@@ -81,7 +89,5 @@ button{
 .subtitulo{
     display: block;
     font-size: 20px;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 50px;
+    margin-top: 10px;
 }

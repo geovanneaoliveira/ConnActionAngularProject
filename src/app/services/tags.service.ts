@@ -30,4 +30,13 @@ export class TagsService implements OnInit{
       error: (error) => console.log(error),
     });
   }
+
+  setTagsEvento = (idTagsEvento:unknown, idEvento:number) => {
+    this.http.post<any>('/tags/tagsPessoa',{ idEvento , idTagsEvento}).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (error) => console.log(error),
+    });
+  }
 }

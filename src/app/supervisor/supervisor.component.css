@@ -1,3 +1,15 @@
+.btnsize {
+    padding: 5px 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+.btnsizeG {
+    padding: 8px 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
 .org {
     width: 22vw;
 }
