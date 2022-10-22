@@ -1,44 +1,21 @@
 .um{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
-
-.menu{
-    background-color: white;
-    width: 300px;
-    border-radius: 10px;
-    margin-left: 15px;
-    margin-top: 50px;
-    display: block;
-    margin-right: 80px;
-}
-
-.item{
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-decoration: none;
-    color: black;
-    display: block;
-    justify-items: center;
-    margin-left: 16px;
-
-}
-
 .card{
     border: none;
     display: flex;
     /* display: inline-flex; 
     flex-direction: row; */
-    width: 800px;
-    height: 950px;
-    background-color: white;
+    width: 900px;
+    height: 500px;
+    background-color:white;
     border-radius: 10px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 
 }
-
 .titulo{
     display: block;
     font-size: 30px;
@@ -47,8 +24,7 @@
     margin-right: 50px;
 
 }
-
-.subtitulo {
+.subtitulo{
     display: block;
     font-size: 20px;
     margin-top: 20px;
@@ -56,15 +32,20 @@
     margin-right: 50px;
 }
 
-.text {
-    display: block;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 50px;
+.contribuicao{
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(206, 209, 247);;
+    padding: 10px 10px 10px 10px;
+    margin-left: 300px;
+    margin-top: 50px;
 }
 
-.bloco{
-    display: block;
-    
+.input{
+    display: flex;
+    text-align: center;
+    border: 10px;
+    font-family: 'Poppins';
+
 }
