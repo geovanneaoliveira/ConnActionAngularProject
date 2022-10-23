@@ -1,6 +1,6 @@
 <div class="container">
   <div class="p-4 p-md-5 mb-4 rounded imgBanner">
-    <div class="col-md-6 px-0">
+    <div class="col-md-6 px-0 d-flex flex-row">
       <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
       <img [src]="org.orgFoto" alt="logo" width="50%" height="50%">
     </div>
@@ -17,20 +17,21 @@
       <h2>Eventos</h2>
       <div class="d-flex flex-row flex-wrap justify-content-between">
         <div class="d-flex flex-row margemorg justify-content-between" *ngFor="let evento of org.eventos">
-          <div class="card shadow-sm org">
+          <div class="card shadow-sm eventosize">
             <div class="card-body">
               <div class="header-evento">
-              <h5 class="card-title txtover">{{evento.nome}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
-            </div>
+                <h5 class="card-title txtover flex-wrap">{{evento.nome}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
+              </div>
               <!-- <div class="d-flex flex-row flex-wrap">
                 <div id="tag-desse-evento" class="mb-2 txtover" *ngFor="let tag of evento.tagsEvento">
                   <p>{{tag}}</p>
                 </div>
               </div> -->
-              <div class="d-flex">
+              <div class="d-flex align-items-end">
                 <div class="btn-group">
-                  <button type="button" class="botaoBorderGradient btnsize">Gerenciar</button>
+                  <button type="button" class="botaoBorderGradient btnsize"
+                    (click)="gerenciarEvento(evento)">Gerenciar</button>
                 </div>
               </div>
             </div>
@@ -38,10 +39,7 @@
         </div>
 
         <div class="d-flex flex-row margemorg">
-          <div class="card shadow-sm org backcolor">
-            <div class="moresize d-flex">
-              <img class="card-img-top more" src="../../assets/fotos/more.png">
-            </div>
+          <div class="card shadow-sm eventosize backcolor">
             <div class="card-body">
               <h2 class="txtover">Adicionar evento</h2>
               <div class="d-flex">
@@ -53,6 +51,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <hr>
+      <h2>Contribuições</h2>
+      <div class="contribuicoes">
+        <p>Valor total recebido: R${{org.valorTotal}}</p>
       </div>
     </div>
   </div>

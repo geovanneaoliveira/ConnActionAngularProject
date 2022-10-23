@@ -1,6 +1,7 @@
 export type User = {
     id: number;
     nome: string;
+    sobrenome: string;
     login: string;
     senha: string;
     fotoPerfil: string;
@@ -17,9 +18,9 @@ export type Evento = {
     nome: string;
     data: Date;
     nomeOrganizacao: string;
-    pessoasEvento: string[];
+    pessoasEvento: User[];
     tagsEvento: string[];
-    patrocinadores: string[];
+    patrocinadores: Patrocinador[];
 }
 
 export type Cadastro = {
@@ -50,6 +51,13 @@ export type Organizacao = {
     orgFoto: string;
     cnpj: string;
     eventos: Evento[];
-    contribuicoes: number;
+    valorTotal: number;
     tags: string[];
+}
+
+export type Patrocinador = {
+    id: number;
+    nome: string;
+    representante: number;
+    fotoPatrocinador: string;
 }
