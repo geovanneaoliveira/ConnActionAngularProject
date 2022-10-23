@@ -20,7 +20,7 @@
     
 }
  /* inputs */
-input[type=textEvento]{
+input[type=text], input[type=datetime-local]{
     padding: 20px;
     outline: none;
     caret-color: rgb(115, 62, 238);
@@ -90,4 +90,39 @@ input[type=textEvento]{
     display: block;
     font-size: 20px;
     margin-top: 10px;
+}
+
+/* modal */
+.modalwidth {
+    width: 90%;
+}
+
+/* tags */
+
+.list-group-item{
+    color: black;
+    border-radius: 22px;
+    margin: 5px;
+    background-color: rgb(206, 209, 247);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 6px;
+}
+
+.list-group {
+    list-style:none;
+    display: flex;
+}
+
+.form-horizontal {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tags{
+    margin-top: 40px;
+    display: flex;
 }

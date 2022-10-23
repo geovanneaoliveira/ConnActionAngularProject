@@ -1,33 +1,38 @@
-<h3>Minhas Organizações</h3>
-<div class="d-flex flex-row flex-wrap">
-<div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
-    <div class="card shadow-sm org">
-        <img class="card-img-top imgFit" [src]="minhaOrg.orgFoto">
-        <div class="card-body">
+<div class="container">
+  <div class="d-flex flex-column">
+    <h1 class="blog-post-title mt-2">Minhas Organizações</h1>
+    <hr>
+    <div class="d-flex flex-row justify-content-between flex-wrap">
+      <div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
+        <div class="card shadow-sm org">
+          <img class="card-img-top imgFit" [src]="minhaOrg.orgFoto">
+          <div class="card-body">
             <h2 class="txtover">{{minhaOrg.nomeOrg}}</h2>
-          <div class="d-flex">
-            <div class="btn-group">
-              <button type="button" class="botaoBorderGradient btnsize" (click)="gerenciarOrg(minhaOrg)">Gerenciar</button>
+            <div class="d-flex">
+              <div class="btn-group">
+                <button type="button" class="botaoBorderGradient btnsize"
+                  (click)="gerenciarOrg(minhaOrg)">Gerenciar</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-</div>
-<div class="d-flex flex-row margemorg">
-  <div class="card shadow-sm org backcolor">
-    <div class="moresize d-flex">
-      <img class="card-img-top more moreimg" src="../../assets/fotos/more.png">
-    </div>
+  <div class="d-flex flex-row margemorg">
+    <div class="card shadow-sm backcolor org">
+      <div class="d-flex moresize">
+        <img class="card-img-top  more" src="../../assets/fotos/more.png">
+      </div>
       <div class="card-body">
-          <h2 class="txtover">Adicionar Organização</h2>
+        <h2 class="txtover">Adicionar Organização</h2>
         <div class="d-flex">
           <div class="btn-group">
-            <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal" data-bs-target="#exampleModal">Adicionar</button>
+            <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Adicionar</button>
           </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
 </div>
 <app-criar-org></app-criar-org>
 <!-- Modal -->

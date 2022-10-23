@@ -7,12 +7,12 @@
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body ">
                 <h5 class="subtitulo">Preencha as informações para criar um evento</h5>
                 <form [formGroup]="eventoForm" class="form">
-                    <input type="textEvento" name="NomeEvento" id="nomeEvento" formControlName="nome"
+                    <input type="text" name="NomeEvento" id="nomeEvento" formControlName="nome"
                         [ngClass]="classesTextEvento" placeholder="Nome Do Evento">
-                    <input type="textEvento" name="datavento" id="dataEvento" formControlName="data"
+                    <input type="datetime-local" name="datavento" id="dataEvento" formControlName="data"
                         [ngClass]="classesTextEvento" placeholder="Data Do Evento">
 
                         <div class="form-horizontal">

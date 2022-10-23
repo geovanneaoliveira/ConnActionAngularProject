@@ -78,9 +78,9 @@ flex-wrap: wrap;
     background-color: transparent;
 }
 
-.org {
-    width: 35vw;
-    height: 20vw;
+.eventosize {
+    width: 25vw;
+    height: 10vw;
 }
 
 h2 {
@@ -103,8 +103,7 @@ h2 {
 }
 
 .moresize {
-    width: 35vw;
-    height: 15vw;
+    width: 50%;
     justify-content: center;
     align-items: center;
 }

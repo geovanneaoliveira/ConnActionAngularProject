@@ -34,6 +34,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
+import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,9 @@ import { FooterComponent } from './footer/footer.component';
     SideMenuComponent,
     SupervisorComponent,
     OrgSupervisorComponent,
-    FooterComponent
+    FooterComponent,
+    EventoSupervisorComponent,
+    CriarPatrocinadorComponent
   ],
   imports: [
     BrowserModule,

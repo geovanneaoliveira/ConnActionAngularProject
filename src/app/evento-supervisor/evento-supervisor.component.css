@@ -48,3 +48,16 @@ h2 {
 .card.backcolor {
     background-color: transparent;
 }
+
+#tag-desse-evento{
+    display: flex;
+    gap: 12px;
+}
+
+#tag-desse-evento p {
+    background-color: #e2e2e2;
+    margin: 0;
+    border-radius: 24px;
+    padding: 5px; 
+    color: rgb(0, 0, 0); 
+}

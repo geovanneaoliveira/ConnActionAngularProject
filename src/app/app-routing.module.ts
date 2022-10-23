@@ -17,6 +17,7 @@ import { HistoricoComponent } from './historico/historico.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
+import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
 
 
 const routes: Routes = [
@@ -94,6 +95,11 @@ const routes: Routes = [
   {
     path: 'orgsupervisor/:id',
     component: OrgSupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'eventoorgsupervisor/:id',
+    component: EventoSupervisorComponent,
     canActivate: [AuthGuard]
   },
   {
