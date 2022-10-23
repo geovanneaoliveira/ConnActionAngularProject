@@ -1,15 +1,55 @@
-<div class="um">
-    <div class="card">
-        <h1 class="titulo">Contribuição financeira também é voluntariado!</h1>
-        <h2 class="subtitulo">A seguir você pode inserir o valor que deseja doar:</h2>
-        <div >
-            <form class="contribuicao" [formGroup]="contribuicaoForm" (ngSubmit)="criarContribuicao()" style="display: flex; flex-direction:column; width:20%;">
-                <input class="input" type="number" name="valor" id="valor" formControlName="valor" placeholder="VALOR">
-                <div *ngIf="submitted && f.valor.errors" class="invalid-feedback">
-                    <div *ngIf="f.valor.errors">Valor em branco!</div>
+<div class="container">
+    <h1 class="blog-post-title mt-3 mb-0">Organizações Parceiras</h1>
+    <hr>
+    <div class="d-flex flex-row justify-content-between flex-wrap">
+        <div class="d-flex flex-row margemorg" *ngFor="let org of todasOrgs">
+            <div class="card shadow-sm org">
+                <img class="card-img-top imgFit" [src]="org.orgFoto">
+                <div class="card-body">
+                    <h2 class="txtover">{{org.nomeOrg}}</h2>
+                    <div class="btn-group d-flex justify-content-between">
+                        <button type="button" class="botaoGradient btnsize" (click)="setIdOrg(org.id)"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal">Doar</button>
+                        <button type="button" class="botaoBorderGradient btnsize"
+                            (click)="conhecerOrg()">Conhecer</button>
+                    </div>
                 </div>
-                <button class="btn-size" type="submit" [disabled]="!contribuicaoForm.valid">Doar</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Doação</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1 class="titulo">Contribuição financeira também é voluntariado!</h1>
+                <h3 class="subtitulo">A seguir você pode inserir o valor que deseja doar:</h3>
+                <form class="contribuicao" [formGroup]="contribuicaoForm">
+                    <input class="input" type="number" name="valor" id="valor" formControlName="valor"
+                        placeholder="VALOR">
+                    <div *ngIf="submitted && f.valor.errors" class="invalid-feedback">
+                        <div *ngIf="f.valor.errors">Valor em branco!</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="botaoGradient criar-size btnsizeG" [disabled]="!contribuicaoForm.valid"
+                    (click)="criarContribuicao()">Doar</button>
+                <button type="button" class="botaoBorderGradient btnsize" data-bs-dismiss="modal">Voltar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="um">
+    <div class="card cardL">
+        <div>
+        </div>
+    </div>
+</div> -->

@@ -1,9 +1,12 @@
 <div class="back">
   <nav class="navbar navbar-dark navbar-expand-lg back-color">
     <div class="container-fluid">
-        <a routerLink="/" class="navbar-brand">
+        <a routerLink="/" class="navbar-brand" *ngIf="this.user == null">
             <img src="../../assets/icons/logowhite.png" alt="Bootstrap" width="30" height="30" class="d-inline-block align-text-top">
-            ConnAction </a>
+        ConnAction </a>
+        <a routerLink="/menu" class="navbar-brand" *ngIf="this.user != null">
+            <img src="../../assets/icons/logowhite.png" alt="Bootstrap" width="30" height="30" class="d-inline-block align-text-top">
+        ConnAction </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>

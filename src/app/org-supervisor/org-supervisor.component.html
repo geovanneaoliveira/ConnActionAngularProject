@@ -1,8 +1,7 @@
 <div class="container">
-  <div class="p-4 p-md-5 mb-4 rounded imgBanner">
+  <div class="p-4 p-md-5 mb-4 rounded imgBanner" [style.background-image]="'url('+org.orgFoto+')'">
     <div class="col-md-6 px-0 d-flex flex-row">
       <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
-      <img [src]="org.orgFoto" alt="logo" width="50%" height="50%">
     </div>
   </div>
 

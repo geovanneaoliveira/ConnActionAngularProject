@@ -15,42 +15,46 @@
     width: 66.66666667%;
 }
 
-.p-3{
+.p-3 {
     background-color: rgb(255, 255, 255);
 }
- .imgBanner{
-   background-color:rgb(171, 171, 252); 
-} 
 
-#tag-desse-evento{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+.imgBanner {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-#btn-tags{
+#tag-desse-evento {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
-    align-items:flex-start;
-    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+
+#btn-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
     overflow: hidden;
     height: 10vw;
 }
 
-#btn-participar{
-    background-color:rgb(211, 211, 255); 
+#btn-participar {
+    background-color: rgb(211, 211, 255);
     border-radius: 18px;
     padding: 8px;
     color: #000000;
 }
 
-#btn-participar a{
+#btn-participar a {
     text-decoration: none;
     color: #000000;
 }
 
-#tag-desse-evento{
+#tag-desse-evento {
     display: flex;
     gap: 12px;
 }
@@ -59,8 +63,8 @@ flex-wrap: wrap;
     background-color: #e2e2e2;
     margin: 0;
     border-radius: 24px;
-    padding: 5px; 
-    color: rgb(0, 0, 0); 
+    padding: 5px;
+    color: rgb(0, 0, 0);
 }
 
 .evento {
@@ -85,7 +89,7 @@ flex-wrap: wrap;
 
 h2 {
     white-space: nowrap;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .txtover {
@@ -93,7 +97,7 @@ h2 {
 }
 
 .imgFit {
-    object-fit:cover;
+    object-fit: cover;
     width: 28vw;
     height: 14vw;
 }
@@ -119,7 +123,7 @@ h2 {
 
 .sizing {
     width: 75vw;
-} 
+}
 
 .header-evento {
     height: 5vw;
