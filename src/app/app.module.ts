@@ -37,6 +37,7 @@ import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor
 import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 import { EventoInfosComponent } from './evento-infos/evento-infos.component';
+import { NgxHttpLoaderModule } from 'ngx-http-loader';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { EventoInfosComponent } from './evento-infos/evento-infos.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxHttpLoaderModule.forRoot(),
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
