@@ -75,3 +75,5 @@
 .border-gradient-purple {
     border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

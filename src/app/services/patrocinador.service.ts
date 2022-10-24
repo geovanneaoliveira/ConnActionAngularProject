@@ -12,4 +12,8 @@ export class PatrocinadorService {
   criarPatrocinador(patrocinador:Patrocinador) {
     return this.http.post<any>('/patrocinador/criar', patrocinador);
   }
+
+  getAll = () => {
+    return this.http.get<Patrocinador[]>('/patrocinador/todos');
+  }
 }
