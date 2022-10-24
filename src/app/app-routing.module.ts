@@ -5,7 +5,6 @@ import { CadastroComponentComponent } from './cadastro-component/cadastro-compon
 import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
@@ -19,6 +18,7 @@ import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
+import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 
 
 const routes: Routes = [
@@ -45,10 +45,6 @@ const routes: Routes = [
   {
     path: 'ong',
     component: SouUmaOngComponent
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
   },
   {
     path: 'menu',
@@ -105,15 +101,23 @@ const routes: Routes = [
   },
   {
     path: 'historico',
-    component: HistoricoComponent
+    component: HistoricoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'contribuicao',
-    component: CriarContribuicaoComponent
+    component: CriarContribuicaoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'vagaseventos',
-    component: VagaEventosComponent
+    component: VagaEventosComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'eventoinfos/:id',
+    component: EventoInfosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

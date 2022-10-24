@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../helpers/auth.service';
 import { EventoService } from '../services/evento.service';
 import { Evento } from '../types/types';
+import { User } from '../types/types';
 
 @Component({
   selector: 'app-vaga-eventos',
@@ -9,14 +12,32 @@ import { Evento } from '../types/types';
 })
 export class VagaEventosComponent implements OnInit {
 
-  eventos:Evento[] = [];
+  eventosTags: Evento[] = [];
+  eventos: Evento[] = [];
+  user!: number;
 
-  constructor(private eventoService:EventoService) { }
+  constructor(private eventoService: EventoService, private router:Router, private auth:AuthenticationService) { }
 
   ngOnInit(): void {
-    this.eventoService.getAll().subscribe(eventos => {
+    this.user = this.auth.userValue.id;
+    this.eventoService.eventosNaoPresente().subscribe(eventos => {
       this.eventos = eventos;
     });
+    this.eventoService.eventosTagsUser().subscribe(eventos => {
+      this.eventosTags = eventos;
+    });
+  }
+
+  confirmarPresenca = (idEvento: number) => {
+    this.eventoService.confirmarPresenca(idEvento).subscribe(response => {
+      (<HTMLInputElement>document.getElementById(idEvento as unknown as string)).innerText = 'Confirmado!';
+      (<HTMLInputElement>document.getElementById(idEvento as unknown as string)).disabled = true;
+      console.log(response);
+    });
+  }
+
+  verInfos(idEvento: number) {
+    this.router.navigate([`eventoinfos/${idEvento}`]);
   }
 
 }
