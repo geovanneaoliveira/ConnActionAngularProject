@@ -25,7 +25,7 @@ input[type=text], input[type=datetime-local]{
     outline: none;
     caret-color: rgb(115, 62, 238);
     width:auto;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-right: 40px;
     margin-top: 10px;
 }
@@ -116,7 +116,8 @@ input[type=text], input[type=datetime-local]{
 }
 
 .form-horizontal {
-    margin-top: 10px;
+    margin-left: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

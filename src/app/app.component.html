@@ -29,17 +29,17 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/ong">ONG</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <!-- <a class="nav-link" *ngIf="this.user != null"  routerLink="/menu" aria-current="page">Menu</a> -->
             <a href="#" *ngIf="this.user != null" class="nav-link" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Menu</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" *ngIf="this.user != null" routerLink="dashboard" aria-current="page">Dashboard</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" routerLink="/login" *ngIf="this.user == null">Entrar</a>
           </li>
