@@ -17,9 +17,9 @@
                     <input type="text" name="cpf" id="cpf" formControlName="cpf" [ngClass]="classesText" placeholder="CPF">
                     <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText" placeholder="LOGIN">
                     <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText" placeholder="SENHA">
-                    <button type="submit" [innerText]="nome" [ngClass]="classesCadastro" [disabled]="!cadastroForm.valid"></button>
+                    <button type="submit" [innerText]="nome" class="btn-size botaoGradient my-3" [disabled]="!cadastroForm.valid"></button>
                     <div>Já possui uma conta?</div>
-                    <button type="button" name="voltar" id="voltar" class="btn-size voltar" routerLink="/login">Entrar</button>
+                    <button type="button" name="voltar" id="voltar" class="btn-sizeB botaoBorderGradient mt-3" routerLink="/login">Entrar</button>
                 </form>
             </div>
         </div>
