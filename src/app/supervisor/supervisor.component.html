@@ -1,7 +1,7 @@
 <div class="container">
   <div id="minhas" class="d-flex flex-column">
-      <h1  class="blog-post-title mt-2">Minhas Organizações</h1>
-      <hr>
+      <h1 class="blog-post-title mt-2 mb-1">Minhas Organizações</h1>
+      <hr class="mt-1">
     <div class="d-flex flex-row justify-content-between flex-wrap">
       <div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
         <div class="card shadow-sm org">
@@ -17,22 +17,59 @@
           </div>
         </div>
       </div>
-  <div class="d-flex flex-row margemorg">
-    <div class="card shadow-sm backcolor org">
-      <div class="d-flex moresize">
-        <img class="card-img-top  more" src="../../assets/fotos/more.png">
+      <div class="d-flex flex-row margemorg">
+        <div class="card shadow-sm backcolor org">
+          <div class="d-flex moresize">
+            <img class="card-img-top  more" src="../../assets/fotos/more.png">
+          </div>
+          <div class="card-body">
+            <h2 class="txtover">Adicionar Organização</h2>
+            <div class="d-flex">
+              <div class="btn-group">
+                <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Adicionar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <h2 class="txtover">Adicionar Organização</h2>
-        <div class="d-flex">
-          <div class="btn-group">
-            <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">Adicionar</button>
+    </div>
+  </div>
+  <h1 class="blog-post-title mt-2">Patrocinadores</h1>
+  <hr class="mt-1">
+  <div class="d-flex flex-row justify-content-between flex-wrap mt-3">
+    <div class="d-flex flex-row margemorg" *ngFor="let patrocinador of patrocinadores">
+      <div class="card shadow-sm org">
+        <img class="card-img-top imgFit" [src]="patrocinador.fotoPatrocinador">
+        <div class="card-body">
+          <h2 class="txtover">{{patrocinador.nome}}</h2>
+          <div class="d-flex">
+            <div class="btn-group">
+              <button type="button" class="botaoBorderGradient btnsize"
+                (click)="gerenciarPatrocinador(patrocinador)">Gerenciar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row margemorg">
+      <div class="card shadow-sm backcolor org">
+        <div class="d-flex moresize">
+          <img class="card-img-top  more" src="../../assets/fotos/more.png">
+        </div>
+        <div class="card-body">
+          <h2 class="txtover">Adicionar Patrocinador</h2>
+          <div class="d-flex">
+            <div class="btn-group">
+              <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
+                data-bs-target="#modalPatrocinador">Adicionar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<app-criar-patrocinador></app-criar-patrocinador>
 <app-criar-org></app-criar-org>
 <!-- Modal -->

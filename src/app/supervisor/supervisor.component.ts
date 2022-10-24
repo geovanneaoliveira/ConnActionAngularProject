@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrgSupervisorComponent } from '../org-supervisor/org-supervisor.component';
 import { OrganizacaoService } from '../services/organizacao.service';
-import { Organizacao } from '../types/types';
+import { PatrocinadorService } from '../services/patrocinador.service';
+import { Organizacao, Patrocinador } from '../types/types';
 
 @Component({
   selector: 'app-supervisor',
@@ -12,13 +13,17 @@ import { Organizacao } from '../types/types';
 export class SupervisorComponent implements OnInit {
 
   minhasOrgs: Organizacao[] = [];
+  patrocinadores: Patrocinador[] = [];
 
-  constructor(private organizacaoService:OrganizacaoService, private router:Router) { }
+  constructor(private organizacaoService:OrganizacaoService, private router:Router, private patrocinadorService:PatrocinadorService) { }
 
   ngOnInit(): void {
     this.organizacaoService.orgsPorSupervisor().subscribe(organizacoes => {
       this.minhasOrgs = organizacoes;
     });
+    this.patrocinadorService.getAll().subscribe(patrocinadores => {
+      this.patrocinadores = patrocinadores;
+    })
   }
   
   gerenciarOrg = (org:Organizacao) => {
@@ -26,7 +31,9 @@ export class SupervisorComponent implements OnInit {
   }
 
   adicionarOrg = () => {
-
   }
 
+  gerenciarPatrocinador = (patrocinador:Patrocinador) => {
+
+  }
 }

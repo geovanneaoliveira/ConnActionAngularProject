@@ -1,57 +1,57 @@
+<ngx-http-loader [custom]="true" [customLoader]="loaderTemplate">
+  <ng-template #loaderTemplate>
+    <img src="../../assets/icons/Logo Colorida.svg" alt="logo" class="imgLoader" />
+  </ng-template>
+</ngx-http-loader>
 <div class="back">
   <nav class="navbar navbar-dark navbar-expand-lg back-color justify-content-center sticky-top">
     <div class="container">
-    <div class="container-fluid d-flex align-items-center">
-      <a routerLink="/" class="navbar-brand" *ngIf="this.user == null">
-        <img src="../../assets/icons/Logo Branca.svg" alt="ConnAction" width="30"
-          class="d-inline-block align-text-top me-2">
-        <img src="../../assets/icons/EscritoBrancoRetoCortado.svg" alt="ConnAction" height="30"
-          class="d-inline-block align-text-top"> 
-      </a>
-      <a routerLink="/menu" class="navbar-brand" *ngIf="this.user != null">
-        <img src="../../assets/icons/Logo Branca.svg" alt="ConnAction" width="30"
-          class="d-inline-block align-text-top me-2">
-        <img src="../../assets/icons/EscritoBrancoRetoCortado.svg" alt="ConnAction" height="30"
-          class="d-inline-block align-text-top"> 
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/quemsomos" aria-current="page" *ngIf="this.user == null">Quem somos?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/voluntariado">Quero me voluntariar!</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/ong">ONG</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>
-          </li> -->
-          <li class="nav-item">
-            <!-- <a class="nav-link" *ngIf="this.user != null"  routerLink="/menu" aria-current="page">Menu</a> -->
-            <a href="#" *ngIf="this.user != null" class="nav-link" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Menu</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" *ngIf="this.user != null" routerLink="dashboard" aria-current="page">Dashboard</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/login" *ngIf="this.user == null">Entrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/cadastrar" *ngIf="this.user == null">Cadastrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" *ngIf="this.user != null" (click)="logout()">Logout</a>
-          </li>
-        </ul>
+      <div class="container-fluid d-flex align-items-center">
+        <a routerLink="/" class="navbar-brand" *ngIf="this.user == null">
+          <img src="../../assets/icons/Logo Branca.svg" alt="ConnAction" width="30"
+            class="d-inline-block align-text-top me-2">
+          ConnAction
+        </a>
+        <a routerLink="/menu" class="navbar-brand" *ngIf="this.user != null">
+          <img src="../../assets/icons/Logo Branca.svg" alt="ConnAction" width="30"
+            class="d-inline-block align-text-top me-2">
+            ConnAction
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/quemsomos" aria-current="page" *ngIf="this.user == null">Quem somos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/voluntariado">Quero me voluntariar!</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/ong">ONG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#" *ngIf="this.user == null">Empresas</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" *ngIf="this.user != null"  routerLink="/menu" aria-current="page">Menu</a> -->
+              <a href="#" *ngIf="this.user != null" class="nav-link" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" *ngIf="this.user == null">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cadastrar" *ngIf="this.user == null">Cadastrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="this.user != null" (click)="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     </div>
   </nav>
   <app-side-menu></app-side-menu>
