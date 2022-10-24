@@ -38,6 +38,7 @@ import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocina
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 import { NgxHttpLoaderModule } from 'ngx-http-loader';
+import { SetTagsEventosComponent } from './set-tags-eventos/set-tags-eventos.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { NgxHttpLoaderModule } from 'ngx-http-loader';
     EventoSupervisorComponent,
     CriarPatrocinadorComponent,
     VagaEventosComponent,
-    EventoInfosComponent
+    EventoInfosComponent,
+    SetTagsEventosComponent
   ],
   imports: [
     BrowserModule,
