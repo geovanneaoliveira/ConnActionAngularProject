@@ -10,26 +10,26 @@
 
 .bemvindo{
     font-family: 'Poppins';
-    font-size: 90px;
+    font-size: 70px;
     color: white; 
     display: flex;
     align-items: center;
     align-items: flex-end;
     justify-content:left;
     text-align : left;
-    margin-left: 100px;
+    margin-left: 70px;
     margin-top: 150px;
 }
 
 .sub{
     font-family: 'Poppins';
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     display: block;
     text-align:left;
     justify-content: left;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 70px;
     margin-right: 200px;
     margin-bottom: 30px;
 }
@@ -41,7 +41,7 @@
     border-radius: 10px;
     font-size: 16px;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 80px;
     color: rgb(35, 7, 136);
 }
 
