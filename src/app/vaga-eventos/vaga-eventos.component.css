@@ -6,6 +6,10 @@
     color: rgb(0, 0, 0); 
 }
 
+.titulo{
+    margin-top: 40px
+}
+
 .eventosize {
     width: 25vw;
     max-height: fit-content;

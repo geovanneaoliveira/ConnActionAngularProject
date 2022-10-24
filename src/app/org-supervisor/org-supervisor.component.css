@@ -93,11 +93,14 @@
 
 h2 {
     white-space: nowrap;
+    margin-top: 10px;
     overflow: hidden;
 }
 
 .txtover {
     text-overflow: ellipsis;
+    margin-top: 8px;
+    margin-left: 10px;
 }
 
 .imgFit {
@@ -127,4 +130,15 @@ h2 {
 
 .header-evento {
     height: 5vw;
+}
+
+.card-body{
+    background-color: white;
+    border: none;
+
+}
+
+.d-flex{
+
+    margin-top: 20px;
 }
