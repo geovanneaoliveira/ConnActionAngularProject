@@ -63,3 +63,15 @@
     box-shadow: none;
     color: white;
 }
+
+/* inputs */
+
+.border-gradient {
+    border: 0;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+}
