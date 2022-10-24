@@ -18,6 +18,7 @@ import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
+import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 
 
 const routes: Routes = [
@@ -109,6 +110,10 @@ const routes: Routes = [
   {
     path: 'contribuicao',
     component: CriarContribuicaoComponent
+  },
+  {
+    path: 'vagaseventos',
+    component: VagaEventosComponent
   },
   {
     path: '**',

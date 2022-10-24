@@ -40,6 +40,15 @@ export type Contribuicao = {
     nomeUsuario : string;
     sobrenome : string;
     nomeOrg : string;
+    idOrganizacao: number;
+    idPessoa: number;
+}
+
+export type ContribuicaoForm = {
+    data : Date;
+    valor : string;
+    idOrganizacao: number;
+    idPessoa: number;
 }
 
 export type Organizacao = {

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row g-5">
+        <div class="">
+            <article class="blog-post">
+                <h2 class="blog-post-title mb-0 mt-2">Eventos</h2>
+            </article>
+            <hr class="mt-1 mb-3">
+            <div class="d-flex flex-row flex-wrap justify-content-between">
+                <div class="mb-3" *ngFor="let evento of eventos">
+                    <div class="card shadow-sm eventosize">
+                        <div class="card-body">
+                            <div class="header-evento">
+                                <h5 class="card-title txtover flex-wrap">{{evento.nome}}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
+                            </div>
+                            <div class="d-flex flex-row flex-wrap">
+                                <p class="tag mb-1 me-1" *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
+                            </div>
+                            <div class="btn-group d-flex justify-content-between">
+                                <button class="botaoGradient btn-size">Participar</button>
+                                <button class="botaoBorderGradient btn-size-b">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
