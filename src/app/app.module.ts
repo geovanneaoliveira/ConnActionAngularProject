@@ -17,7 +17,6 @@ import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
@@ -37,6 +36,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
 import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
+import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
     VagasOrganizacaoComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
-    DashboardComponent,
     EventodivComponent,
     MenuComponent,
     SetTagsComponent,
@@ -75,7 +74,8 @@ import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
     FooterComponent,
     EventoSupervisorComponent,
     CriarPatrocinadorComponent,
-    VagaEventosComponent
+    VagaEventosComponent,
+    EventoInfosComponent
   ],
   imports: [
     BrowserModule,
