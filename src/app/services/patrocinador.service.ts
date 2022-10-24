@@ -7,13 +7,17 @@ import { Patrocinador } from '../types/types';
 })
 export class PatrocinadorService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  criarPatrocinador(patrocinador:Patrocinador) {
+  criarPatrocinador(patrocinador: Patrocinador) {
     return this.http.post<any>('/patrocinador/criar', patrocinador);
   }
 
   getAll = () => {
     return this.http.get<Patrocinador[]>('/patrocinador/todos');
+  }
+
+  setPatrocinadoresEvento = () => {
+
   }
 }
