@@ -1,11 +1,15 @@
 <div>
-    <h3>Contribuições</h3>
-    
-    <div *ngFor="let contribuicao of contribuicoes" class="dashboardList">
-        <h5>{{contribuicao.nomeOrg}}</h5>
-        <p>{{contribuicao.valor}}</p>
-        <p>{{contribuicao.data}}</p>
+    <h3 class="titulo">Contribuições</h3>
+
+
+    <div class="contribuicao">
+        <div *ngFor="let contribuicao of contribuicoes" class="dashboardList">
+            <h5>{{contribuicao.nomeOrg}}</h5>
+            <p>R${{contribuicao.valor}}</p>
+            <p class="pOrg">{{contribuicao.data}}</p>
+        </div>
     </div>
+   
     
 </div>
     

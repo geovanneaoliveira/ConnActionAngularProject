@@ -11,3 +11,22 @@
     display: flex;
     flex-direction: column;
 }
+
+.ml-28 {
+    margin-left: 16px;
+}
+
+.imgLoader {
+    width: 80px;
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}

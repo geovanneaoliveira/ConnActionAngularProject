@@ -2,7 +2,7 @@
   <div class="container d-flex flex-wrap justify-content-center">
     <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-1">Vagas</span>
+      <span class="fs-1">Organizações</span>
     </a>
     <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
       <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
@@ -10,152 +10,18 @@
   </div>
 </header>
 
-
-<div class="container" id="teste1" style="margin-top: 12px; background-color: transparent;">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <!-- ngFor="let org for organizacoes" -->
-        <div class="col">
-            <div class="card shadow-sm">
-                <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-                <div class="card-body">
-                    <h2>Titulo</h2>
-                  <p class="card-text">Descrição:</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-              <img class="card-img-top" src="https://i0.wp.com/campusceaec.org/wp-content/uploads/2021/07/voluntarios.jpeg?fit=1024%2C617&ssl=1" height="255">
-          
-              <div class="card-body">
-                  <h2>Titulo</h2>
-                <p class="card-text">Descrição:</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-        <div class="col">
-            <div class="card shadow-sm">
-                <img class="card-img-top" src="https://umbrasil.org.br/wp-content/uploads/2020/08/voluntariado.jpg" height="255">
-                <div class="card-body">
-                    <h2>Titulo</h2>
-                  <p class="card-text">Descrição:</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-              <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-              <div class="card-body">
-                  <h2>Titulo</h2>
-                <p class="card-text">Descrição:</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-            <div class="card-body">
-                <h2>Titulo</h2>
-              <p class="card-text">Descrição:</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-          <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
+<div class="d-flex flex-row flex-wrap">
+  <div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
+      <div class="card shadow-sm org">
+          <img class="card-img-top imgFit" [src]="minhaOrg.orgFoto">
           <div class="card-body">
-              <h2>Titulo</h2>
-            <p class="card-text">Descrição:</p>
-            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="txtover">{{minhaOrg.nomeOrg}}</h2>
+            <div class="d-flex">
               <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="visitarOrg(minhaOrg)">Ver mais</button>
               </div>
             </div>
           </div>
         </div>
   </div>
-
-  <div class="col">
-            <div class="card shadow-sm">
-                <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-                <div class="card-body">
-                    <h2>Titulo</h2>
-                  <p class="card-text">Descrição:</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div><div class="col">
-          <div class="card shadow-sm">
-              <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-              <div class="card-body">
-                  <h2>Titulo</h2>
-                <p class="card-text">Descrição:</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-            <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-            <div class="card-body">
-                <h2>Titulo</h2>
-              <p class="card-text">Descrição:</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="col">
-      <div class="card shadow-sm">
-          <img class="card-img-top" src="https://www.amigosdobem.org/wp-content/uploads/2020/06/Banner_Voluntario_1.jpg" height="255">
-          <div class="card-body">
-              <h2>Titulo</h2>
-            <p class="card-text">Descrição:</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Quero me voluntariar!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-   
-    </div>
 </div>

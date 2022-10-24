@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router, Routes } from '@angular/router';
+import { Spinkit } from 'ng-http-loader';
+import { NgxLoader } from 'ngx-http-loader';
 import { AuthenticationService } from './helpers/auth.service';
 import { User } from './types/types';
 
@@ -11,6 +13,8 @@ import { User } from './types/types';
 })
 export class AppComponent implements OnInit{
   title = 'ConnActionAngularProject';
+
+  public loader = NgxLoader;
 
   user: User | null = null;
 

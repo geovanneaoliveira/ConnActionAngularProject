@@ -10,39 +10,48 @@
 
 .bemvindo{
     font-family: 'Poppins';
-    font-size:75px;
+    font-size: 90px;
     color: white; 
-    display: inline;
-    align-items: left;
-    margin-left: 28px;
-    margin-top: 140px;
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    justify-content:left;
+    text-align : left;
+    margin-left: 100px;
+    margin-top: 150px;
 }
 
-.menu{
-    background-color: white;
-    width: 450px;
-    height: 500px;
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-top: 70px;
+.sub{
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: white;
     display: block;
-    margin-right: 60px;
+    text-align:left;
+    justify-content: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+}
 
+#botao{
+    text-decoration: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 100px;
+    color: rgb(35, 7, 136);
 }
 
 .linha{
-    display: inline-flex;
-    flex-direction: row;
+    display: inline;
 }
 
-.item{
-    font-size: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-decoration: none;
-    color: black;
-    display: block;
-    justify-items: center;
-    margin-left: 25px;
-
+#img{
+    width: 400px;
+    height: 400px;
+    margin-right: 100px;
+    margin-top: 60px;
 }

@@ -1,0 +1,38 @@
+<div class="modal fade" id="modalPatrocinador" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Patrocinador</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- <div class="displayTags">
+                <form [formGroup]="tagsForm" (ngSubmit)="setUserTags()" novalidate>
+                  <div class="form-horizontal">
+                    <div class="list-group-item" *ngFor="let tag of tags; let i=index">
+                        <label >
+                          <input  type="checkbox" [value]="tag.id" (change)="onCheckboxChange($event)" />
+                          {{tag.nome}}
+                        </label>
+                      </div>
+                    </div>  
+                    <input id="salvar" type="submit" value="Salvar">
+                  </form>
+            </div> -->
+          <form [formGroup]="patrocinadorForm" style="display: flex; flex-direction:column;">
+            <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="fotoPatrocinador"
+              (change)="fotoPatrocinador($event)"/>
+            <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
+            <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+              <div *ngIf="f.nome.errors">Nome em branco!</div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="botaoGradient criar-size" [disabled]="!patrocinadorForm.valid"
+            (click)="criarPatrocinador()">Criar</button>
+          <button type="button" class="botaoBorderGradient voltar-size" data-bs-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>

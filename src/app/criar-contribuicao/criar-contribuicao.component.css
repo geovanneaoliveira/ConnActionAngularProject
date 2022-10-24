@@ -1,0 +1,139 @@
+.um{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cardL{
+    border: none;
+    display: flex;
+    /* display: inline-flex; 
+    flex-direction: row; */
+    width: 900px;
+    height: 400px;
+    background-color:white;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+
+}
+.titulo{
+    display: block;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.subtitulo{
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.contribuicao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* border-radius: 10px;
+    background-color: rgb(206, 209, 247);; */
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.input{
+    display: flex;
+    width: 30%;
+    text-align: center;
+    border: 2px solid;
+    outline: none;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Poppins';
+}
+
+/* .btn-size{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+} */
+
+.btn-size{
+    padding: 13px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    width: 100%;
+    background-image: linear-gradient(337deg, rgba(217,88,255,1) 38%, rgba(0,126,250,1) 100%);
+    text-transform: uppercase;
+    background-size: 200% auto;
+    transition: 0.5s;
+    color: white;            
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn-size:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnsize {
+    padding: 5px 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+.btnsizeG {
+    padding: 8px 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+.org {
+    width: 22vw;
+}
+
+h2 {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.txtover {
+    text-overflow: ellipsis;
+}
+
+.imgFit {
+    object-fit:cover;
+    width: 22vw;
+    height: 14vw;
+}
+
+.margemorg {
+    margin-bottom: 2vw;
+}
+
+.moresize {
+    width: 22vw;
+    height: 14vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.more {
+    opacity: 0.7;
+    width: 50%;
+}
+
+.card.backcolor {
+    background-color: transparent;
+}

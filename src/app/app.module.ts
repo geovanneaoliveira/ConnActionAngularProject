@@ -11,15 +11,12 @@ import { CustomTextInputComponent } from './custom-text-input/custom-text-input.
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-import { TesteComponent } from './teste/teste.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicAuthInterceptor } from './helpers/basic-auth.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { CadastroOngComponentComponent } from './cadastro-ong-component/cadastro-ong-component.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventodivComponent } from './eventodiv/eventodiv.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
@@ -36,6 +33,12 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
+import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
+import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
+import { EventoInfosComponent } from './evento-infos/evento-infos.component';
+import { NgxHttpLoaderModule } from 'ngx-http-loader';
+import { SetTagsEventosComponent } from './set-tags-eventos/set-tags-eventos.component';
 
 
 @NgModule({
@@ -49,12 +52,9 @@ import { FooterComponent } from './footer/footer.component';
     SerUmVoluntarioComponent,
     LandingPageComponent,
     QuemSomosComponent,
-    FazerContribuicaoComponent,
     VagasOrganizacaoComponent,
-    TesteComponent,
     SouUmaOngComponent,
     CadastroOngComponentComponent,
-    DashboardComponent,
     EventodivComponent,
     MenuComponent,
     SetTagsComponent,
@@ -67,17 +67,26 @@ import { FooterComponent } from './footer/footer.component';
     SetTagsEventoComponent,
     MeusEventosComponent,
     MinhasContribuicoesComponent,
+    SetTagsEventoComponent,
+    MeusEventosComponent,
+    MinhasContribuicoesComponent,
     HistoricoComponent,
     SideMenuComponent,
     SupervisorComponent,
     OrgSupervisorComponent,
-    FooterComponent
+    FooterComponent,
+    EventoSupervisorComponent,
+    CriarPatrocinadorComponent,
+    VagaEventosComponent,
+    EventoInfosComponent,
+    SetTagsEventosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxHttpLoaderModule.forRoot(),
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TesteComponent } from './teste.component';
+import { SetTagsEventosComponent } from './set-tags-eventos.component';
 
-describe('TesteComponent', () => {
-  let component: TesteComponent;
-  let fixture: ComponentFixture<TesteComponent>;
+describe('SetTagsEventosComponent', () => {
+  let component: SetTagsEventosComponent;
+  let fixture: ComponentFixture<SetTagsEventosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TesteComponent ]
+      declarations: [ SetTagsEventosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TesteComponent);
+    fixture = TestBed.createComponent(SetTagsEventosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

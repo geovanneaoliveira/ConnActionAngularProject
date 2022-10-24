@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { EventoService } from '../services/evento.service';
 import { OrganizacaoService } from '../services/organizacao.service';
-import { Organizacao } from '../types/types';
+import { Evento, Organizacao } from '../types/types';
 
 @Component({
   selector: 'app-org-supervisor',
@@ -9,13 +11,27 @@ import { Organizacao } from '../types/types';
 })
 export class OrgSupervisorComponent implements OnInit {
 
-  org:any;
+  org!: Organizacao;
+  backimg:any;
+  eventos:Evento[] = [];
+  backFoto:any;
 
-  constructor(private organizacaoService:OrganizacaoService) {
+  constructor(private organizacaoService:OrganizacaoService, private activatedRoute:ActivatedRoute, private eventoService:EventoService, private router:Router) {
+    this.activatedRoute.params.subscribe(params => {
+      let id = params['id'];
+      console.log(`${id}`);
+      this.organizacaoService.orgPorId(id).subscribe(org => {
+        this.org = org;
+      });
+    });
   }
 
   ngOnInit(): void {
-    this.org = this.org.orgSupervisor;
+  }
+
+  gerenciarEvento = (evento:Evento) => {
+    console.log(evento.id);
+    this.router.navigate([`eventoorgsupervisor/${evento.id}`]);
   }
 
 }

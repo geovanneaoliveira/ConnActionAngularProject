@@ -1,10 +1,27 @@
-<form [formGroup]="orgForm" (ngSubmit)="criarOrg()" style="display: flex; flex-direction:column; width:20%;">
-    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="orgFoto" (change)="fotoOrg($event)"/>
-    <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
-    <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
-        <div *ngIf="f.nome.errors">Nome em branco!</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Organização</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="orgForm" style="display: flex; flex-direction:column;">
+          <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="orgFoto"
+            (change)="fotoOrg($event)" />
+          <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
+          <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+            <div *ngIf="f.nome.errors">Nome em branco!</div>
+          </div>
+          <input type="text" name="descricao" id="descricao" formControlName="descricao" placeholder="DESCRIÇÃO">
+          <input type="text" name="CNPJ" id="CNPJ" formControlName="cnpj" placeholder="CNPJ">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="botaoGradient criar-size" [disabled]="!orgForm.valid"
+          (click)="criarOrg()">Criar</button>
+        <button type="button" class="botaoBorderGradient voltar-size" data-bs-dismiss="modal">Voltar</button>
+      </div>
     </div>
-    <input type="text" name="descricao" id="descricao" formControlName="descricao" placeholder="DESCRIÇÃO">
-    <input type="text" name="CNPJ" id="CNPJ" formControlName="cnpj" placeholder="CNPJ">
-    <button type="submit" [disabled]="!orgForm.valid">Criar</button>
-</form>
+  </div>
+</div>

@@ -3,7 +3,7 @@
     display: flex;
     /* display: inline-flex; 
     flex-direction: row; */
-    width: 800px;
+    width: 900px;
     height: 600px;
     background-color: white;
     border-radius: 10px;
@@ -20,7 +20,7 @@
     
 }
  /* inputs */
-input[type=textEvento]{
+input[type=text], input[type=datetime-local]{
     padding: 20px;
     outline: none;
     caret-color: rgb(115, 62, 238);
@@ -42,7 +42,7 @@ input[type=textEvento]{
 
 /* button */
 
-button{
+.button{
     padding: 13px;
     margin-bottom: 10px;
     width: 25%;
@@ -55,8 +55,16 @@ button{
     border: 0;
     margin-left: 40px;
     padding: 10px;
-    
     border-radius: 20px;
+}
+
+.btn-size {
+    padding: 11px;
+}
+
+.btn-sizeG {
+    padding: 8px;
+    border-radius: 5px;
 }
 
 
@@ -65,6 +73,7 @@ button{
 .um{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 /* titulos */
@@ -80,7 +89,40 @@ button{
 .subtitulo{
     display: block;
     font-size: 20px;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 50px;
+    margin-top: 10px;
+}
+
+/* modal */
+.modalwidth {
+    width: 90%;
+}
+
+/* tags */
+
+.list-group-item{
+    color: black;
+    border-radius: 22px;
+    margin: 5px;
+    background-color: rgb(206, 209, 247);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 6px;
+}
+
+.list-group {
+    list-style:none;
+    display: flex;
+}
+
+.form-horizontal {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tags{
+    margin-top: 40px;
+    display: flex;
 }

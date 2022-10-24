@@ -1,117 +1,62 @@
-<div class="container">  
-    <main class="container">
-      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
-          <!-- <p class="lead my-3">descrição</p> -->
-          <!-- <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
-        </div>
-      </div>
- 
-      <div class="row g-5">
-        <div class="col-md-8">
-          
-          <article class="blog-post">
-            <h2 class="blog-post-title mb-1"> Sobre:</h2>
-            <p> Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre 
-            Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre 
-            Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre </p>
-            <hr>
-            
-            <h2>Nossos eventos</h2>
-            
-          </article>
-     <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      
-        <div class="row mb-2">
-            <div class="col-md-6">
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Nome Do EVENTO</h3>
-                  <div class="mb-1 text-muted">data do evento</div>
-                  <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="stretched-link">Participar</a>
+<div class="container">
+  <div class="p-4 p-md-5 mb-4 rounded imgBanner" [style.background-image]="'url('+org.orgFoto+')'">
+    <div class="col-md-6 px-0 d-flex flex-row">
+      <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="">
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1">Descrição</h2>
+        <p>{{org.descricao}}</p>
+      </article>
+      <hr>
+      <h2>Eventos</h2>
+      <div class="d-flex flex-row flex-wrap justify-content-between">
+        <div class="d-flex flex-row margemorg justify-content-between" *ngFor="let evento of org.eventos">
+          <div class="card shadow-sm eventosize">
+            <div class="card-body">
+              <div class="header-evento">
+                <h5 class="card-title txtover flex-wrap">{{evento.nome}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{evento.data}}</h6>
+              </div>
+              <!-- <div class="d-flex flex-row flex-wrap">
+                <div id="tag-desse-evento" class="mb-2 txtover" *ngFor="let tag of evento.tagsEvento">
+                  <p>{{tag}}</p>
+                </div>
+              </div> -->
+              <div class="d-flex align-items-end">
+                <div class="btn-group">
+                  <button type="button" class="botaoBorderGradient btnsize"
+                    (click)="gerenciarEvento(evento)">Gerenciar</button>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-            <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
+
+        <div class="d-flex flex-row margemorg">
+          <div class="card shadow-sm eventosize backcolor">
+            <div class="card-body">
+              <h2 class="txtover">Adicionar evento</h2>
+              <div class="d-flex">
+                <div class="btn-group">
+                  <button type="button" class="botaoGradient btnsizeG" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Adicionar</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      </div> 
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      </div> <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      </div> <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      </div> <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Nome Do EVENTO</h3>
-              <div class="mb-1 text-muted">data do evento</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Participar</a>
-            </div>
-          </div>
-        </div>
-      </div> 
+      </div>
+      <hr>
+      <h2>Contribuições</h2>
+      <div class="contribuicoes">
+        <p>Valor total recebido: R${{org.valorTotal}}</p>
+      </div>
     </div>
-      
+  </div>
+</div>
+<app-criar-evento></app-criar-evento>

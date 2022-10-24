@@ -2,23 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
-import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
+import { CriarContribuicaoComponent } from './criar-contribuicao/criar-contribuicao.component';
 import { CriarEventoComponent } from './criar-evento/criar-evento.component';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { TesteComponent } from './teste/teste.component';
 import { VagasOrganizacaoComponent } from './vagas-organizacao/vagas-organizacao.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
-import { MenuComponent } from './menu/menu.component';
-import { MinhasOrgsComponent } from './minhas-orgs/minhas-orgs.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.component';
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
+import { MenuComponent } from './menu/menu.component';
 import { HistoricoComponent } from './historico/historico.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
+import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
+import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
+import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 
 
 const routes: Routes = [
@@ -35,7 +35,7 @@ const routes: Routes = [
     component: CadastroComponentComponent
   },
   {
-    path: 'quem-somos',
+    path: 'quemsomos',
     component: QuemSomosComponent
   },
   {
@@ -45,10 +45,6 @@ const routes: Routes = [
   {
     path: 'ong',
     component: SouUmaOngComponent
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
   },
   {
     path: 'menu',
@@ -66,13 +62,21 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'criarEvento',
+    component: CriarEventoComponent
+  },
+  {
     path:'vagas-organizacao',
     component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
   },
   {
-    path:'teste',
-    component: TesteComponent,
+    path: 'atualizarCadastro',
+    component: AtualizarCadastroComponent
+  },
+  {
+    path:'vagas-organizacao',
+    component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -86,22 +90,39 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'orgsupervisor',
+    path: 'orgsupervisor/:id',
     component: OrgSupervisorComponent,
     canActivate: [AuthGuard]
   },
   {
+    path: 'eventoorgsupervisor/:id',
+    component: EventoSupervisorComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'historico',
-    component: HistoricoComponent
+    component: HistoricoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'contribuicao',
-    component: FazerContribuicaoComponent
+    component: CriarContribuicaoComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'vagaseventos',
+    component: VagaEventosComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'eventoinfos/:id',
+    component: EventoInfosComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',
     redirectTo: '/'
-  },
+  }
 ];
 
 @NgModule({

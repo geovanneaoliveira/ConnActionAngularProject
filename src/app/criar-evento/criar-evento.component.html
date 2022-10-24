@@ -1,19 +1,43 @@
-<div class="um">
-    <app-side-menu></app-side-menu>
-<div>
-        <div class="card">
-            <h1 class="titulo">Criar Evento</h1>
-            <h2 class="subtitulo">Preencha as informações para criar um evento</h2>
-            <form  [formGroup]="eventoForm" class="form">
-            <input type="textEvento" name="NomeEvento" id="nomeEvento" formControlName="nome" [ngClass]="classesTextEvento"  placeholder="Nome Do Evento">
-            <input type="textEvento" name="datavento" id="dataEvento" formControlName="data" [ngClass]="classesTextEvento"  placeholder="Data Do Evento">
-            <button type="submit" class="button" >Criar Evento</button>
-        </form>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex flex-column">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Evento</h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+                <h5 class="subtitulo">Preencha as informações para criar um evento</h5>
+                <form [formGroup]="eventoForm" class="form">
+                    <input type="text" name="NomeEvento" id="nomeEvento" formControlName="nome"
+                        [ngClass]="classesTextEvento" placeholder="Nome Do Evento">
+                    <input type="datetime-local" name="datavento" id="dataEvento" formControlName="data"
+                        [ngClass]="classesTextEvento" placeholder="Data Do Evento">
+
+                        <div class="form-horizontal">
+                            <div class="list-group-item" *ngFor="let tag of tags; let i=index">
+                                <label>
+                                    <input type="checkbox" [value]="tag.id"
+                                        (change)="onCheckboxChange($event)" />
+                                    {{tag.nome}}
+                                </label>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="botaoGradient btn-size" [disabled]="!eventoForm.valid"
+                    (click)="criarEvento()">Criar Evento</button>
+                <button type="button" class="botaoBorderGradient btn-sizeG" data-bs-dismiss="modal">Voltar</button>
+            </div>
         </div>
     </div>
 </div>
-            
-            
+
+<!--<div class="um">
+    <div>
         
- 
-  
+    </div>
+</div>-->

@@ -15,17 +15,65 @@
 /* scrollbar */
 
 ::-webkit-scrollbar {
-    width: 8px;
+    display: none;
 }
-  
-  ::-webkit-scrollbar-track {
+
+/* ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     background: rgb(124, 124, 233);
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(90, 90, 168);
+} */
+
+/* botoes */
+
+.botaoGradient {
+    background-image: linear-gradient(45deg, rgba(217, 88, 255, 1), rgba(0, 126, 250, 1));
+    background-size: 200% auto;
+    transition: 0.3s;
+    color: white;
+    border: 0;
+    border-radius: 5px;
 }
+
+.botaoGradient:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.botaoBorderGradient {
+    color: black;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(45deg, rgba(217, 88, 255, 1), rgba(0, 126, 250, 1));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.botaoBorderGradient:hover {
+    box-shadow: none;
+    color: white;
+}
+
+/* inputs */
+
+.border-gradient {
+    border: 0;
+    border-bottom: 4px solid;
+    border-image-slice: 1;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(337deg, rgba(217,88,255,1) 2%, rgba(0,126,250,1) 100%);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
