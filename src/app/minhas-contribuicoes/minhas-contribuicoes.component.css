@@ -2,6 +2,7 @@
     display: block;
     font-size: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
     /* margin-left: 40px; */
     /* margin-right: 50px; */
     text-align: center;
@@ -21,7 +22,8 @@
  .dashboardList{
     padding-top: 15px;
     margin-right: 10px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    margin-bottom: 15px;
     display: block;
     text-align: center;
     background-color: rgb(217, 217, 243);
@@ -43,4 +45,7 @@
     border-radius: 10px;
     margin-top: 50px;
 
+}
+.pOrg{
+   padding-bottom: 10px;
 }
