@@ -36,6 +36,7 @@ import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.componen
 import { FooterComponent } from './footer/footer.component';
 import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
 import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
+import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocina
     OrgSupervisorComponent,
     FooterComponent,
     EventoSupervisorComponent,
-    CriarPatrocinadorComponent
+    CriarPatrocinadorComponent,
+    VagaEventosComponent
   ],
   imports: [
     BrowserModule,

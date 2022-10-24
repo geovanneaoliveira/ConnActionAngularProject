@@ -23,7 +23,7 @@
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 
 #tag-desse-evento {
@@ -87,6 +87,10 @@
     height: 10vw;
 }
 
+.margemorg {
+    margin-bottom: 2vw;
+}
+
 h2 {
     white-space: nowrap;
     overflow: hidden;
@@ -100,10 +104,6 @@ h2 {
     object-fit: cover;
     width: 28vw;
     height: 14vw;
-}
-
-.margemorg {
-    margin-bottom: 2vw;
 }
 
 .moresize {
