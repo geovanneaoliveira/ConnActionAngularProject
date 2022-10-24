@@ -1,0 +1,17 @@
+#mediaFile{
+ padding: 10px 0;
+}
+
+.criar-size{
+    border-radius: 5px;
+    padding: 8px;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.voltar-size{
+    border-radius: 5px;
+    padding: 7px;
+    width: 45%;
+    margin: 0 auto;
+}
