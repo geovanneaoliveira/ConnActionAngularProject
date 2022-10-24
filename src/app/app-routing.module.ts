@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { AtualizarCadastroComponent } from './atualizar-cadastro/atualizar-cadastro.component';
 import { CadastroComponentComponent } from './cadastro-component/cadastro-component.component';
 import { FazerContribuicaoComponent } from './fazer-contribuicao/fazer-contribuicao.component';
