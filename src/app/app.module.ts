@@ -37,6 +37,8 @@ import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor
 import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocinador.component';
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 import { EventoInfosComponent } from './evento-infos/evento-infos.component';
+import { NgxHttpLoaderModule } from 'ngx-http-loader';
+import { SetTagsEventosComponent } from './set-tags-eventos/set-tags-eventos.component';
 
 @NgModule({
   declarations: [
@@ -75,13 +77,15 @@ import { EventoInfosComponent } from './evento-infos/evento-infos.component';
     EventoSupervisorComponent,
     CriarPatrocinadorComponent,
     VagaEventosComponent,
-    EventoInfosComponent
+    EventoInfosComponent,
+    SetTagsEventosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxHttpLoaderModule.forRoot(),
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
