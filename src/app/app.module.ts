@@ -40,6 +40,7 @@ import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 import { NgxHttpLoaderModule } from 'ngx-http-loader';
 import { SetPatrocinadoresEventoComponent } from './set-patrocinadores-evento/set-patrocinadores-evento.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

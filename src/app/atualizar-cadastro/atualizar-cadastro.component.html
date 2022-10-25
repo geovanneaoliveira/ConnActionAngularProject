@@ -16,7 +16,8 @@
             </div>
             <h2 class="text">Altere seus dados pessoais:</h2>
             <div class="cadastro">
-                    <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
+                    <input type="text" name="nome" id="nome" formControlName="nome" 
+                    [ngClass]="classesText" placeholder="NOME">
                     <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
                         <div *ngIf="f.nome.errors">Nome em branco!</div>
                     </div>

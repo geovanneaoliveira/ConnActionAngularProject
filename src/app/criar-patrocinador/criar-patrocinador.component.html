@@ -20,16 +20,21 @@
                   </form>
             </div> -->
           <form [formGroup]="patrocinadorForm" style="display: flex; flex-direction:column;">
+            
             <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="fotoPatrocinador"
               (change)="fotoPatrocinador($event)"/>
-            <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
+
+            <input type="text" class="border-gradient border-gradient-purple" name="nome" id="nome" formControlName="nome" placeholder="NOME"> 
+
+
+            
             <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
               <div *ngIf="f.nome.errors">Nome em branco!</div>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="botaoGradient criar-size" [disabled]="!patrocinadorForm.valid"
+          <button type="submit"  class="botaoGradient criar-size" [disabled]="!patrocinadorForm.valid"
             (click)="criarPatrocinador()">Criar</button>
           <button type="button" class="botaoBorderGradient voltar-size" data-bs-dismiss="modal">Voltar</button>
         </div>
