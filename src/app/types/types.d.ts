@@ -6,6 +6,8 @@ export type User = {
     senha: string;
     fotoPerfil: string;
     authdata?: string;
+    telefone:string;
+    cpf:string;
 }
 
 export type Tag = {

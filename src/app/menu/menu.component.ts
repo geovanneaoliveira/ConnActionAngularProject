@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   
   constructor(private auth:AuthenticationService) {
     this.name = this.auth.userValue.nome;
+    console.log(this.auth.userValue);
   }
 
   ngOnInit(): void { }

@@ -12,13 +12,14 @@ import { SerUmVoluntarioComponent } from './ser-um-voluntario/ser-um-voluntario.
 import { SetTagsComponent } from './set-tags/set-tags.component';
 import { SouUmaOngComponent } from './sou-uma-ong/sou-uma-ong.component';
 import { MenuComponent } from './menu/menu.component';
-import { HistoricoComponent } from './historico/historico.component';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { OrgSupervisorComponent } from './org-supervisor/org-supervisor.component';
 import { EventoSupervisorComponent } from './evento-supervisor/evento-supervisor.component';
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 import { EventoInfosComponent } from './evento-infos/evento-infos.component';
+import { OrgInfosComponent } from './org-infos/org-infos.component';
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 
 
 const routes: Routes = [
@@ -66,7 +67,7 @@ const routes: Routes = [
     component: CriarEventoComponent
   },
   {
-    path:'vagas-organizacao',
+    path: 'vagas-organizacao',
     component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
   },
@@ -75,7 +76,7 @@ const routes: Routes = [
     component: AtualizarCadastroComponent
   },
   {
-    path:'vagas-organizacao',
+    path: 'vagas-organizacao',
     component: VagasOrganizacaoComponent,
     canActivate: [AuthGuard]
   },
@@ -100,8 +101,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'historico',
-    component: HistoricoComponent,
+    path: 'perfil',
+    component: MeuPerfilComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -117,6 +118,11 @@ const routes: Routes = [
   {
     path: 'eventoinfos/:id',
     component: EventoInfosComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'orginfos/:id',
+    component: OrgInfosComponent,
     canActivate: [AuthGuard]
   },
   {

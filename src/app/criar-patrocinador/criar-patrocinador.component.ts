@@ -57,10 +57,11 @@ export class CriarPatrocinadorComponent implements OnInit {
     reader.readAsDataURL(file);
     reader.onload = () => {
       this.base64 = reader.result;
+      (<HTMLInputElement>document.getElementById('patProfile')).style.backgroundImage = 'url('+this.base64+')';
     };
   }
 
-  setPatrocinadores = () => {
-    
-  }
+  onClick = () => {
+    (<HTMLInputElement>document.getElementById('inputFotoPat')).click();
+  };
 }

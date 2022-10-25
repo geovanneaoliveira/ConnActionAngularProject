@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ContribuicaoService } from '../services/contribuicao.service';
 import { OrganizacaoService } from '../services/organizacao.service';
 import { ContribuicaoForm, Organizacao } from '../types/types';
@@ -17,7 +18,7 @@ export class CriarContribuicaoComponent implements OnInit {
   idOrg!: number;
   contribuicao: any;
 
-  constructor(private formBuilder:FormBuilder, private contribuicaoService:ContribuicaoService, private organizacaoService:OrganizacaoService) {
+  constructor(private formBuilder:FormBuilder, private contribuicaoService:ContribuicaoService, private organizacaoService:OrganizacaoService, private router:Router) {
     this.contribuicaoForm = formBuilder.group({
       valor:['',Validators.required],
       data:[new Date()],
@@ -52,7 +53,7 @@ export class CriarContribuicaoComponent implements OnInit {
     });
   }
 
-  conhecerOrg = () => {
-
+  conhecerOrg = (org:Organizacao) => {
+    this.router.navigate([`orginfos/${org.id}`]);
   }
 }
