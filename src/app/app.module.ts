@@ -38,7 +38,7 @@ import { CriarPatrocinadorComponent } from './criar-patrocinador/criar-patrocina
 import { VagaEventosComponent } from './vaga-eventos/vaga-eventos.component';
 import { EventoInfosComponent } from './evento-infos/evento-infos.component';
 import { NgxHttpLoaderModule } from 'ngx-http-loader';
-import { SetTagsEventosComponent } from './set-tags-eventos/set-tags-eventos.component';
+import { SetPatrocinadoresEventoComponent } from './set-patrocinadores-evento/set-patrocinadores-evento.component';
 
 
 @NgModule({
@@ -79,7 +79,7 @@ import { SetTagsEventosComponent } from './set-tags-eventos/set-tags-eventos.com
     CriarPatrocinadorComponent,
     VagaEventosComponent,
     EventoInfosComponent,
-    SetTagsEventosComponent
+    SetPatrocinadoresEventoComponent
   ],
   imports: [
     BrowserModule,
