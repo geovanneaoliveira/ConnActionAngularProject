@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="orgForm" style="display: flex; flex-direction:column;">
-          <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="orgFoto"
+          <input type="file" id="mediaFile" accept="image/*" formControlName="orgFoto"
             (change)="fotoOrg($event)" />
           <input class="border-gradient border-gradient-purple mt-3"type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
           <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
@@ -25,5 +25,3 @@
     </div>
   </div>
 </div>
-
-<!-- oi -->

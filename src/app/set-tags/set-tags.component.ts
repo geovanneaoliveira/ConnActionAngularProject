@@ -37,7 +37,9 @@ export class SetTagsComponent implements OnInit {
     const checkArray: FormArray = this.tagsForm.get('checkArray') as FormArray;
     if (e.target.checked) {
       checkArray.push(new FormControl(e.target.value));
+      (<HTMLInputElement>document.getElementById(e.target.value)).style.backgroundColor = 'rgb(204, 167, 252)';
     } else {
+      (<HTMLInputElement>document.getElementById(e.target.value)).style.backgroundColor = 'rgb(206, 209, 247)';
       let i: number = 0;
       checkArray.controls.forEach((item: any) => {
         if (item.value == e.target.value) {
@@ -47,6 +49,9 @@ export class SetTagsComponent implements OnInit {
         i++;
       });
     }
+
+
+
   }
 
 }
