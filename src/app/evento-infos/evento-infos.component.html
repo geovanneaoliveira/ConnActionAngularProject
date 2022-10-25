@@ -1,31 +1,34 @@
 <div class="container">
-    <div class="d-flex flex-column">
-        <h1 class="blog-post-title mt-2">{{evento.nome}}</h1>
-        <h3 class="blog-post-subtitle mt-2">{{evento.data}}</h3>
-        <h3 class="blog-post-subtitle ">{{evento.nomeOrganizacao}}</h3>
-        <hr>
-        <h2>Tags</h2>
-        <div class="d-flex flex-row flex-wrap mt-3">
-            <div id="tag-desse-evento" class="mb-2 txtover" *ngFor="let tag of evento.tagsEvento">
-                <p>{{tag}}</p>
+    <div class="card">
+        <div class="d-flex flex-column">
+            <h1 class="blog-post-title mt-3">{{evento.nome}}</h1>
+            <h3 class="blog-post-subtitle mt-2 subtitulo " >{{evento.data}}</h3>
+            <h3 class="blog-post-subtitle subtitulo ">{{evento.nomeOrganizacao}}</h3>
+            <hr>
+            <h2>Tags</h2>
+            <div class="d-flex flex-row flex-wrap mt-3">
+                <div id="tag-desse-evento" class="mb-2 txtover" *ngFor="let tag of evento.tagsEvento">
+                    <p>{{tag}}</p>
+                </div>
             </div>
-        </div>
-        <hr>
-        <h2>Patrocinadores</h2>
-        <div class="d-flex flex-row justify-content-between flex-wrap mt-3">
-            <div class="d-flex flex-row margemorg" *ngFor="let patrocinador of evento.patrocinadores">
-                <div class="card shadow-sm org">
-                    <img class="card-img-top imgFit" [src]="patrocinador.fotoPatrocinador">
-                    <div class="card-body">
-                        <h2 class="txtover">{{patrocinador.nome}}</h2>
+            <hr>
+            <h2>Patrocinadores</h2>
+            <div class="d-flex flex-row justify-content-between flex-wrap mt-3">
+                <div class="d-flex flex-row margemorg" *ngFor="let patrocinador of evento.patrocinadores">
+                    <div class="card shadow-sm org">
+                        <img class="card-img-top imgFit" [src]="patrocinador.fotoPatrocinador">
+                        <div class="card-body">
+                            <h2 class="txtover">{{patrocinador.nome}}</h2>
+                        </div>
                     </div>
                 </div>
             </div>
+            <hr>
+                <h2>Voluntários</h2>
+                <div class="d-flex flex-row flex-wrap  mt-3">
+                    <p class="mx-1 subtitulo" *ngFor="let pessoa of evento.pessoasEvento">{{pessoa.nome}} {{pessoa.sobrenome}}</p>
+                </div>
         </div>
-        <hr>
-            <h2>Voluntários</h2>
-            <div class="d-flex flex-row flex-wrap justify-content-evenly mt-3">
-                <p class="mx-1" *ngFor="let pessoa of evento.pessoasEvento">{{pessoa.nome}} {{pessoa.sobrenome}}</p>
-            </div>
     </div>
+    
 </div>
