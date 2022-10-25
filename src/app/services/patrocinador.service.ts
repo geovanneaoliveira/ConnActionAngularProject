@@ -17,7 +17,7 @@ export class PatrocinadorService {
     return this.http.get<Patrocinador[]>('/patrocinador/todos');
   }
 
-  setPatrocinadoresEvento = (idsPatrocinadores:any ,idEvento:number) => {
-    return this.http.post<any>('/patrocinador/addpatrocinadorids',{idEvento,idsPatrocinadores})
+  setPatrocinadoresEvento = (idsPatrocinadores:number[] ,idEvento:number) => {
+    return this.http.post<JSON>('/evento/addpatrocinadorids',{idEvento,idsPatrocinadores})
   }
 }

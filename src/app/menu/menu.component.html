@@ -1,12 +1,17 @@
 <div class="page">
-    <div  class="linha">
+    <div class="linha">
         <h1 class="bemvindo">
             Bem vindo à ConnAction, {{name}}!
         </h1>
         <h1 class="sub">
-           Nos ajude a saber que tipo de voluntariado você deseja fazer.
+            Nos ajude a saber que tipo de voluntariado você deseja fazer.
         </h1>
-      <a id="botao" routerLink="/tags">Adicionar Tags de Interesse!</a>
+        <a id="botao" data-bs-toggle="modal" data-bs-target="#setTags">Adicionar Tags de Interesse!</a>
+        <h1 class="sub">
+            Agora, procure eventos que combinam com você!
+        </h1>
+        <a id="botao" routerLink="/vagaseventos">Voluntarie-se!</a>
     </div>
     <div class="linha"><img id="img" src="../../assets/fotos/logo.png" alt="logo"></div>
 </div>
+<app-set-tags></app-set-tags>

@@ -52,7 +52,8 @@ export class SetPatrocinadoresEventoComponent implements OnInit {
 
   setPatrocinadoresEvento = () => {
     this.idsPatrocinadores = this.patrocinadoresEventoForm.value.checkArray;
-    this.patrocinadorService.setPatrocinadoresEvento(this.idsPatrocinadores,this.idEvento).subscribe(response => {
+    console.log(this.idsPatrocinadores, this.idEvento);
+    this.patrocinadorService.setPatrocinadoresEvento(this.idsPatrocinadores as number[],this.idEvento).subscribe(response => {
       window.location.reload();
     });
   }
