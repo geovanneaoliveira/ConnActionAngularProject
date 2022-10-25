@@ -54,8 +54,12 @@ export class CriarOrgComponent implements OnInit {
     reader.readAsDataURL(file);
     reader.onload = () => {
       this.base64 = reader.result;
-      // (<HTMLInputElement>document.getElementById('profile')).style.backgroundImage = 'url('+this.base64+')';
+      (<HTMLInputElement>document.getElementById('orgProfile')).style.backgroundImage = 'url('+this.base64+')';
     };
   }
+
+  onClick = () => {
+    (<HTMLInputElement>document.getElementById('inputFotoOrg')).click();
+  };
 
 }

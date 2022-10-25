@@ -1,0 +1,15 @@
+<div class="container">
+    <header class="d-flex flex-row header mt-2 align-items-center">
+        <div class="profile-outter">
+            <div id="profile" [ngStyle]="{'background-image': 'url(' + user.fotoPerfil + ')'}"></div>
+        </div>
+        <div class="customVr"></div>
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row align-items-center"><img src="../../assets/svgs/person.svg" class="altura me-1"><h1 class="mb-0"> {{user.nome}} {{user.sobrenome}}</h1></div>
+            <div class="d-flex flex-row align-items-center"><img src="../../assets/svgs/phone.svg" class="altura me-1"><h3 class="mb-0"> {{user.telefone}}</h3></div>
+            <div class="d-flex flex-row align-items-center"><img src="../../assets/svgs/card-heading.svg" class="altura me-1"><h3 class="mb-0"> {{user.cpf}}</h3></div>
+        </div>
+    </header>
+    <hr>
+    <app-historico></app-historico>
+</div>

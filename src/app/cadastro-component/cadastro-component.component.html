@@ -1,26 +1,34 @@
-    <div class="cadastro">
-        <div class="rot">
-            <div class="outter">
-                <div (click)="onClick()">
-                    <div class="profile-outter">
-                        <div id="profile"></div>
-                    </div>        
+<div class="cadastro">
+    <div class="rot">
+        <div class="outter">
+            <div (click)="onClick()">
+                <div class="profile-outter">
+                    <div id="profile"></div>
                 </div>
-                <form [formGroup]="cadastroForm" class="cadastro-block" (ngSubmit)="cadastrar()">
-                    <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" (change)="fotoPerfil($event)"/>
-                    <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText" placeholder="NOME">
-                    <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
-                        <div *ngIf="f.nome.errors">Nome em branco!</div>
-                    </div>
-                    <input type="text" name="sobrenome" id="sobrenome" formControlName="sobrenome" [ngClass]="classesText" placeholder="SOBRENOME">
-                    <input type="text" name="telefone" id="telefone" formControlName="telefone" [ngClass]="classesText" placeholder="TELEFONE">
-                    <input type="text" name="cpf" id="cpf" formControlName="cpf" [ngClass]="classesText" placeholder="CPF">
-                    <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText" placeholder="LOGIN">
-                    <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText" placeholder="SENHA">
-                    <button type="submit" [innerText]="nome" class="btn-size botaoGradient my-3" [disabled]="!cadastroForm.valid"></button>
-                    <div>Já possui uma conta?</div>
-                    <button type="button" name="voltar" id="voltar" class="btn-sizeB botaoBorderGradient mt-3" routerLink="/login">Entrar</button>
-                </form>
             </div>
+            <form [formGroup]="cadastroForm" class="cadastro-block" (ngSubmit)="cadastrar()">
+                <input type="file" id="mediaFile" accept="image/*"
+                    (change)="fotoPerfil($event)"/>
+                <input type="text" name="nome" id="nome" formControlName="nome" [ngClass]="classesText"
+                    placeholder="NOME">
+                <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+                    <div *ngIf="f.nome.errors">Nome em branco!</div>
+                </div>
+                <input type="text" name="sobrenome" id="sobrenome" formControlName="sobrenome" [ngClass]="classesText"
+                    placeholder="SOBRENOME">
+                <input type="text" name="telefone" id="telefone" formControlName="telefone" [ngClass]="classesText"
+                    placeholder="TELEFONE">
+                <input type="text" name="cpf" id="cpf" formControlName="cpf" [ngClass]="classesText" placeholder="CPF">
+                <input type="text" name="login" id="login" formControlName="login" [ngClass]="classesText"
+                    placeholder="LOGIN">
+                <input type="text" name="senha" id="senha" formControlName="senha" [ngClass]="classesText"
+                    placeholder="SENHA">
+                <button type="submit" [innerText]="nome" class="btn-size botaoGradient my-3"
+                    [disabled]="!cadastroForm.valid"></button>
+                <div>Já possui uma conta?</div>
+                <button type="button" name="voltar" id="voltar" class="btn-sizeB botaoBorderGradient mt-3"
+                    routerLink="/login">Entrar</button>
+            </form>
         </div>
     </div>
+</div>

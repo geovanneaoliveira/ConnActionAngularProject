@@ -6,16 +6,11 @@
 .card{
     border: none;
     display: flex;
-    /* display: inline-flex; 
-    flex-direction: row; */
-    width: 1100px;
-    /* height: 800px; */
+    width: 100%;
     background-color:white;
     border-radius: 10px;
-    margin-top: 50px;
     margin-bottom: 15px;
     padding-bottom: 15px;
-
 }
 
 .titulo{

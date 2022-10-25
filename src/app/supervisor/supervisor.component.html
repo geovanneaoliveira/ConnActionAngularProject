@@ -1,7 +1,7 @@
 <div class="container">
   <div id="minhas" class="d-flex flex-column">
-      <h1 class="blog-post-title mt-2 mb-1">Minhas Organizações</h1>
-      <hr class="mt-1">
+    <h1 class="blog-post-title mt-2 mb-1">Minhas Organizações</h1>
+    <hr class="mt-1">
     <div class="d-flex flex-row justify-content-between flex-wrap">
       <div class="d-flex flex-row margemorg" *ngFor="let minhaOrg of minhasOrgs">
         <div class="card shadow-sm org">
@@ -43,12 +43,12 @@
         <img class="card-img-top imgFit" [src]="patrocinador.fotoPatrocinador">
         <div class="card-body">
           <h2 class="txtover">{{patrocinador.nome}}</h2>
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             <div class="btn-group">
               <button type="button" class="botaoBorderGradient btnsize"
                 (click)="gerenciarPatrocinador(patrocinador)">Gerenciar</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

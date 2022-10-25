@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="p-4 p-md-5 mb-4 rounded imgBanner" [style.background-image]="'url('+org.orgFoto+')'">
+        <div class="col-md-6 px-0 d-flex flex-row">
+            <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="">
+
+            <article class="blog-post">
+                <h2 class="blog-post-title mb-1">Descrição</h2>
+                <p>{{org.descricao}}</p>
+            </article>
+            <hr>
+            <h2>Eventos</h2>
+            <div class="d-flex flex-row flex-wrap justify-content-between">
+                <div class="mb-3" *ngFor="let evento of org.eventos">
+                    <div class="card shadow-sm eventosize">
+                        <div class="card-body">
+                            <div class="header-evento">
+                                <h5 class="card-title txtover flex-wrap">{{evento.nome}}</h5>
+                                <h6 class="card-subtitle text-muted mb-0">{{evento.data}}</h6>
+                            </div>
+                            <div class="d-flex flex-row flex-wrap">
+                                <p class="tag mb-1 me-1" *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
+                            </div>
+                            <div class="btn-group d-flex justify-content-between mt-1">
+                                <button class="botaoGradient btn-size" (click)="confirmarPresenca(evento.id)" [id]="evento.id">Participar</button>
+                                <button class="botaoBorderGradient btn-size-b" (click)="verInfos(evento.id)">Ver mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2>Contribuições</h2>
+            <div class="contribuicoes">
+                <p>Valor total recebido: R${{org.valorTotal}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<app-criar-evento></app-criar-evento>
