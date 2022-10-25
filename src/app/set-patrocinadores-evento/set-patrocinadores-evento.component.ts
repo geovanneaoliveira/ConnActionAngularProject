@@ -17,10 +17,11 @@ export class SetPatrocinadoresEventoComponent implements OnInit {
   submitted = false;
   patrocinadores: Patrocinador[] = [];
   idEvento!:number;
+  idsPatrocinadores: undefined[] | unknown= [];
 
   constructor(private eventoService: EventoService, private patrocinadorService: PatrocinadorService, private formBuilder: FormBuilder, private http: HttpClient, private activatedRoute: ActivatedRoute) {
     this.patrocinadoresEventoForm = this.formBuilder.group({
-      idPatrocinadores: this.formBuilder.array([])
+      checkArray: this.formBuilder.array([])
     });
   }
 
@@ -34,7 +35,7 @@ export class SetPatrocinadoresEventoComponent implements OnInit {
   }
 
   onCheckboxChange(e: any) {
-    const checkArray: FormArray = this.patrocinadoresEventoForm.get('idPatrocinadores') as FormArray;
+    const checkArray: FormArray = this.patrocinadoresEventoForm.get('checkArray') as FormArray;
     if (e.target.checked) {
       checkArray.push(new FormControl(e.target.value));
     } else {
@@ -50,7 +51,10 @@ export class SetPatrocinadoresEventoComponent implements OnInit {
   }
 
   setPatrocinadoresEvento = () => {
-    
+    this.idsPatrocinadores = this.patrocinadoresEventoForm.value.checkArray;
+    this.patrocinadorService.setPatrocinadoresEvento(this.idsPatrocinadores,this.idEvento).subscribe(response => {
+      window.location.reload();
+    });
   }
 
 }
