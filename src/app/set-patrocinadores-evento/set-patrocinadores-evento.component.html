@@ -1,0 +1,31 @@
+<div class="modal fade" id="patrocinadoresEvento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex flex-column">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Patrocinadores</h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+                <form [formGroup]="patrocinadoresEventoForm" novalidate>
+                <h5 class="subtitulo">Escolha os patrocinadores do seu Evento!</h5>
+                <div class="form-horizontal">
+                    <div class="list-group-item" *ngFor="let patrocinador of patrocinadores; let i=index">
+                        <label>
+                            <input type="checkbox" [value]="patrocinador.id" (change)="onCheckboxChange($event)" />
+                            {{patrocinador.nome}}
+                        </label>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="botaoGradient btn-size" [disabled]="!patrocinadoresEventoForm.valid"
+                    (click)="setPatrocinadoresEvento()">Escolher</button>
+                <button type="button" class="botaoBorderGradient btn-sizeG" data-bs-dismiss="modal">Voltar</button>
+            </div>
+        </div>
+    </div>
+</div>

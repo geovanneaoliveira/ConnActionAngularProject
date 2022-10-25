@@ -24,7 +24,7 @@ h2 {
 }
 
 .imgFit {
-    object-fit:cover;
+    object-fit:contain;
     width: 22vw;
     height: 14vw;
 }

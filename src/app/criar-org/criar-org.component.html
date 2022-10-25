@@ -9,12 +9,12 @@
         <form [formGroup]="orgForm" style="display: flex; flex-direction:column;">
           <input type="file" id="mediaFile" accept="image/jpg, image/png, image/jpeg" formControlName="orgFoto"
             (change)="fotoOrg($event)" />
-          <input type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
+          <input class="border-gradient border-gradient-purple mt-3"type="text" name="nome" id="nome" formControlName="nome" placeholder="NOME">
           <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
             <div *ngIf="f.nome.errors">Nome em branco!</div>
-          </div>
-          <input type="text" name="descricao" id="descricao" formControlName="descricao" placeholder="DESCRIÇÃO">
-          <input type="text" name="CNPJ" id="CNPJ" formControlName="cnpj" placeholder="CNPJ">
+          </div> 
+          <input class="border-gradient border-gradient-purple mt-2" type="text" name="descricao" id="descricao" formControlName="descricao" placeholder="DESCRIÇÃO">
+          <input class="border-gradient border-gradient-purple mt-2" type="text" name="CNPJ" id="CNPJ" formControlName="cnpj" placeholder="CNPJ">
         </form>
       </div>
       <div class="modal-footer">
@@ -25,3 +25,5 @@
     </div>
   </div>
 </div>
+
+<!-- oi -->
