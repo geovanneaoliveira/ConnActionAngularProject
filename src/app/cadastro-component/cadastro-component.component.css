@@ -42,6 +42,13 @@ input[type=text]{
     width: 240px;
 }
 
+input[type=password]{
+    padding: 10px;
+    outline: none;
+    caret-color: rgb(115, 62, 238);
+    width: 240px;
+}
+
 .border-gradient {
     border: 0;
     border-bottom: 4px solid;

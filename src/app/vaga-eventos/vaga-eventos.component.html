@@ -5,7 +5,7 @@
                 <div class="titulo">
                     <h2 class="blog-post-title mb-1 mt-3">Eventos com a sua cara!</h2>
                 </div>
-                
+
             </article>
             <hr class="mt-1 mb-3">
             <div class="d-flex flex-row flex-wrap justify-content-between">
@@ -20,8 +20,10 @@
                                 <p class="tag mb-1 me-1" *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
                             </div>
                             <div class="btn-group d-flex justify-content-between">
-                                <button class="botaoGradient btn-size" (click)="confirmarPresenca(evento.id)" [id]="evento.id">Participar</button>
-                                <button class="botaoBorderGradient btn-size-b" (click)="verInfos(evento.id)">Ver mais</button>
+                                <button class="botaoGradient btn-size" (click)="confirmarPresenca(evento.id)"
+                                    [id]="evento.id">Participar</button>
+                                <button class="botaoBorderGradient btn-size-b" (click)="verInfos(evento.id)">Ver
+                                    mais</button>
                             </div>
                         </div>
                     </div>
@@ -46,8 +48,10 @@
                                 <p class="tag mb-1 me-1" *ngFor="let tag of evento.tagsEvento">{{tag}}</p>
                             </div>
                             <div class="btn-group d-flex justify-content-between">
-                                <button class="botaoGradient btn-size" (click)="confirmarPresenca(evento.id)" [id]="evento.id">Participar</button>
-                                <button class="botaoBorderGradient btn-size-b" (click)="verInfos(evento.id)">Ver mais</button>
+                                <button class="botaoGradient btn-size" (click)="confirmarPresenca(evento.id)"
+                                    [id]="evento.id">Participar</button>
+                                <button class="botaoBorderGradient btn-size-b" (click)="verInfos(evento.id)">Ver
+                                    mais</button>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,7 @@
                         [ngClass]="classesTextEvento" placeholder="Data Do Evento">
 
                         <div class="form-horizontal">
-                            <div class="list-group-item" *ngFor="let tag of tags; let i=index">
+                            <div class="list-group-item" [id]="tag.id" *ngFor="let tag of tags; let i=index">
                                 <label>
                                     <input type="checkbox" [value]="tag.id"
                                         (change)="onCheckboxChange($event)" />
