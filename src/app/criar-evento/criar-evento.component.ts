@@ -60,7 +60,6 @@ export class CriarEventoComponent implements OnInit {
     this.http.post<any>('/evento/criar', this.eventoForm.value)
       .subscribe({
         next: (response) => {
-          console.log(response);
           window.location.reload();
         },
         error: (error) => console.log(error),
