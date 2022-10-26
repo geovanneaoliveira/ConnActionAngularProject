@@ -1,9 +1,13 @@
 <div class="container">
-    <div class="p-4 p-md-5 mb-4 rounded imgBanner" [style.background-image]="'url('+org.orgFoto+')'">
-        <div class="col-md-6 px-0 d-flex flex-row">
-            <h1 class="display-4 fst-italic">{{org.nomeOrg}}</h1>
+    <header class="d-flex flex-row header mt-2 align-items-center">
+        <div class="profile-outter">
+            <div id="profile" [ngStyle]="{'background-image': 'url(' + org.orgFoto + ')'}"></div>
         </div>
-    </div>
+        <div class="customVr"></div>
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row align-items-center"><h1 class="mb-0">{{org.nomeOrg}}</h1></div>
+        </div>
+    </header>
 
     <div class="row g-5">
         <div class="">
