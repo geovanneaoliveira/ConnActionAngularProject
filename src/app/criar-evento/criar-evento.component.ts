@@ -25,7 +25,7 @@ export class CriarEventoComponent implements OnInit {
       nome: ['', Validators.required],
       data: ['', Validators.required],
       idOrganizacao: [''],
-      checkArray: this.formBuilder.array([])
+      idTags: this.formBuilder.array([])
     });
   }
 
@@ -39,7 +39,7 @@ export class CriarEventoComponent implements OnInit {
   }   
 
   onCheckboxChange(e: any) {
-    const checkArray: FormArray = this.eventoForm.get('checkArray') as FormArray;
+    const checkArray: FormArray = this.eventoForm.get('idTags') as FormArray;
     if (e.target.checked) {
       checkArray.push(new FormControl(e.target.value));
       (<HTMLInputElement>document.getElementById(e.target.value)).style.backgroundColor = 'rgb(204, 167, 252)';

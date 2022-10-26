@@ -30,9 +30,9 @@ input[type=text], input[type=datetime-local]{
     margin-top: 10px;
 }
 
-input[type=checkbox]{
+/* input[type=checkbox]{
     display: none;
-}
+} */
 
 .list-group-item{
     color: black;
